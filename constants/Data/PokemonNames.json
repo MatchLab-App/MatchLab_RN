@@ -1,0 +1,7703 @@
+{
+  "리자드": {
+    "english_name": "charmeleon",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "リザード"
+  },
+  "이상해꽃": {
+    "english_name": "venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "フシギバナ"
+  },
+  "아보크": {
+    "english_name": "arbok",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "アーボック"
+  },
+  "깨비참": {
+    "english_name": "spearow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "オニスズメ"
+  },
+  "푸크린": {
+    "english_name": "wigglytuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "japanese_name": "プクリン"
+  },
+  "아보": {
+    "english_name": "ekans",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "アーボ"
+  },
+  "나인테일": {
+    "english_name": "ninetales",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "キュウコン"
+  },
+  "독침붕": {
+    "english_name": "beedrill",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "スピアー"
+  },
+  "꼬렛": {
+    "english_name": "rattata",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "コラッタ"
+  },
+  "니드퀸": {
+    "english_name": "nidoqueen",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "japanese_name": "ニドクイン"
+  },
+  "니드리나": {
+    "english_name": "nidorina",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ニドリーナ"
+  },
+  "골덕": {
+    "english_name": "golduck",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ゴルダック"
+  },
+  "피카츄": {
+    "english_name": "pikachu",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ピカチュウ"
+  },
+  "이상해풀": {
+    "english_name": "ivysaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "フシギソウ"
+  },
+  "거북왕": {
+    "english_name": "blastoise",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カメックス"
+  },
+  "모다피": {
+    "english_name": "bellsprout",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "マダツボミ"
+  },
+  "코일": {
+    "english_name": "magnemite",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "japanese_name": "コイル"
+  },
+  "니드런♀": {
+    "english_name": "nidoran-f",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ニドラン♀"
+  },
+  "픽시": {
+    "english_name": "clefable",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ピクシー"
+  },
+  "강챙이": {
+    "english_name": "poliwrath",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "japanese_name": "ニョロボン"
+  },
+  "콘팡": {
+    "english_name": "venonat",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "コンパン"
+  },
+  "우츠보트": {
+    "english_name": "victreebel",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ウツボット"
+  },
+  "레어코일": {
+    "english_name": "magneton",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "japanese_name": "レアコイル"
+  },
+  "주뱃": {
+    "english_name": "zubat",
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "japanese_name": "ズバット"
+  },
+  "구구": {
+    "english_name": "pidgey",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ポッポ"
+  },
+  "뚜벅쵸": {
+    "english_name": "oddish",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ナゾノクサ"
+  },
+  "우츠동": {
+    "english_name": "weepinbell",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ウツドン"
+  },
+  "니드킹": {
+    "english_name": "nidoking",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "japanese_name": "ニドキング"
+  },
+  "망키": {
+    "english_name": "mankey",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "マンキー"
+  },
+  "니드리노": {
+    "english_name": "nidorino",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ニドリーノ"
+  },
+  "피죤투": {
+    "english_name": "pidgeot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ピジョット"
+  },
+  "데구리": {
+    "english_name": "graveler",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "ゴローン"
+  },
+  "윤겔라": {
+    "english_name": "kadabra",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ユンゲラー"
+  },
+  "냄새꼬": {
+    "english_name": "gloom",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "クサイハナ"
+  },
+  "날쌩마": {
+    "english_name": "rapidash",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ギャロップ"
+  },
+  "단데기": {
+    "english_name": "metapod",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "トランセル"
+  },
+  "디그다": {
+    "english_name": "diglett",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ディグダ"
+  },
+  "모래두지": {
+    "english_name": "sandshrew",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "サンド"
+  },
+  "삐삐": {
+    "english_name": "clefairy",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ピッピ"
+  },
+  "레트라": {
+    "english_name": "raticate",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ラッタ"
+  },
+  "어니부기": {
+    "english_name": "wartortle",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カメール"
+  },
+  "성원숭": {
+    "english_name": "primeape",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "オコリザル"
+  },
+  "후딘": {
+    "english_name": "alakazam",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "フーディン"
+  },
+  "고라파덕": {
+    "english_name": "psyduck",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "コダック"
+  },
+  "골뱃": {
+    "english_name": "golbat",
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "japanese_name": "ゴルバット"
+  },
+  "슈륙챙이": {
+    "english_name": "poliwhirl",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ニョロゾ"
+  },
+  "가디": {
+    "english_name": "growlithe",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ガーディ"
+  },
+  "포니타": {
+    "english_name": "ponyta",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ポニータ"
+  },
+  "니드런♂": {
+    "english_name": "nidoran-m",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ニドラン♂"
+  },
+  "푸린": {
+    "english_name": "jigglypuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "japanese_name": "プリン"
+  },
+  "식스테일": {
+    "english_name": "vulpix",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ロコン"
+  },
+  "닥트리오": {
+    "english_name": "dugtrio",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ダグトリオ"
+  },
+  "도나리": {
+    "english_name": "venomoth",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "モルフォン"
+  },
+  "파이리": {
+    "english_name": "charmander",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ヒトカゲ"
+  },
+  "나옹": {
+    "english_name": "meowth",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ニャース"
+  },
+  "리자몽": {
+    "english_name": "charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "リザードン"
+  },
+  "꼬마돌": {
+    "english_name": "geodude",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "イシツブテ"
+  },
+  "왕눈해": {
+    "english_name": "tentacool",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "japanese_name": "メノクラゲ"
+  },
+  "딱구리": {
+    "english_name": "golem",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "ゴローニャ"
+  },
+  "야돈": {
+    "english_name": "slowpoke",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "ヤドン"
+  },
+  "뿔충이": {
+    "english_name": "weedle",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "ビードル"
+  },
+  "파라스": {
+    "english_name": "paras",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "パラス"
+  },
+  "꼬부기": {
+    "english_name": "squirtle",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ゼニガメ"
+  },
+  "이상해씨": {
+    "english_name": "bulbasaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "フシギダネ"
+  },
+  "야도란": {
+    "english_name": "slowbro",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "ヤドラン"
+  },
+  "괴력몬": {
+    "english_name": "machamp",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "カイリキー"
+  },
+  "라이츄": {
+    "english_name": "raichu",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ライチュウ"
+  },
+  "파오리": {
+    "english_name": "farfetchd",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "カモネギ"
+  },
+  "독파리": {
+    "english_name": "tentacruel",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "japanese_name": "ドククラゲ"
+  },
+  "두두": {
+    "english_name": "doduo",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ドードー"
+  },
+  "캐터피": {
+    "english_name": "caterpie",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "キャタピー"
+  },
+  "라플레시아": {
+    "english_name": "vileplume",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ラフレシア"
+  },
+  "발챙이": {
+    "english_name": "poliwag",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ニョロモ"
+  },
+  "두트리오": {
+    "english_name": "dodrio",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ドードリオ"
+  },
+  "피죤": {
+    "english_name": "pidgeotto",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ピジョン"
+  },
+  "쥬쥬": {
+    "english_name": "seel",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "パウワウ"
+  },
+  "캐이시": {
+    "english_name": "abra",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ケーシィ"
+  },
+  "파라섹트": {
+    "english_name": "parasect",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "パラセクト"
+  },
+  "페르시온": {
+    "english_name": "persian",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ペルシアン"
+  },
+  "고지": {
+    "english_name": "sandslash",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "サンドパン"
+  },
+  "버터플": {
+    "english_name": "butterfree",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "バタフリー"
+  },
+  "쥬레곤": {
+    "english_name": "dewgong",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "japanese_name": "ジュゴン"
+  },
+  "알통몬": {
+    "english_name": "machop",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ワンリキー"
+  },
+  "깨비드릴조": {
+    "english_name": "fearow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "オニドリル"
+  },
+  "질퍽이": {
+    "english_name": "grimer",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ベトベター"
+  },
+  "셀러": {
+    "english_name": "shellder",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "シェルダー"
+  },
+  "질뻐기": {
+    "english_name": "muk",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ベトベトン"
+  },
+  "고오스": {
+    "english_name": "gastly",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "japanese_name": "ゴース"
+  },
+  "파르셀": {
+    "english_name": "cloyster",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "japanese_name": "パルシェン"
+  },
+  "팬텀": {
+    "english_name": "gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "japanese_name": "ゲンガー"
+  },
+  "고우스트": {
+    "english_name": "haunter",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "japanese_name": "ゴースト"
+  },
+  "킹크랩": {
+    "english_name": "kingler",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "キングラー"
+  },
+  "크랩": {
+    "english_name": "krabby",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "クラブ"
+  },
+  "또도가스": {
+    "english_name": "weezing",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "マタドガス"
+  },
+  "뿔카노": {
+    "english_name": "rhyhorn",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "japanese_name": "サイホーン"
+  },
+  "슬리퍼": {
+    "english_name": "hypno",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "スリーパー"
+  },
+  "덩쿠리": {
+    "english_name": "tangela",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "モンジャラ"
+  },
+  "쏘드라": {
+    "english_name": "horsea",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "タッツー"
+  },
+  "럭키": {
+    "english_name": "chansey",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ラッキー"
+  },
+  "또가스": {
+    "english_name": "koffing",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ドガース"
+  },
+  "찌리리공": {
+    "english_name": "voltorb",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ビリリダマ"
+  },
+  "라프라스": {
+    "english_name": "lapras",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "japanese_name": "ラプラス"
+  },
+  "코뿌리": {
+    "english_name": "rhydon",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "japanese_name": "サイドン"
+  },
+  "홍수몬": {
+    "english_name": "hitmonchan",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "エビワラー"
+  },
+  "쁘사이저": {
+    "english_name": "pinsir",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "カイロス"
+  },
+  "별가사리": {
+    "english_name": "staryu",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヒトデマン"
+  },
+  "켄타로스": {
+    "english_name": "tauros",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ケンタロス"
+  },
+  "왕콘치": {
+    "english_name": "seaking",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "アズマオウ"
+  },
+  "시드라": {
+    "english_name": "seadra",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "シードラ"
+  },
+  "내루미": {
+    "english_name": "lickitung",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ベロリンガ"
+  },
+  "롱스톤": {
+    "english_name": "onix",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "イワーク"
+  },
+  "루주라": {
+    "english_name": "jynx",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "japanese_name": "ルージュラ"
+  },
+  "슬리프": {
+    "english_name": "drowzee",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "スリープ"
+  },
+  "쥬피썬더": {
+    "english_name": "jolteon",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "サンダース"
+  },
+  "캥카": {
+    "english_name": "kangaskhan",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ガルーラ"
+  },
+  "부스터": {
+    "english_name": "flareon",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ブースター"
+  },
+  "아쿠스타": {
+    "english_name": "starmie",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "スターミー"
+  },
+  "신뇽": {
+    "english_name": "dragonair",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ハクリュー"
+  },
+  "에레브": {
+    "english_name": "electabuzz",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "エレブー"
+  },
+  "메타몽": {
+    "english_name": "ditto",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "メタモン"
+  },
+  "스라크": {
+    "english_name": "scyther",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ストライク"
+  },
+  "콘치": {
+    "english_name": "goldeen",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "トサキント"
+  },
+  "메가니움": {
+    "english_name": "meganium",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "メガニウム"
+  },
+  "치코리타": {
+    "english_name": "chikorita",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "チコリータ"
+  },
+  "뮤츠": {
+    "english_name": "mewtwo",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ミュウツー"
+  },
+  "마임맨": {
+    "english_name": "mr-mime",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "バリヤード"
+  },
+  "마그마": {
+    "english_name": "magmar",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ブーバー"
+  },
+  "뮤": {
+    "english_name": "mew",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ミュウ"
+  },
+  "블레이범": {
+    "english_name": "typhlosion",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "バクフーン"
+  },
+  "베이리프": {
+    "english_name": "bayleef",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ベイリーフ"
+  },
+  "브케인": {
+    "english_name": "cyndaquil",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ヒノアラシ"
+  },
+  "마그케인": {
+    "english_name": "quilava",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "マグマラシ"
+  },
+  "리아코": {
+    "english_name": "totodile",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ワニノコ"
+  },
+  "엘리게이": {
+    "english_name": "croconaw",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "アリゲイツ"
+  },
+  "꼬리선": {
+    "english_name": "sentret",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "オタチ"
+  },
+  "야부엉": {
+    "english_name": "noctowl",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ヨルノズク"
+  },
+  "장크로다일": {
+    "english_name": "feraligatr",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "オーダイル"
+  },
+  "부우부": {
+    "english_name": "hoothoot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ホーホー"
+  },
+  "레디바": {
+    "english_name": "ledyba",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "レディバ"
+  },
+  "근육몬": {
+    "english_name": "machoke",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ゴーリキー"
+  },
+  "다꼬리": {
+    "english_name": "furret",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "オオタチ"
+  },
+  "윈디": {
+    "english_name": "arcanine",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ウインディ"
+  },
+  "랜턴": {
+    "english_name": "lanturn",
+    "types": [
+      "water",
+      "electric"
+    ],
+    "japanese_name": "ランターン"
+  },
+  "전룡": {
+    "english_name": "ampharos",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "デンリュウ"
+  },
+  "왕자리": {
+    "english_name": "yanma",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ヤンヤンマ"
+  },
+  "푸푸린": {
+    "english_name": "igglybuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "japanese_name": "ププリン"
+  },
+  "메리프": {
+    "english_name": "mareep",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "メリープ"
+  },
+  "레디안": {
+    "english_name": "ledian",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "レディアン"
+  },
+  "네이티오": {
+    "english_name": "xatu",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "ネイティオ"
+  },
+  "꼬지모": {
+    "english_name": "sudowoodo",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ウソッキー"
+  },
+  "딱충이": {
+    "english_name": "kakuna",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "コクーン"
+  },
+  "해루미": {
+    "english_name": "sunflora",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "キマワリ"
+  },
+  "마릴리": {
+    "english_name": "azumarill",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "japanese_name": "マリルリ"
+  },
+  "통통코": {
+    "english_name": "hoppip",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "ハネッコ"
+  },
+  "두코": {
+    "english_name": "skiploom",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "ポポッコ"
+  },
+  "키링키": {
+    "english_name": "girafarig",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "japanese_name": "キリンリキ"
+  },
+  "잉어킹": {
+    "english_name": "magikarp",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "コイキング"
+  },
+  "이브이": {
+    "english_name": "eevee",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "イーブイ"
+  },
+  "야도킹": {
+    "english_name": "slowking",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "ヤドキング"
+  },
+  "블래키": {
+    "english_name": "umbreon",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "ブラッキー"
+  },
+  "우파": {
+    "english_name": "wooper",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ウパー"
+  },
+  "해너츠": {
+    "english_name": "sunkern",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ヒマナッツ"
+  },
+  "왕구리": {
+    "english_name": "politoed",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ニョロトノ"
+  },
+  "아르코": {
+    "english_name": "bellossom",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "キレイハナ"
+  },
+  "마릴": {
+    "english_name": "marill",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "japanese_name": "マリル"
+  },
+  "에브이": {
+    "english_name": "espeon",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "エーフィ"
+  },
+  "탕구리": {
+    "english_name": "cubone",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "カラカラ"
+  },
+  "쏘콘": {
+    "english_name": "forretress",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "japanese_name": "フォレトス"
+  },
+  "마자용": {
+    "english_name": "wobbuffet",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ソーナンス"
+  },
+  "에이팜": {
+    "english_name": "aipom",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "エイパム"
+  },
+  "포푸니": {
+    "english_name": "sneasel",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "japanese_name": "ニューラ"
+  },
+  "안농": {
+    "english_name": "unown",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "アンノーン"
+  },
+  "깜지곰": {
+    "english_name": "teddiursa",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ヒメグマ"
+  },
+  "강철톤": {
+    "english_name": "steelix",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "japanese_name": "ハガネール"
+  },
+  "핫삼": {
+    "english_name": "scizor",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "japanese_name": "ハッサム"
+  },
+  "링곰": {
+    "english_name": "ursaring",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "リングマ"
+  },
+  "꾸꾸리": {
+    "english_name": "swinub",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "japanese_name": "ウリムー"
+  },
+  "피콘": {
+    "english_name": "pineco",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "クヌギダマ"
+  },
+  "솜솜코": {
+    "english_name": "jumpluff",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "ワタッコ"
+  },
+  "블루": {
+    "english_name": "snubbull",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ブルー"
+  },
+  "침바루": {
+    "english_name": "qwilfish",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "japanese_name": "ハリーセン"
+  },
+  "메꾸리": {
+    "english_name": "piloswine",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "japanese_name": "イノムー"
+  },
+  "무우마": {
+    "english_name": "misdreavus",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ムウマ"
+  },
+  "마그카르고": {
+    "english_name": "magcargo",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "japanese_name": "マグカルゴ"
+  },
+  "마그마그": {
+    "english_name": "slugma",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "マグマッグ"
+  },
+  "샤미드": {
+    "english_name": "vaporeon",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "シャワーズ"
+  },
+  "암나이트": {
+    "english_name": "omanyte",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "オムナイト"
+  },
+  "그랑블루": {
+    "english_name": "granbull",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "グランブル"
+  },
+  "대포무노": {
+    "english_name": "octillery",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "オクタン"
+  },
+  "아라리": {
+    "english_name": "exeggcute",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "japanese_name": "タマタマ"
+  },
+  "미뇽": {
+    "english_name": "dratini",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ミニリュウ"
+  },
+  "썬더": {
+    "english_name": "zapdos",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "japanese_name": "サンダー"
+  },
+  "프리져": {
+    "english_name": "articuno",
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "japanese_name": "フリーザー"
+  },
+  "암스타": {
+    "english_name": "omastar",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "オムスター"
+  },
+  "헬가": {
+    "english_name": "houndoom",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "japanese_name": "ヘルガー"
+  },
+  "코산호": {
+    "english_name": "corsola",
+    "types": [
+      "water",
+      "rock"
+    ],
+    "japanese_name": "サニーゴ"
+  },
+  "델빌": {
+    "english_name": "houndour",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "japanese_name": "デルビル"
+  },
+  "크로뱃": {
+    "english_name": "crobat",
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "japanese_name": "クロバット"
+  },
+  "삐": {
+    "english_name": "cleffa",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ピィ"
+  },
+  "배루키": {
+    "english_name": "tyrogue",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "バルキー"
+  },
+  "딜리버드": {
+    "english_name": "delibird",
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "japanese_name": "デリバード"
+  },
+  "파이어": {
+    "english_name": "moltres",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "ファイヤー"
+  },
+  "갸라도스": {
+    "english_name": "gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "ギャラドス"
+  },
+  "코리갑": {
+    "english_name": "donphan",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ドンファン"
+  },
+  "노라키": {
+    "english_name": "stantler",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "オドシシ"
+  },
+  "프테라": {
+    "english_name": "aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "japanese_name": "プテラ"
+  },
+  "데기라스": {
+    "english_name": "pupitar",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "サナギラス"
+  },
+  "보송송": {
+    "english_name": "flaaffy",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "モココ"
+  },
+  "토게피": {
+    "english_name": "togepi",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "トゲピー"
+  },
+  "초라기": {
+    "english_name": "chinchou",
+    "types": [
+      "water",
+      "electric"
+    ],
+    "japanese_name": "チョンチー"
+  },
+  "망나뇽": {
+    "english_name": "dragonite",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "japanese_name": "カイリュー"
+  },
+  "피츄": {
+    "english_name": "pichu",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ピチュー"
+  },
+  "킹드라": {
+    "english_name": "kingdra",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "japanese_name": "キングドラ"
+  },
+  "투구푸스": {
+    "english_name": "kabutops",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "カブトプス"
+  },
+  "토게틱": {
+    "english_name": "togetic",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "japanese_name": "トゲチック"
+  },
+  "폴리곤": {
+    "english_name": "porygon",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ポリゴン"
+  },
+  "에레키드": {
+    "english_name": "elekid",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "エレキッド"
+  },
+  "투구": {
+    "english_name": "kabuto",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "カブト"
+  },
+  "잠만보": {
+    "english_name": "snorlax",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "カビゴン"
+  },
+  "총어": {
+    "english_name": "remoraid",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "テッポウオ"
+  },
+  "네이티": {
+    "english_name": "natu",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "ネイティ"
+  },
+  "단단지": {
+    "english_name": "shuckle",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "japanese_name": "ツボツボ"
+  },
+  "그라에나": {
+    "english_name": "mightyena",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "グラエナ"
+  },
+  "칠색조": {
+    "english_name": "ho-oh",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "ホウオウ"
+  },
+  "영치코": {
+    "english_name": "combusken",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "ワカシャモ"
+  },
+  "늪짱이": {
+    "english_name": "marshtomp",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ヌマクロー"
+  },
+  "번치코": {
+    "english_name": "blaziken",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "バシャーモ"
+  },
+  "실쿤": {
+    "english_name": "silcoon",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "カラサリス"
+  },
+  "독케일": {
+    "english_name": "dustox",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "ドクケイル"
+  },
+  "아차모": {
+    "english_name": "torchic",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "アチャモ"
+  },
+  "포챠나": {
+    "english_name": "poochyena",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "ポチエナ"
+  },
+  "마기라스": {
+    "english_name": "tyranitar",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "japanese_name": "バンギラス"
+  },
+  "뷰티플라이": {
+    "english_name": "beautifly",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "アゲハント"
+  },
+  "세레비": {
+    "english_name": "celebi",
+    "types": [
+      "psychic",
+      "grass"
+    ],
+    "japanese_name": "セレビィ"
+  },
+  "로토스": {
+    "english_name": "lombre",
+    "types": [
+      "water",
+      "grass"
+    ],
+    "japanese_name": "ハスブレロ"
+  },
+  "개무소": {
+    "english_name": "wurmple",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "ケムッソ"
+  },
+  "아리아도스": {
+    "english_name": "ariados",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "アリアドス"
+  },
+  "페이검": {
+    "english_name": "spinarak",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "イトマル"
+  },
+  "지그제구리": {
+    "english_name": "zigzagoon",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ジグザグマ"
+  },
+  "로파파": {
+    "english_name": "ludicolo",
+    "types": [
+      "water",
+      "grass"
+    ],
+    "japanese_name": "ルンパッパ"
+  },
+  "루기아": {
+    "english_name": "lugia",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "ルギア"
+  },
+  "나무돌이": {
+    "english_name": "grovyle",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ジュプトル"
+  },
+  "나무킹": {
+    "english_name": "sceptile",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ジュカイン"
+  },
+  "스왈로": {
+    "english_name": "swellow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "オオスバメ"
+  },
+  "직구리": {
+    "english_name": "linoone",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "マッスグマ"
+  },
+  "도토링": {
+    "english_name": "seedot",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "タネボー"
+  },
+  "누오": {
+    "english_name": "quagsire",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ヌオー"
+  },
+  "테일로": {
+    "english_name": "taillow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "スバメ"
+  },
+  "니로우": {
+    "english_name": "murkrow",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "ヤミカラス"
+  },
+  "텅구리": {
+    "english_name": "marowak",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ガラガラ"
+  },
+  "붐볼": {
+    "english_name": "electrode",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "マルマイン"
+  },
+  "시라소몬": {
+    "english_name": "hitmonlee",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "サワムラー"
+  },
+  "노고치": {
+    "english_name": "dunsparce",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ノコッチ"
+  },
+  "헤라크로스": {
+    "english_name": "heracross",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "japanese_name": "ヘラクロス"
+  },
+  "다탱구": {
+    "english_name": "shiftry",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "japanese_name": "ダーテング"
+  },
+  "나시": {
+    "english_name": "exeggutor",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "japanese_name": "ナッシー"
+  },
+  "갈모매": {
+    "english_name": "wingull",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "キャモメ"
+  },
+  "가디안": {
+    "english_name": "gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "サーナイト"
+  },
+  "잎새코": {
+    "english_name": "nuzleaf",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "japanese_name": "コノハナ"
+  },
+  "패리퍼": {
+    "english_name": "pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "ペリッパー"
+  },
+  "가보리": {
+    "english_name": "aron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "japanese_name": "ココドラ"
+  },
+  "갱도라": {
+    "english_name": "lairon",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "japanese_name": "コドラ"
+  },
+  "비나방": {
+    "english_name": "masquerain",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "アメモース"
+  },
+  "입치트": {
+    "english_name": "mawile",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "japanese_name": "クチート"
+  },
+  "카포에라": {
+    "english_name": "hitmontop",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "カポエラー"
+  },
+  "애버라스": {
+    "english_name": "larvitar",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "japanese_name": "ヨーギラス"
+  },
+  "밀탱크": {
+    "english_name": "miltank",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ミルタンク"
+  },
+  "스이쿤": {
+    "english_name": "suicune",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "スイクン"
+  },
+  "폴리곤2": {
+    "english_name": "porygon2",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ポリゴン２"
+  },
+  "만타인": {
+    "english_name": "mantine",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "マンタイン"
+  },
+  "루브도": {
+    "english_name": "smeargle",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ドーブル"
+  },
+  "라이코": {
+    "english_name": "raikou",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ライコウ"
+  },
+  "앤테이": {
+    "english_name": "entei",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "エンテイ"
+  },
+  "해피너스": {
+    "english_name": "blissey",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ハピナス"
+  },
+  "썬더볼트": {
+    "english_name": "manectric",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ライボルト"
+  },
+  "썬더라이": {
+    "english_name": "electrike",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ラクライ"
+  },
+  "마이농": {
+    "english_name": "minun",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "マイナン"
+  },
+  "보스로라": {
+    "english_name": "aggron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "japanese_name": "ボスゴドラ"
+  },
+  "무장조": {
+    "english_name": "skarmory",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "japanese_name": "エアームド"
+  },
+  "꼴깍몬": {
+    "english_name": "gulpin",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ゴクリン"
+  },
+  "플러시": {
+    "english_name": "plusle",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "プラスル"
+  },
+  "꿀꺽몬": {
+    "english_name": "swalot",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "マルノーム"
+  },
+  "요가랑": {
+    "english_name": "meditite",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "japanese_name": "アサナン"
+  },
+  "요가램": {
+    "english_name": "medicham",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "japanese_name": "チャーレム"
+  },
+  "고래왕자": {
+    "english_name": "wailmer",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ホエルコ"
+  },
+  "샤프니아": {
+    "english_name": "carvanha",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "japanese_name": "キバニア"
+  },
+  "샤크니아": {
+    "english_name": "sharpedo",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "japanese_name": "サメハダー"
+  },
+  "네오비트": {
+    "english_name": "illumise",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "イルミーゼ"
+  },
+  "볼비트": {
+    "english_name": "volbeat",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "バルビート"
+  },
+  "피그점프": {
+    "english_name": "spoink",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "バネブー"
+  },
+  "얼루기": {
+    "english_name": "spinda",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "パッチール"
+  },
+  "고래왕": {
+    "english_name": "wailord",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ホエルオー"
+  },
+  "폭타": {
+    "english_name": "camerupt",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "japanese_name": "バクーダ"
+  },
+  "둔타": {
+    "english_name": "numel",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "japanese_name": "ドンメル"
+  },
+  "로젤리아": {
+    "english_name": "roselia",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ロゼリア"
+  },
+  "톱치": {
+    "english_name": "trapinch",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ナックラー"
+  },
+  "비브라바": {
+    "english_name": "vibrava",
+    "types": [
+      "ground",
+      "dragon"
+    ],
+    "japanese_name": "ビブラーバ"
+  },
+  "플라이곤": {
+    "english_name": "flygon",
+    "types": [
+      "ground",
+      "dragon"
+    ],
+    "japanese_name": "フライゴン"
+  },
+  "선인왕": {
+    "english_name": "cacnea",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "サボネア"
+  },
+  "파비코": {
+    "english_name": "swablu",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "チルット"
+  },
+  "쟝고": {
+    "english_name": "zangoose",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ザングース"
+  },
+  "루나톤": {
+    "english_name": "lunatone",
+    "types": [
+      "rock",
+      "psychic"
+    ],
+    "japanese_name": "ルナトーン"
+  },
+  "솔록": {
+    "english_name": "solrock",
+    "types": [
+      "rock",
+      "psychic"
+    ],
+    "japanese_name": "ソルロック"
+  },
+  "미꾸리": {
+    "english_name": "barboach",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ドジョッチ"
+  },
+  "가재군": {
+    "english_name": "corphish",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヘイガニ"
+  },
+  "점토도리": {
+    "english_name": "claydol",
+    "types": [
+      "ground",
+      "psychic"
+    ],
+    "japanese_name": "ネンドール"
+  },
+  "메깅": {
+    "english_name": "whiscash",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ナマズン"
+  },
+  "오뚝군": {
+    "english_name": "baltoy",
+    "types": [
+      "ground",
+      "psychic"
+    ],
+    "japanese_name": "ヤジロン"
+  },
+  "릴링": {
+    "english_name": "lileep",
+    "types": [
+      "rock",
+      "grass"
+    ],
+    "japanese_name": "リリーラ"
+  },
+  "가재장군": {
+    "english_name": "crawdaunt",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "japanese_name": "シザリガー"
+  },
+  "아노딥스": {
+    "english_name": "anorith",
+    "types": [
+      "rock",
+      "bug"
+    ],
+    "japanese_name": "アノプス"
+  },
+  "릴리요": {
+    "english_name": "cradily",
+    "types": [
+      "rock",
+      "grass"
+    ],
+    "japanese_name": "ユレイドル"
+  },
+  "아말도": {
+    "english_name": "armaldo",
+    "types": [
+      "rock",
+      "bug"
+    ],
+    "japanese_name": "アーマルド"
+  },
+  "밀로틱": {
+    "english_name": "milotic",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ミロカロス"
+  },
+  "다크펫": {
+    "english_name": "banette",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ジュペッタ"
+  },
+  "빈티나": {
+    "english_name": "feebas",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヒンバス"
+  },
+  "켈리몬": {
+    "english_name": "kecleon",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "カクレオン"
+  },
+  "앱솔": {
+    "english_name": "absol",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "アブソル"
+  },
+  "마자": {
+    "english_name": "wynaut",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ソーナノ"
+  },
+  "눈꼬마": {
+    "english_name": "snorunt",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "ユキワラシ"
+  },
+  "해골몽": {
+    "english_name": "duskull",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ヨマワル"
+  },
+  "캐스퐁": {
+    "english_name": "castform",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ポワルン"
+  },
+  "진주몽": {
+    "english_name": "clamperl",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "パールル"
+  },
+  "치렁": {
+    "english_name": "chimecho",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "チリーン"
+  },
+  "트로피우스": {
+    "english_name": "tropius",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "トロピウス"
+  },
+  "씨카이저": {
+    "english_name": "walrein",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "japanese_name": "トドゼルガ"
+  },
+  "씨레오": {
+    "english_name": "sealeo",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "japanese_name": "トドグラー"
+  },
+  "분홍장이": {
+    "english_name": "gorebyss",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "サクラビス"
+  },
+  "헌테일": {
+    "english_name": "huntail",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ハンテール"
+  },
+  "어둠대신": {
+    "english_name": "shuppet",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "カゲボウズ"
+  },
+  "얼음귀신": {
+    "english_name": "glalie",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "オニゴーリ"
+  },
+  "미라몽": {
+    "english_name": "dusclops",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "サマヨール"
+  },
+  "시라칸": {
+    "english_name": "relicanth",
+    "types": [
+      "water",
+      "rock"
+    ],
+    "japanese_name": "ジーランス"
+  },
+  "대굴레오": {
+    "english_name": "spheal",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "japanese_name": "タマザラシ"
+  },
+  "메탕구": {
+    "english_name": "metang",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "メタング"
+  },
+  "메탕": {
+    "english_name": "beldum",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "ダンバル"
+  },
+  "사랑동이": {
+    "english_name": "luvdisc",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ラブカス"
+  },
+  "라티오스": {
+    "english_name": "latios",
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "japanese_name": "ラティオス"
+  },
+  "레쿠쟈": {
+    "english_name": "rayquaza",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "japanese_name": "レックウザ"
+  },
+  "보만다": {
+    "english_name": "salamence",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "japanese_name": "ボーマンダ"
+  },
+  "메타그로스": {
+    "english_name": "metagross",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "メタグロス"
+  },
+  "라티아스": {
+    "english_name": "latias",
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "japanese_name": "ラティアス"
+  },
+  "쉘곤": {
+    "english_name": "shelgon",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "コモルー"
+  },
+  "레지스틸": {
+    "english_name": "registeel",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "レジスチル"
+  },
+  "수풀부기": {
+    "english_name": "grotle",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ハヤシガメ"
+  },
+  "모부기": {
+    "english_name": "turtwig",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ナエトル"
+  },
+  "레지아이스": {
+    "english_name": "regice",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "レジアイス"
+  },
+  "그란돈": {
+    "english_name": "groudon",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "グラードン"
+  },
+  "아공이": {
+    "english_name": "bagon",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "タツベイ"
+  },
+  "찌르꼬": {
+    "english_name": "starly",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ムックル"
+  },
+  "나무지기": {
+    "english_name": "treecko",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "キモリ"
+  },
+  "지라치": {
+    "english_name": "jirachi",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "ジラーチ"
+  },
+  "팽도리": {
+    "english_name": "piplup",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ポッチャマ"
+  },
+  "찌르호크": {
+    "english_name": "staraptor",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ムクホーク"
+  },
+  "도롱마담": {
+    "english_name": "wormadam",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "ミノマダム"
+  },
+  "귀뚤뚜기": {
+    "english_name": "kricketot",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "コロボーシ"
+  },
+  "물짱이": {
+    "english_name": "mudkip",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ミズゴロウ"
+  },
+  "세꿀버리": {
+    "english_name": "combee",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ミツハニー"
+  },
+  "카스쿤": {
+    "english_name": "cascoon",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "マユルド"
+  },
+  "럭시오": {
+    "english_name": "luxio",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ルクシオ"
+  },
+  "팽태자": {
+    "english_name": "prinplup",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ポッタイシ"
+  },
+  "비퀸": {
+    "english_name": "vespiquen",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ビークイン"
+  },
+  "비버통": {
+    "english_name": "bibarel",
+    "types": [
+      "normal",
+      "water"
+    ],
+    "japanese_name": "ビーダル"
+  },
+  "대짱이": {
+    "english_name": "swampert",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ラグラージ"
+  },
+  "렌트라": {
+    "english_name": "luxray",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "レントラー"
+  },
+  "연꽃몬": {
+    "english_name": "lotad",
+    "types": [
+      "water",
+      "grass"
+    ],
+    "japanese_name": "ハスボー"
+  },
+  "꼬몽울": {
+    "english_name": "budew",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "スボミー"
+  },
+  "코코리": {
+    "english_name": "phanpy",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ゴマゾウ"
+  },
+  "두개도스": {
+    "english_name": "cranidos",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ズガイドス"
+  },
+  "찌르버드": {
+    "english_name": "staravia",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ムクバード"
+  },
+  "꼬링크": {
+    "english_name": "shinx",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "コリンク"
+  },
+  "엠페르트": {
+    "english_name": "empoleon",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "japanese_name": "エンペルト"
+  },
+  "귀뚤톡크": {
+    "english_name": "kricketune",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "コロトック"
+  },
+  "마그비": {
+    "english_name": "magby",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ブビィ"
+  },
+  "깜까미": {
+    "english_name": "sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "japanese_name": "ヤミラミ"
+  },
+  "글라이거": {
+    "english_name": "gligar",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "japanese_name": "グライガー"
+  },
+  "뽀뽀라": {
+    "english_name": "smoochum",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "japanese_name": "ムチュール"
+  },
+  "비구술": {
+    "english_name": "surskit",
+    "types": [
+      "bug",
+      "water"
+    ],
+    "japanese_name": "アメタマ"
+  },
+  "버섯꼬": {
+    "english_name": "shroomish",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "キノココ"
+  },
+  "폭음룡": {
+    "english_name": "exploud",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "バクオング"
+  },
+  "발바로": {
+    "english_name": "vigoroth",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ヤルキモノ"
+  },
+  "테오키스": {
+    "english_name": "deoxys",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "デオキシス"
+  },
+  "아이스크": {
+    "english_name": "ninjask",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "テッカニン"
+  },
+  "마크탕": {
+    "english_name": "makuhita",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "マクノシタ"
+  },
+  "레지락": {
+    "english_name": "regirock",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "レジロック"
+  },
+  "게을킹": {
+    "english_name": "slaking",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ケッキング"
+  },
+  "가이오가": {
+    "english_name": "kyogre",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カイオーガ"
+  },
+  "플로젤": {
+    "english_name": "floatzel",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "フローゼル"
+  },
+  "체리버": {
+    "english_name": "cherubi",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "チェリンボ"
+  },
+  "불꽃숭이": {
+    "english_name": "chimchar",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ヒコザル"
+  },
+  "무우마직": {
+    "english_name": "mismagius",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ムウマージ"
+  },
+  "토대부기": {
+    "english_name": "torterra",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "japanese_name": "ドダイトス"
+  },
+  "에나비": {
+    "english_name": "skitty",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "エネコ"
+  },
+  "체리꼬": {
+    "english_name": "cherrim",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "チェリム"
+  },
+  "껍질몬": {
+    "english_name": "shedinja",
+    "types": [
+      "bug",
+      "ghost"
+    ],
+    "japanese_name": "ヌケニン"
+  },
+  "파이숭이": {
+    "english_name": "monferno",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "モウカザル"
+  },
+  "흔들풍손": {
+    "english_name": "drifloon",
+    "types": [
+      "ghost",
+      "flying"
+    ],
+    "japanese_name": "フワンテ"
+  },
+  "델케티": {
+    "english_name": "delcatty",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "エネコロロ"
+  },
+  "랄토스": {
+    "english_name": "ralts",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "ラルトス"
+  },
+  "하리뭉": {
+    "english_name": "hariyama",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ハリテヤマ"
+  },
+  "킬리아": {
+    "english_name": "kirlia",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "キルリア"
+  },
+  "파비코리": {
+    "english_name": "altaria",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "japanese_name": "チルタリス"
+  },
+  "루리리": {
+    "english_name": "azurill",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "japanese_name": "ルリリ"
+  },
+  "나옹마": {
+    "english_name": "glameow",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ニャルマー"
+  },
+  "코코파스": {
+    "english_name": "nosepass",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ノズパス"
+  },
+  "피그킹": {
+    "english_name": "grumpig",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ブーピッグ"
+  },
+  "도롱충이": {
+    "english_name": "burmy",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "ミノムッチ"
+  },
+  "세비퍼": {
+    "english_name": "seviper",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ハブネーク"
+  },
+  "겟핸보숭": {
+    "english_name": "ambipom",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "エテボース"
+  },
+  "스컹탱크": {
+    "english_name": "skuntank",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "japanese_name": "スカタンク"
+  },
+  "동탁군": {
+    "english_name": "bronzong",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "ドータクン"
+  },
+  "코터스": {
+    "english_name": "torkoal",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "コータス"
+  },
+  "동미러": {
+    "english_name": "bronzor",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "ドーミラー"
+  },
+  "흉내내": {
+    "english_name": "mime-jr",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "マネネ"
+  },
+  "랑딸랑": {
+    "english_name": "chingling",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "リーシャン"
+  },
+  "핑복": {
+    "english_name": "happiny",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ピンプク"
+  },
+  "꼬지지": {
+    "english_name": "bonsly",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ウソハチ"
+  },
+  "딥상어동": {
+    "english_name": "gible",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "japanese_name": "フカマル"
+  },
+  "화강돌": {
+    "english_name": "spiritomb",
+    "types": [
+      "ghost",
+      "dark"
+    ],
+    "japanese_name": "ミカルゲ"
+  },
+  "페라페": {
+    "english_name": "chatot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ペラップ"
+  },
+  "깝질무": {
+    "english_name": "shellos",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カラナクシ"
+  },
+  "게을로": {
+    "english_name": "slakoth",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ナマケロ"
+  },
+  "밤선인": {
+    "english_name": "cacturne",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "japanese_name": "ノクタス"
+  },
+  "버섯모": {
+    "english_name": "breloom",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "japanese_name": "キノガッサ"
+  },
+  "방패톱스": {
+    "english_name": "shieldon",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "japanese_name": "タテトプス"
+  },
+  "나메일": {
+    "english_name": "mothim",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ガーメイル"
+  },
+  "램펄드": {
+    "english_name": "rampardos",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ラムパルド"
+  },
+  "먹고자": {
+    "english_name": "munchlax",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ゴンベ"
+  },
+  "형광어": {
+    "english_name": "finneon",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ケイコウオ"
+  },
+  "드래피온": {
+    "english_name": "drapion",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "japanese_name": "ドラピオン"
+  },
+  "루카리오": {
+    "english_name": "lucario",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "japanese_name": "ルカリオ"
+  },
+  "스콜피": {
+    "english_name": "skorupi",
+    "types": [
+      "poison",
+      "bug"
+    ],
+    "japanese_name": "スコルピ"
+  },
+  "하마돈": {
+    "english_name": "hippowdon",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "カバルドン"
+  },
+  "한카리아스": {
+    "english_name": "garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "japanese_name": "ガブリアス"
+  },
+  "히포포타스": {
+    "english_name": "hippopotas",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ヒポポタス"
+  },
+  "네오라이트": {
+    "english_name": "lumineon",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ネオラント"
+  },
+  "독개굴": {
+    "english_name": "toxicroak",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "japanese_name": "ドクロッグ"
+  },
+  "눈쓰개": {
+    "english_name": "snover",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "japanese_name": "ユキカブリ"
+  },
+  "삐딱구리": {
+    "english_name": "croagunk",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "japanese_name": "グレッグル"
+  },
+  "타만타": {
+    "english_name": "mantyke",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "タマンタ"
+  },
+  "눈설왕": {
+    "english_name": "abomasnow",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "japanese_name": "ユキノオー"
+  },
+  "거대코뿌리": {
+    "english_name": "rhyperior",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "japanese_name": "ドサイドン"
+  },
+  "내룸벨트": {
+    "english_name": "lickilicky",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ベロベルト"
+  },
+  "에레키블": {
+    "english_name": "electivire",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "エレキブル"
+  },
+  "메가자리": {
+    "english_name": "yanmega",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "メガヤンマ"
+  },
+  "덩쿠림보": {
+    "english_name": "tangrowth",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "モジャンボ"
+  },
+  "맘모꾸리": {
+    "english_name": "mamoswine",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "japanese_name": "マンムー"
+  },
+  "글레이시아": {
+    "english_name": "glaceon",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "グレイシア"
+  },
+  "포푸니라": {
+    "english_name": "weavile",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "japanese_name": "マニューラ"
+  },
+  "토게키스": {
+    "english_name": "togekiss",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "japanese_name": "トゲキッス"
+  },
+  "무스틈니": {
+    "english_name": "carnivine",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "マスキッパ"
+  },
+  "자포코일": {
+    "english_name": "magnezone",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "japanese_name": "ジバコイル"
+  },
+  "리피아": {
+    "english_name": "leafeon",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "リーフィア"
+  },
+  "마그마번": {
+    "english_name": "magmortar",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ブーバーン"
+  },
+  "폴리곤Z": {
+    "english_name": "porygon-z",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ポリゴンＺ"
+  },
+  "로토무": {
+    "english_name": "rotom",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "japanese_name": "ロトム"
+  },
+  "엠라이트": {
+    "english_name": "mesprit",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "エムリット"
+  },
+  "유크시": {
+    "english_name": "uxie",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ユクシー"
+  },
+  "아그놈": {
+    "english_name": "azelf",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "アグノム"
+  },
+  "히드런": {
+    "english_name": "heatran",
+    "types": [
+      "fire",
+      "steel"
+    ],
+    "japanese_name": "ヒードラン"
+  },
+  "레지기가스": {
+    "english_name": "regigigas",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "レジギガス"
+  },
+  "디아루가": {
+    "english_name": "dialga",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "japanese_name": "ディアルガ"
+  },
+  "마나피": {
+    "english_name": "manaphy",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "マナフィ"
+  },
+  "기라티나": {
+    "english_name": "giratina",
+    "types": [
+      "ghost",
+      "dragon"
+    ],
+    "japanese_name": "ギラティナ"
+  },
+  "피오네": {
+    "english_name": "phione",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "フィオネ"
+  },
+  "다크라이": {
+    "english_name": "darkrai",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "ダークライ"
+  },
+  "아르세우스": {
+    "english_name": "arceus",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "アルセウス"
+  },
+  "비크티니": {
+    "english_name": "victini",
+    "types": [
+      "psychic",
+      "fire"
+    ],
+    "japanese_name": "ビクティニ"
+  },
+  "샤로다": {
+    "english_name": "serperior",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ジャローダ"
+  },
+  "크레세리아": {
+    "english_name": "cresselia",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "クレセリア"
+  },
+  "주리비얀": {
+    "english_name": "snivy",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ツタージャ"
+  },
+  "쉐이미": {
+    "english_name": "shaymin",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "シェイミ"
+  },
+  "염무왕": {
+    "english_name": "emboar",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "エンブオー"
+  },
+  "샤비": {
+    "english_name": "servine",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ジャノビー"
+  },
+  "차오꿀": {
+    "english_name": "pignite",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "チャオブー"
+  },
+  "펄기아": {
+    "english_name": "palkia",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "japanese_name": "パルキア"
+  },
+  "뚜꾸리": {
+    "english_name": "tepig",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ポカブ"
+  },
+  "수댕이": {
+    "english_name": "oshawott",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ミジュマル"
+  },
+  "쌍검자비": {
+    "english_name": "dewott",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "フタチマル"
+  },
+  "보르쥐": {
+    "english_name": "patrat",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ミネズミ"
+  },
+  "요테리": {
+    "english_name": "lillipup",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ヨーテリー"
+  },
+  "대검귀": {
+    "english_name": "samurott",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ダイケンキ"
+  },
+  "파치리스": {
+    "english_name": "pachirisu",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "パチリス"
+  },
+  "보르그": {
+    "english_name": "watchog",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ミルホッグ"
+  },
+  "초염몽": {
+    "english_name": "infernape",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "japanese_name": "ゴウカザル"
+  },
+  "하데리어": {
+    "english_name": "herdier",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ハーデリア"
+  },
+  "쌔비냥": {
+    "english_name": "purrloin",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "チョロネコ"
+  },
+  "소곤룡": {
+    "english_name": "whismur",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ゴニョニョ"
+  },
+  "바랜드": {
+    "english_name": "stoutland",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ムーランド"
+  },
+  "토중몬": {
+    "english_name": "nincada",
+    "types": [
+      "bug",
+      "ground"
+    ],
+    "japanese_name": "ツチニン"
+  },
+  "야나프": {
+    "english_name": "pansage",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ヤナップ"
+  },
+  "레파르다스": {
+    "english_name": "liepard",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "レパルダス"
+  },
+  "바오키": {
+    "english_name": "simisear",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "バオッキー"
+  },
+  "바오프": {
+    "english_name": "pansear",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "バオップ"
+  },
+  "야나키": {
+    "english_name": "simisage",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ヤナッキー"
+  },
+  "몽나": {
+    "english_name": "munna",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ムンナ"
+  },
+  "앗차프": {
+    "english_name": "panpour",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヒヤップ"
+  },
+  "콩둘기": {
+    "english_name": "pidove",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "マメパト"
+  },
+  "노공룡": {
+    "english_name": "loudred",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ドゴーム"
+  },
+  "줄뮤마": {
+    "english_name": "blitzle",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "シママ"
+  },
+  "앗차키": {
+    "english_name": "simipour",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヒヤッキー"
+  },
+  "켄호로우": {
+    "english_name": "unfezant",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ケンホロウ"
+  },
+  "유토브": {
+    "english_name": "tranquill",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ハトーボー"
+  },
+  "단굴": {
+    "english_name": "roggenrola",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ダンゴロ"
+  },
+  "기가이어스": {
+    "english_name": "gigalith",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ギガイアス"
+  },
+  "몽얌나": {
+    "english_name": "musharna",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ムシャーナ"
+  },
+  "암트르": {
+    "english_name": "boldore",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ガントル"
+  },
+  "제브라이카": {
+    "english_name": "zebstrika",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ゼブライカ"
+  },
+  "으랏차": {
+    "english_name": "timburr",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ドッコラー"
+  },
+  "맘박쥐": {
+    "english_name": "swoobat",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "ココロモリ"
+  },
+  "또르박쥐": {
+    "english_name": "woobat",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "コロモリ"
+  },
+  "토쇠골": {
+    "english_name": "gurdurr",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ドテッコツ"
+  },
+  "동챙이": {
+    "english_name": "tympole",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "オタマロ"
+  },
+  "두더류": {
+    "english_name": "drilbur",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "モグリュー"
+  },
+  "노보청": {
+    "english_name": "conkeldurr",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ローブシン"
+  },
+  "다부니": {
+    "english_name": "audino",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "タブンネ"
+  },
+  "둥실라이드": {
+    "english_name": "drifblim",
+    "types": [
+      "ghost",
+      "flying"
+    ],
+    "japanese_name": "フワライド"
+  },
+  "몰드류": {
+    "english_name": "excadrill",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "japanese_name": "ドリュウズ"
+  },
+  "브이젤": {
+    "english_name": "buizel",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ブイゼル"
+  },
+  "던지미": {
+    "english_name": "throh",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ナゲキ"
+  },
+  "돈크로우": {
+    "english_name": "honchkrow",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "ドンカラス"
+  },
+  "두까비": {
+    "english_name": "palpitoad",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ガマガル"
+  },
+  "두르보": {
+    "english_name": "sewaddle",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "クルミル"
+  },
+  "트리토돈": {
+    "english_name": "gastrodon",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "トリトドン"
+  },
+  "두르쿤": {
+    "english_name": "swadloon",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "クルマユ"
+  },
+  "두빅굴": {
+    "english_name": "seismitoad",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "japanese_name": "ガマゲロゲ"
+  },
+  "타격귀": {
+    "english_name": "sawk",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ダゲキ"
+  },
+  "마디네": {
+    "english_name": "venipede",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "フシデ"
+  },
+  "이어롭": {
+    "english_name": "lopunny",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ミミロップ"
+  },
+  "모아머": {
+    "english_name": "leavanny",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "japanese_name": "ハハコモリ"
+  },
+  "휠구": {
+    "english_name": "whirlipede",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "ホイーガ"
+  },
+  "로즈레이드": {
+    "english_name": "roserade",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "ロズレイド"
+  },
+  "비버니": {
+    "english_name": "bidoof",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ビッパ"
+  },
+  "펜드라": {
+    "english_name": "scolipede",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "japanese_name": "ペンドラー"
+  },
+  "리오르": {
+    "english_name": "riolu",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "リオル"
+  },
+  "한바이트": {
+    "english_name": "gabite",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "japanese_name": "ガバイト"
+  },
+  "소미안": {
+    "english_name": "cottonee",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "japanese_name": "モンメン"
+  },
+  "엘풍": {
+    "english_name": "whimsicott",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "japanese_name": "エルフーン"
+  },
+  "바리톱스": {
+    "english_name": "bastiodon",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "japanese_name": "トリデプス"
+  },
+  "악비아르": {
+    "english_name": "krookodile",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "japanese_name": "ワルビアル"
+  },
+  "드레디어": {
+    "english_name": "lilligant",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ドレディア"
+  },
+  "달막화": {
+    "english_name": "darumaka",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ダルマッカ"
+  },
+  "곤율거니": {
+    "english_name": "scrafty",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "japanese_name": "ズルズキン"
+  },
+  "깜눈크": {
+    "english_name": "sandile",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "japanese_name": "メグロコ"
+  },
+  "암팰리스": {
+    "english_name": "crustle",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "japanese_name": "イワパレス"
+  },
+  "배쓰나이": {
+    "english_name": "basculin",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "バスラオ"
+  },
+  "악비르": {
+    "english_name": "krokorok",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "japanese_name": "ワルビル"
+  },
+  "치릴리": {
+    "english_name": "petilil",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "チュリネ"
+  },
+  "불비달마": {
+    "english_name": "darmanitan",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ヒヒダルマ"
+  },
+  "몬냥이": {
+    "english_name": "purugly",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ブニャット"
+  },
+  "이어롤": {
+    "english_name": "buneary",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ミミロル"
+  },
+  "스컹뿡": {
+    "english_name": "stunky",
+    "types": [
+      "poison",
+      "dark"
+    ],
+    "japanese_name": "スカンプー"
+  },
+  "심보러": {
+    "english_name": "sigilyph",
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "japanese_name": "シンボラー"
+  },
+  "데스니칸": {
+    "english_name": "cofagrigus",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "デスカーン"
+  },
+  "곤율랭": {
+    "english_name": "scraggy",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "japanese_name": "ズルッグ"
+  },
+  "데스마스": {
+    "english_name": "yamask",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "デスマス"
+  },
+  "프로토가": {
+    "english_name": "tirtouga",
+    "types": [
+      "water",
+      "rock"
+    ],
+    "japanese_name": "プロトーガ"
+  },
+  "늑골라": {
+    "english_name": "carracosta",
+    "types": [
+      "water",
+      "rock"
+    ],
+    "japanese_name": "アバゴーラ"
+  },
+  "아켄": {
+    "english_name": "archen",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "japanese_name": "アーケン"
+  },
+  "아케오스": {
+    "english_name": "archeops",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "japanese_name": "アーケオス"
+  },
+  "깨봉이": {
+    "english_name": "trubbish",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ヤブクロン"
+  },
+  "더스트나": {
+    "english_name": "garbodor",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ダストダス"
+  },
+  "조로아": {
+    "english_name": "zorua",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "ゾロア"
+  },
+  "조로아크": {
+    "english_name": "zoroark",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "ゾロアーク"
+  },
+  "글라이온": {
+    "english_name": "gliscor",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "japanese_name": "グライオン"
+  },
+  "치라미": {
+    "english_name": "minccino",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "チラーミィ"
+  },
+  "고디탱": {
+    "english_name": "gothita",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ゴチム"
+  },
+  "고디보미": {
+    "english_name": "gothorita",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ゴチミル"
+  },
+  "치라치노": {
+    "english_name": "cinccino",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "チラチーノ"
+  },
+  "대코파스": {
+    "english_name": "probopass",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "japanese_name": "ダイノーズ"
+  },
+  "야느와르몽": {
+    "english_name": "dusknoir",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ヨノワール"
+  },
+  "엘레이드": {
+    "english_name": "gallade",
+    "types": [
+      "psychic",
+      "fighting"
+    ],
+    "japanese_name": "エルレイド"
+  },
+  "듀란": {
+    "english_name": "duosion",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ダブラン"
+  },
+  "고디모아젤": {
+    "english_name": "gothitelle",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ゴチルゼル"
+  },
+  "유니란": {
+    "english_name": "solosis",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ユニラン"
+  },
+  "에몽가": {
+    "english_name": "emolga",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "japanese_name": "エモンガ"
+  },
+  "란쿨루스": {
+    "english_name": "reuniclus",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ランクルス"
+  },
+  "눈여아": {
+    "english_name": "froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "japanese_name": "ユキメノコ"
+  },
+  "꼬지보리": {
+    "english_name": "ducklett",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "コアルヒー"
+  },
+  "사철록": {
+    "english_name": "deerling",
+    "types": [
+      "normal",
+      "grass"
+    ],
+    "japanese_name": "シキジカ"
+  },
+  "스완나": {
+    "english_name": "swanna",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "japanese_name": "スワンナ"
+  },
+  "바라철록": {
+    "english_name": "sawsbuck",
+    "types": [
+      "normal",
+      "grass"
+    ],
+    "japanese_name": "メブキジカ"
+  },
+  "바닐리치": {
+    "english_name": "vanillish",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "バニリッチ"
+  },
+  "바닐프티": {
+    "english_name": "vanillite",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "バニプッチ"
+  },
+  "슈바르고": {
+    "english_name": "escavalier",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "japanese_name": "シュバルゴ"
+  },
+  "파쪼옥": {
+    "english_name": "joltik",
+    "types": [
+      "bug",
+      "electric"
+    ],
+    "japanese_name": "バチュル"
+  },
+  "배바닐라": {
+    "english_name": "vanilluxe",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "バイバニラ"
+  },
+  "딱정곤": {
+    "english_name": "karrablast",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "カブルモ"
+  },
+  "깜놀버슬": {
+    "english_name": "foongus",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "タマゲタケ"
+  },
+  "뽀록나": {
+    "english_name": "amoonguss",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "japanese_name": "モロバレル"
+  },
+  "탱그릴": {
+    "english_name": "frillish",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "japanese_name": "プルリル"
+  },
+  "맘복치": {
+    "english_name": "alomomola",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ママンボウ"
+  },
+  "너트령": {
+    "english_name": "ferrothorn",
+    "types": [
+      "grass",
+      "steel"
+    ],
+    "japanese_name": "ナットレイ"
+  },
+  "탱탱겔": {
+    "english_name": "jellicent",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "japanese_name": "ブルンゲル"
+  },
+  "전툴라": {
+    "english_name": "galvantula",
+    "types": [
+      "bug",
+      "electric"
+    ],
+    "japanese_name": "デンチュラ"
+  },
+  "기어르": {
+    "english_name": "klink",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ギアル"
+  },
+  "기기어르": {
+    "english_name": "klang",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ギギアル"
+  },
+  "기기기어르": {
+    "english_name": "klinklang",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ギギギアル"
+  },
+  "저리더프": {
+    "english_name": "eelektross",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "シビルドン"
+  },
+  "저리어": {
+    "english_name": "tynamo",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "シビシラス"
+  },
+  "저리릴": {
+    "english_name": "eelektrik",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "シビビール"
+  },
+  "리그레": {
+    "english_name": "elgyem",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "リグレー"
+  },
+  "불켜미": {
+    "english_name": "litwick",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "japanese_name": "ヒトモシ"
+  },
+  "벰크": {
+    "english_name": "beheeyem",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "オーベム"
+  },
+  "램프라": {
+    "english_name": "lampent",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "japanese_name": "ランプラー"
+  },
+  "샹델라": {
+    "english_name": "chandelure",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "japanese_name": "シャンデラ"
+  },
+  "터검니": {
+    "english_name": "axew",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "キバゴ"
+  },
+  "액슨도": {
+    "english_name": "fraxure",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "オノンド"
+  },
+  "코고미": {
+    "english_name": "cubchoo",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "クマシュン"
+  },
+  "액스라이즈": {
+    "english_name": "haxorus",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "オノノクス"
+  },
+  "툰베어": {
+    "english_name": "beartic",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "ツンベアー"
+  },
+  "프리지오": {
+    "english_name": "cryogonal",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "フリージオ"
+  },
+  "쪼마리": {
+    "english_name": "shelmet",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "チョボマキ"
+  },
+  "비조푸": {
+    "english_name": "mienfoo",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "コジョフー"
+  },
+  "어지리더": {
+    "english_name": "accelgor",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "アギルダー"
+  },
+  "메더": {
+    "english_name": "stunfisk",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "japanese_name": "マッギョ"
+  },
+  "비조도": {
+    "english_name": "mienshao",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "コジョンド"
+  },
+  "골비람": {
+    "english_name": "golett",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "japanese_name": "ゴビット"
+  },
+  "돌살이": {
+    "english_name": "dwebble",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "japanese_name": "イシズマイ"
+  },
+  "크리만": {
+    "english_name": "druddigon",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "クリムガン"
+  },
+  "버프론": {
+    "english_name": "bouffalant",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "バッフロン"
+  },
+  "절각참": {
+    "english_name": "bisharp",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "japanese_name": "キリキザン"
+  },
+  "골루그": {
+    "english_name": "golurk",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "japanese_name": "ゴルーグ"
+  },
+  "자망칼": {
+    "english_name": "pawniard",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "japanese_name": "コマタナ"
+  },
+  "마라카치": {
+    "english_name": "maractus",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "マラカッチ"
+  },
+  "수리둥보": {
+    "english_name": "rufflet",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ワシボン"
+  },
+  "아이앤트": {
+    "english_name": "durant",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "japanese_name": "アイアント"
+  },
+  "불카모스": {
+    "english_name": "volcarona",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "japanese_name": "ウルガモス"
+  },
+  "활화르바": {
+    "english_name": "larvesta",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "japanese_name": "メラルバ"
+  },
+  "앤티골": {
+    "english_name": "heatmor",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "クイタラン"
+  },
+  "버랜지나": {
+    "english_name": "mandibuzz",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "バルジーナ"
+  },
+  "워글": {
+    "english_name": "braviary",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ウォーグル"
+  },
+  "모노두": {
+    "english_name": "deino",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "japanese_name": "モノズ"
+  },
+  "벌차이": {
+    "english_name": "vullaby",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "バルチャイ"
+  },
+  "비리디온": {
+    "english_name": "virizion",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "japanese_name": "ビリジオン"
+  },
+  "삼삼드래": {
+    "english_name": "hydreigon",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "japanese_name": "サザンドラ"
+  },
+  "볼트로스": {
+    "english_name": "thundurus",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "japanese_name": "ボルトロス"
+  },
+  "테라키온": {
+    "english_name": "terrakion",
+    "types": [
+      "rock",
+      "fighting"
+    ],
+    "japanese_name": "テラキオン"
+  },
+  "디헤드": {
+    "english_name": "zweilous",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "japanese_name": "ジヘッド"
+  },
+  "제크로무": {
+    "english_name": "zekrom",
+    "types": [
+      "dragon",
+      "electric"
+    ],
+    "japanese_name": "ゼクロム"
+  },
+  "레시라무": {
+    "english_name": "reshiram",
+    "types": [
+      "dragon",
+      "fire"
+    ],
+    "japanese_name": "レシラム"
+  },
+  "랜드로스": {
+    "english_name": "landorus",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "japanese_name": "ランドロス"
+  },
+  "게노세크트": {
+    "english_name": "genesect",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "japanese_name": "ゲノセクト"
+  },
+  "큐레무": {
+    "english_name": "kyurem",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "japanese_name": "キュレム"
+  },
+  "도치보구": {
+    "english_name": "quilladin",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ハリボーグ"
+  },
+  "도치마론": {
+    "english_name": "chespin",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ハリマロン"
+  },
+  "메로엣타": {
+    "english_name": "meloetta",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "japanese_name": "メロエッタ"
+  },
+  "테르나": {
+    "english_name": "braixen",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "テールナー"
+  },
+  "브리가론": {
+    "english_name": "chesnaught",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "japanese_name": "ブリガロン"
+  },
+  "푸호꼬": {
+    "english_name": "fennekin",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "フォッコ"
+  },
+  "케르디오": {
+    "english_name": "keldeo",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "japanese_name": "ケルディオ"
+  },
+  "마폭시": {
+    "english_name": "delphox",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "japanese_name": "マフォクシー"
+  },
+  "개구마르": {
+    "english_name": "froakie",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ケロマツ"
+  },
+  "파르빗": {
+    "english_name": "bunnelby",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ホルビー"
+  },
+  "파르토": {
+    "english_name": "diggersby",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "japanese_name": "ホルード"
+  },
+  "화살꼬빈": {
+    "english_name": "fletchling",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ヤヤコマ"
+  },
+  "개굴반장": {
+    "english_name": "frogadier",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ゲコガシラ"
+  },
+  "불화살빈": {
+    "english_name": "fletchinder",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "ヒノヤコマ"
+  },
+  "개굴닌자": {
+    "english_name": "greninja",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "japanese_name": "ゲッコウガ"
+  },
+  "파이어로": {
+    "english_name": "talonflame",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "ファイアロー"
+  },
+  "레오꼬": {
+    "english_name": "litleo",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "japanese_name": "シシコ"
+  },
+  "분이벌레": {
+    "english_name": "scatterbug",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "コフキムシ"
+  },
+  "플라베베": {
+    "english_name": "flabebe",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "フラベベ"
+  },
+  "분떠도리": {
+    "english_name": "spewpa",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "コフーライ"
+  },
+  "비비용": {
+    "english_name": "vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "japanese_name": "ビビヨン"
+  },
+  "화염레오": {
+    "english_name": "pyroar",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "japanese_name": "カエンジシ"
+  },
+  "메이클": {
+    "english_name": "skiddo",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "メェークル"
+  },
+  "판짱": {
+    "english_name": "pancham",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ヤンチャム"
+  },
+  "철시드": {
+    "english_name": "ferroseed",
+    "types": [
+      "grass",
+      "steel"
+    ],
+    "japanese_name": "テッシード"
+  },
+  "플라제스": {
+    "english_name": "florges",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "フラージェス"
+  },
+  "고고트": {
+    "english_name": "gogoat",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ゴーゴート"
+  },
+  "플라엣테": {
+    "english_name": "floette",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "フラエッテ"
+  },
+  "냐스퍼": {
+    "english_name": "espurr",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ニャスパー"
+  },
+  "부란다": {
+    "english_name": "pangoro",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "japanese_name": "ゴロンダ"
+  },
+  "쌍검킬": {
+    "english_name": "doublade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "japanese_name": "ニダンギル"
+  },
+  "트리미앙": {
+    "english_name": "furfrou",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "トリミアン"
+  },
+  "단칼빙": {
+    "english_name": "honedge",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "japanese_name": "ヒトツキ"
+  },
+  "냐오닉스": {
+    "english_name": "meowstic",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ニャオニクス"
+  },
+  "슈쁘": {
+    "english_name": "spritzee",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "シュシュプ"
+  },
+  "킬가르도": {
+    "english_name": "aegislash",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "japanese_name": "ギルガルド"
+  },
+  "나룸퍼프": {
+    "english_name": "swirlix",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ペロッパフ"
+  },
+  "나루림": {
+    "english_name": "slurpuff",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ペロリーム"
+  },
+  "프레프티르": {
+    "english_name": "aromatisse",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "フレフワン"
+  },
+  "오케이징": {
+    "english_name": "inkay",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "japanese_name": "マーイーカ"
+  },
+  "거북손손": {
+    "english_name": "binacle",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "カメテテ"
+  },
+  "칼라마네로": {
+    "english_name": "malamar",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "japanese_name": "カラマネロ"
+  },
+  "거북손데스": {
+    "english_name": "barbaracle",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "japanese_name": "ガメノデス"
+  },
+  "드래캄": {
+    "english_name": "dragalge",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "japanese_name": "ドラミドロ"
+  },
+  "수레기": {
+    "english_name": "skrelp",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "japanese_name": "クズモー"
+  },
+  "블로스터": {
+    "english_name": "clawitzer",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ブロスター"
+  },
+  "목도리키텔": {
+    "english_name": "helioptile",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "japanese_name": "エリキテル"
+  },
+  "완철포": {
+    "english_name": "clauncher",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ウデッポウ"
+  },
+  "일레도리자드": {
+    "english_name": "heliolisk",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "japanese_name": "エレザード"
+  },
+  "아마루르가": {
+    "english_name": "aurorus",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "japanese_name": "アマルルガ"
+  },
+  "아마루스": {
+    "english_name": "amaura",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "japanese_name": "アマルス"
+  },
+  "루차불": {
+    "english_name": "hawlucha",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "japanese_name": "ルチャブル"
+  },
+  "견고라스": {
+    "english_name": "tyrantrum",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "japanese_name": "ガチゴラス"
+  },
+  "티고라스": {
+    "english_name": "tyrunt",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "japanese_name": "チゴラス"
+  },
+  "멜리시": {
+    "english_name": "carbink",
+    "types": [
+      "rock",
+      "fairy"
+    ],
+    "japanese_name": "メレシー"
+  },
+  "미끄메라": {
+    "english_name": "goomy",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ヌメラ"
+  },
+  "미끄래곤": {
+    "english_name": "goodra",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ヌメルゴン"
+  },
+  "데덴네": {
+    "english_name": "dedenne",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "japanese_name": "デデンネ"
+  },
+  "님피아": {
+    "english_name": "sylveon",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ニンフィア"
+  },
+  "미끄네일": {
+    "english_name": "sliggoo",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ヌメイル"
+  },
+  "클레피": {
+    "english_name": "klefki",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "japanese_name": "クレッフィ"
+  },
+  "코바르온": {
+    "english_name": "cobalion",
+    "types": [
+      "steel",
+      "fighting"
+    ],
+    "japanese_name": "コバルオン"
+  },
+  "대로트": {
+    "english_name": "trevenant",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "japanese_name": "オーロット"
+  },
+  "호바귀": {
+    "english_name": "pumpkaboo",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "japanese_name": "バケッチャ"
+  },
+  "토네로스": {
+    "english_name": "tornadus",
+    "types": [
+      "flying"
+    ],
+    "japanese_name": "トルネロス"
+  },
+  "꽁어름": {
+    "english_name": "bergmite",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "カチコール"
+  },
+  "나목령": {
+    "english_name": "phantump",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "japanese_name": "ボクレー"
+  },
+  "이벨타르": {
+    "english_name": "yveltal",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "イベルタル"
+  },
+  "크레베이스": {
+    "english_name": "avalugg",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "クレベース"
+  },
+  "펌킨인": {
+    "english_name": "gourgeist",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "japanese_name": "パンプジン"
+  },
+  "음번": {
+    "english_name": "noivern",
+    "types": [
+      "flying",
+      "dragon"
+    ],
+    "japanese_name": "オンバーン"
+  },
+  "지가르데": {
+    "english_name": "zygarde",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "japanese_name": "ジガルデ"
+  },
+  "디안시": {
+    "english_name": "diancie",
+    "types": [
+      "rock",
+      "fairy"
+    ],
+    "japanese_name": "ディアンシー"
+  },
+  "음뱃": {
+    "english_name": "noibat",
+    "types": [
+      "flying",
+      "dragon"
+    ],
+    "japanese_name": "オンバット"
+  },
+  "제르네아스": {
+    "english_name": "xerneas",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ゼルネアス"
+  },
+  "후파": {
+    "english_name": "hoopa",
+    "types": [
+      "psychic",
+      "ghost"
+    ],
+    "japanese_name": "フーパ"
+  },
+  "모크나이퍼": {
+    "english_name": "decidueye",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "japanese_name": "ジュナイパー"
+  },
+  "볼케니온": {
+    "english_name": "volcanion",
+    "types": [
+      "fire",
+      "water"
+    ],
+    "japanese_name": "ボルケニオン"
+  },
+  "냐오불": {
+    "english_name": "litten",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ニャビー"
+  },
+  "빼미스로우": {
+    "english_name": "dartrix",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "フクスロー"
+  },
+  "누리공": {
+    "english_name": "popplio",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "アシマリ"
+  },
+  "냐오히트": {
+    "english_name": "torracat",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ニャヒート"
+  },
+  "나몰빼미": {
+    "english_name": "rowlet",
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "japanese_name": "モクロー"
+  },
+  "크라파": {
+    "english_name": "trumbeak",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ケララッパ"
+  },
+  "키요공": {
+    "english_name": "brionne",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "オシャマリ"
+  },
+  "어흥염": {
+    "english_name": "incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "japanese_name": "ガオガエン"
+  },
+  "누리레느": {
+    "english_name": "primarina",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "japanese_name": "アシレーヌ"
+  },
+  "콕코구리": {
+    "english_name": "pikipek",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ツツケラ"
+  },
+  "왕큰부리": {
+    "english_name": "toucannon",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "ドデカバシ"
+  },
+  "영구스": {
+    "english_name": "yungoos",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ヤングース"
+  },
+  "형사구스": {
+    "english_name": "gumshoos",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "デカグース"
+  },
+  "턱지충이": {
+    "english_name": "grubbin",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "アゴジムシ"
+  },
+  "투구뿌논": {
+    "english_name": "vikavolt",
+    "types": [
+      "bug",
+      "electric"
+    ],
+    "japanese_name": "クワガノン"
+  },
+  "전지충이": {
+    "english_name": "charjabug",
+    "types": [
+      "bug",
+      "electric"
+    ],
+    "japanese_name": "デンヂムシ"
+  },
+  "모단단게": {
+    "english_name": "crabominable",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "japanese_name": "ケケンカニ"
+  },
+  "오기지게": {
+    "english_name": "crabrawler",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "マケンカニ"
+  },
+  "춤추새": {
+    "english_name": "oricorio",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "japanese_name": "オドリドリ"
+  },
+  "에블리": {
+    "english_name": "cutiefly",
+    "types": [
+      "bug",
+      "fairy"
+    ],
+    "japanese_name": "アブリー"
+  },
+  "암멍이": {
+    "english_name": "rockruff",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "イワンコ"
+  },
+  "에리본": {
+    "english_name": "ribombee",
+    "types": [
+      "bug",
+      "fairy"
+    ],
+    "japanese_name": "アブリボン"
+  },
+  "더시마사리": {
+    "english_name": "toxapex",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "japanese_name": "ドヒドイデ"
+  },
+  "머드나기": {
+    "english_name": "mudbray",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "ドロバンコ"
+  },
+  "루가루암": {
+    "english_name": "lycanroc",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ルガルガン"
+  },
+  "시마사리": {
+    "english_name": "mareanie",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "japanese_name": "ヒドイデ"
+  },
+  "라란티스": {
+    "english_name": "lurantis",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ラランテス"
+  },
+  "물거미": {
+    "english_name": "dewpider",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "japanese_name": "シズクモ"
+  },
+  "약어리": {
+    "english_name": "wishiwashi",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヨワシ"
+  },
+  "만마드": {
+    "english_name": "mudsdale",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "バンバドロ"
+  },
+  "깨비물거미": {
+    "english_name": "araquanid",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "japanese_name": "オニシズクモ"
+  },
+  "포곰곰": {
+    "english_name": "stufful",
+    "types": [
+      "normal",
+      "fighting"
+    ],
+    "japanese_name": "ヌイコグマ"
+  },
+  "짜랑랑": {
+    "english_name": "fomantis",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "カリキリ"
+  },
+  "달콤아": {
+    "english_name": "bounsweet",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "アマカジ"
+  },
+  "마셰이드": {
+    "english_name": "shiinotic",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "japanese_name": "マシェード"
+  },
+  "야도뇽": {
+    "english_name": "salandit",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "japanese_name": "ヤトウモリ"
+  },
+  "염뉴트": {
+    "english_name": "salazzle",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "japanese_name": "エンニュート"
+  },
+  "이븐곰": {
+    "english_name": "bewear",
+    "types": [
+      "normal",
+      "fighting"
+    ],
+    "japanese_name": "キテルグマ"
+  },
+  "자마슈": {
+    "english_name": "morelull",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "japanese_name": "ネマシュ"
+  },
+  "달코퀸": {
+    "english_name": "tsareena",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "アマージョ"
+  },
+  "큐아링": {
+    "english_name": "comfey",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "キュワワー"
+  },
+  "달무리나": {
+    "english_name": "steenee",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "アママイコ"
+  },
+  "내던숭이": {
+    "english_name": "passimian",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ナゲツケサル"
+  },
+  "하랑우탄": {
+    "english_name": "oranguru",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "japanese_name": "ヤレユータン"
+  },
+  "꼬시레": {
+    "english_name": "wimpod",
+    "types": [
+      "bug",
+      "water"
+    ],
+    "japanese_name": "コソクムシ"
+  },
+  "갑주무사": {
+    "english_name": "golisopod",
+    "types": [
+      "bug",
+      "water"
+    ],
+    "japanese_name": "グソクムシャ"
+  },
+  "모래성이당": {
+    "english_name": "palossand",
+    "types": [
+      "ghost",
+      "ground"
+    ],
+    "japanese_name": "シロデスナ"
+  },
+  "해무기": {
+    "english_name": "pyukumuku",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ナマコブシ"
+  },
+  "타입:널": {
+    "english_name": "type-null",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "タイプ：ヌル"
+  },
+  "모래꿍": {
+    "english_name": "sandygast",
+    "types": [
+      "ghost",
+      "ground"
+    ],
+    "japanese_name": "スナバァ"
+  },
+  "실버디": {
+    "english_name": "silvally",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "シルヴァディ"
+  },
+  "자말라": {
+    "english_name": "komala",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ネッコアラ"
+  },
+  "토게데마루": {
+    "english_name": "togedemaru",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "japanese_name": "トゲデマル"
+  },
+  "따라큐": {
+    "english_name": "mimikyu",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "japanese_name": "ミミッキュ"
+  },
+  "메테노": {
+    "english_name": "minior",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "japanese_name": "メテノ"
+  },
+  "치갈기": {
+    "english_name": "bruxish",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "ハギギシリ"
+  },
+  "짜랑고우": {
+    "english_name": "hakamo-o",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "japanese_name": "ジャランゴ"
+  },
+  "폭거북스": {
+    "english_name": "turtonator",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "japanese_name": "バクガメス"
+  },
+  "할비롱": {
+    "english_name": "drampa",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "japanese_name": "ジジーロン"
+  },
+  "타타륜": {
+    "english_name": "dhelmise",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "japanese_name": "ダダリン"
+  },
+  "짜랑꼬": {
+    "english_name": "jangmo-o",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "ジャラコ"
+  },
+  "카푸나비나": {
+    "english_name": "tapu-lele",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "カプ・テテフ"
+  },
+  "솔가레오": {
+    "english_name": "solgaleo",
+    "types": [
+      "psychic",
+      "steel"
+    ],
+    "japanese_name": "ソルガレオ"
+  },
+  "카푸느지느": {
+    "english_name": "tapu-fini",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "japanese_name": "カプ・レヒレ"
+  },
+  "카푸브루루": {
+    "english_name": "tapu-bulu",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "japanese_name": "カプ・ブルル"
+  },
+  "루나아라": {
+    "english_name": "lunala",
+    "types": [
+      "psychic",
+      "ghost"
+    ],
+    "japanese_name": "ルナアーラ"
+  },
+  "악식킹": {
+    "english_name": "guzzlord",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "japanese_name": "アクジキング"
+  },
+  "전수목": {
+    "english_name": "xurkitree",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "デンジュモク"
+  },
+  "코스모그": {
+    "english_name": "cosmog",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "コスモッグ"
+  },
+  "코스모움": {
+    "english_name": "cosmoem",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "コスモウム"
+  },
+  "페로코체": {
+    "english_name": "pheromosa",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "japanese_name": "フェローチェ"
+  },
+  "매시붕": {
+    "english_name": "buzzwole",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "japanese_name": "マッシブーン"
+  },
+  "흥나숭": {
+    "english_name": "grookey",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "サルノリ"
+  },
+  "멜메탈": {
+    "english_name": "melmetal",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "メルメタル"
+  },
+  "차곡차곡": {
+    "english_name": "stakataka",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "japanese_name": "ツンデツンデ"
+  },
+  "염버니": {
+    "english_name": "scorbunny",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ヒバニー"
+  },
+  "텅비드": {
+    "english_name": "nihilego",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "japanese_name": "ウツロイド"
+  },
+  "래비풋": {
+    "english_name": "raboot",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ラビフット"
+  },
+  "고릴타": {
+    "english_name": "rillaboom",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ゴリランダー"
+  },
+  "인텔리레온": {
+    "english_name": "inteleon",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "インテレオン"
+  },
+  "채키몽": {
+    "english_name": "thwackey",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "バチンキー"
+  },
+  "두파팡": {
+    "english_name": "blacephalon",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "japanese_name": "ズガドーン"
+  },
+  "마샤도": {
+    "english_name": "marshadow",
+    "types": [
+      "fighting",
+      "ghost"
+    ],
+    "japanese_name": "マーシャドー"
+  },
+  "누겔레온": {
+    "english_name": "drizzile",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ジメレオン"
+  },
+  "카푸꼬꼬꼭": {
+    "english_name": "tapu-koko",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "japanese_name": "カプ・コケコ"
+  },
+  "베베놈": {
+    "english_name": "poipole",
+    "types": [
+      "poison"
+    ],
+    "japanese_name": "ベベノム"
+  },
+  "짜랑고우거": {
+    "english_name": "kommo-o",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "japanese_name": "ジャラランガ"
+  },
+  "에이스번": {
+    "english_name": "cinderace",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "エースバーン"
+  },
+  "아고용": {
+    "english_name": "naganadel",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "japanese_name": "アーゴヨン"
+  },
+  "울머기": {
+    "english_name": "sobble",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "メッソン"
+  },
+  "멜탄": {
+    "english_name": "meltan",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "メルタン"
+  },
+  "탐리스": {
+    "english_name": "skwovet",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ホシガリス"
+  },
+  "요씽리스": {
+    "english_name": "greedent",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ヨクバリス"
+  },
+  "파라꼬": {
+    "english_name": "rookidee",
+    "types": [
+      "flying"
+    ],
+    "japanese_name": "ココガラ"
+  },
+  "아머까오": {
+    "english_name": "corviknight",
+    "types": [
+      "flying",
+      "steel"
+    ],
+    "japanese_name": "アーマーガア"
+  },
+  "파크로우": {
+    "english_name": "corvisquire",
+    "types": [
+      "flying"
+    ],
+    "japanese_name": "アオガラス"
+  },
+  "이올브": {
+    "english_name": "orbeetle",
+    "types": [
+      "bug",
+      "psychic"
+    ],
+    "japanese_name": "イオルブ"
+  },
+  "두루지벌레": {
+    "english_name": "blipbug",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "サッチムシ"
+  },
+  "훔처우": {
+    "english_name": "nickit",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "クスネ"
+  },
+  "펄스멍": {
+    "english_name": "boltund",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "パルスワン"
+  },
+  "폭슬라이": {
+    "english_name": "thievul",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "フォクスライ"
+  },
+  "우르": {
+    "english_name": "wooloo",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ウールー"
+  },
+  "탄동": {
+    "english_name": "rolycoly",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "タンドン"
+  },
+  "레돔벌레": {
+    "english_name": "dottler",
+    "types": [
+      "bug",
+      "psychic"
+    ],
+    "japanese_name": "レドームシ"
+  },
+  "과사삭벌레": {
+    "english_name": "applin",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "japanese_name": "カジッチュ"
+  },
+  "배우르": {
+    "english_name": "dubwool",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "バイウールー"
+  },
+  "멍파치": {
+    "english_name": "yamper",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ワンパチ"
+  },
+  "백솜모카": {
+    "english_name": "eldegoss",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ワタシラガ"
+  },
+  "때때무노": {
+    "english_name": "clobbopus",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "タタッコ"
+  },
+  "모래뱀": {
+    "english_name": "silicobra",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "スナヘビ"
+  },
+  "깨물부기": {
+    "english_name": "chewtle",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カムカメ"
+  },
+  "케오퍼스": {
+    "english_name": "grapploct",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "オトスパス"
+  },
+  "꼬모카": {
+    "english_name": "gossifleur",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ヒメンカ"
+  },
+  "일레즌": {
+    "english_name": "toxel",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "japanese_name": "エレズン"
+  },
+  "태우지네": {
+    "english_name": "sizzlipede",
+    "types": [
+      "fire",
+      "bug"
+    ],
+    "japanese_name": "ヤクデ"
+  },
+  "다태우지네": {
+    "english_name": "centiskorch",
+    "types": [
+      "fire",
+      "bug"
+    ],
+    "japanese_name": "マルヤクデ"
+  },
+  "데인차": {
+    "english_name": "sinistea",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ヤバチャ"
+  },
+  "메롱꿍": {
+    "english_name": "impidimp",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "japanese_name": "ベロバー"
+  },
+  "가로막구리": {
+    "english_name": "obstagoon",
+    "types": [
+      "dark",
+      "normal"
+    ],
+    "japanese_name": "タチフサグマ"
+  },
+  "단지래플": {
+    "english_name": "appletun",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "japanese_name": "タルップル"
+  },
+  "창파나이트": {
+    "english_name": "sirfetchd",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ネギガナイト"
+  },
+  "산호르곤": {
+    "english_name": "cursola",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "サニゴーン"
+  },
+  "몸지브림": {
+    "english_name": "hatenna",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ミブリム"
+  },
+  "마휘핑": {
+    "english_name": "alcremie",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "マホイップ"
+  },
+  "마빌크": {
+    "english_name": "milcery",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "マホミル"
+  },
+  "마임꽁꽁": {
+    "english_name": "mr-rime",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "japanese_name": "バリコオル"
+  },
+  "데스판": {
+    "english_name": "runerigus",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "japanese_name": "デスバーン"
+  },
+  "대왕끼리동": {
+    "english_name": "copperajah",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ダイオウドウ"
+  },
+  "모스노우": {
+    "english_name": "frosmoth",
+    "types": [
+      "ice",
+      "bug"
+    ],
+    "japanese_name": "モスノウ"
+  },
+  "드라꼰": {
+    "english_name": "dreepy",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "japanese_name": "ドラメシヤ"
+  },
+  "모르페코": {
+    "english_name": "morpeko",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "japanese_name": "モルペコ"
+  },
+  "끼리동": {
+    "english_name": "cufant",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ゾウドウ"
+  },
+  "두랄루돈": {
+    "english_name": "duraludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "japanese_name": "ジュラルドン"
+  },
+  "에써르": {
+    "english_name": "indeedee",
+    "types": [
+      "psychic",
+      "normal"
+    ],
+    "japanese_name": "イエッサン"
+  },
+  "파치래곤": {
+    "english_name": "dracozolt",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "japanese_name": "パッチラゴン"
+  },
+  "레지에레키": {
+    "english_name": "regieleki",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "レジエレキ"
+  },
+  "드래펄트": {
+    "english_name": "dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "japanese_name": "ドラパルト"
+  },
+  "돌헨진": {
+    "english_name": "stonjourner",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "イシヘンジン"
+  },
+  "대여르": {
+    "english_name": "falinks",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "タイレーツ"
+  },
+  "어래곤": {
+    "english_name": "dracovish",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "japanese_name": "ウオノラゴン"
+  },
+  "버드렉스": {
+    "english_name": "calyrex",
+    "types": [
+      "psychic",
+      "grass"
+    ],
+    "japanese_name": "バドレックス"
+  },
+  "종이신도": {
+    "english_name": "kartana",
+    "types": [
+      "grass",
+      "steel"
+    ],
+    "japanese_name": "カミツルギ"
+  },
+  "파치르돈": {
+    "english_name": "arctozolt",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "japanese_name": "パッチルドン"
+  },
+  "포푸니크": {
+    "english_name": "sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "japanese_name": "オオニューラ"
+  },
+  "장침바루": {
+    "english_name": "overqwil",
+    "types": [
+      "dark",
+      "poison"
+    ],
+    "japanese_name": "ハリーマン"
+  },
+  "나로테": {
+    "english_name": "floragato",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ニャローテ"
+  },
+  "대쓰여너": {
+    "english_name": "basculegion",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "japanese_name": "イダイトウ"
+  },
+  "러브로스": {
+    "english_name": "enamorus",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "japanese_name": "ラブトロス"
+  },
+  "나오하": {
+    "english_name": "sprigatito",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "ニャオハ"
+  },
+  "뜨아거": {
+    "english_name": "fuecoco",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "ホゲータ"
+  },
+  "마스카나": {
+    "english_name": "meowscarada",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "japanese_name": "マスカーニャ"
+  },
+  "악뜨거": {
+    "english_name": "crocalor",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "アチゲータ"
+  },
+  "꾸왁스": {
+    "english_name": "quaxly",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "クワッス"
+  },
+  "아꾸왁": {
+    "english_name": "quaxwell",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ウェルカモ"
+  },
+  "콩알뚜기": {
+    "english_name": "nymble",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "マメバッタ"
+  },
+  "웨이니발": {
+    "english_name": "quaquaval",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "japanese_name": "ウェーニバル"
+  },
+  "맛보돈": {
+    "english_name": "lechonk",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "グルトン"
+  },
+  "라우드본": {
+    "english_name": "skeledirge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "japanese_name": "ラウドボーン"
+  },
+  "타랜툴라": {
+    "english_name": "tarountula",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "タマンチュラ"
+  },
+  "빠모트": {
+    "english_name": "pawmo",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "japanese_name": "パモット"
+  },
+  "파밀리쥐": {
+    "english_name": "maushold",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "イッカネズミ"
+  },
+  "빠모": {
+    "english_name": "pawmi",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "パモ"
+  },
+  "엑스레그": {
+    "english_name": "lokix",
+    "types": [
+      "bug",
+      "dark"
+    ],
+    "japanese_name": "エクスレッグ"
+  },
+  "바우첼": {
+    "english_name": "dachsbun",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "バウッツェル"
+  },
+  "올리르바": {
+    "english_name": "arboliva",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "japanese_name": "オリーヴァ"
+  },
+  "미니브": {
+    "english_name": "smoliv",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "japanese_name": "ミニーブ"
+  },
+  "시비꼬": {
+    "english_name": "squawkabilly",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "japanese_name": "イキリンコ"
+  },
+  "베베솔트": {
+    "english_name": "nacli",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "コジオ"
+  },
+  "카디나르마": {
+    "english_name": "armarouge",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "japanese_name": "グレンアルマ"
+  },
+  "콜로솔트": {
+    "english_name": "garganacl",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "キョジオーン"
+  },
+  "스태솔트": {
+    "english_name": "naclstack",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ジオヅム"
+  },
+  "카르본": {
+    "english_name": "charcadet",
+    "types": [
+      "fire"
+    ],
+    "japanese_name": "カルボウ"
+  },
+  "마기아나": {
+    "english_name": "magearna",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "japanese_name": "マギアナ"
+  },
+  "파라블레이즈": {
+    "english_name": "ceruledge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "japanese_name": "ソウブレイズ"
+  },
+  "찌리비": {
+    "english_name": "wattrel",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "japanese_name": "カイデン"
+  },
+  "빈나두": {
+    "english_name": "tadbulb",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ズピカ"
+  },
+  "땃쭈르": {
+    "english_name": "shroodle",
+    "types": [
+      "poison",
+      "normal"
+    ],
+    "japanese_name": "シルシュルー"
+  },
+  "오라티프": {
+    "english_name": "maschiff",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "オラチフ"
+  },
+  "마피티프": {
+    "english_name": "mabosstiff",
+    "types": [
+      "dark"
+    ],
+    "japanese_name": "マフィティフ"
+  },
+  "찌리배리": {
+    "english_name": "bellibolt",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ハラバリー"
+  },
+  "들눈해": {
+    "english_name": "toedscool",
+    "types": [
+      "ground",
+      "grass"
+    ],
+    "japanese_name": "ノノクラゲ"
+  },
+  "찌리비크": {
+    "english_name": "kilowattrel",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "japanese_name": "タイカイデン"
+  },
+  "태깅구르": {
+    "english_name": "grafaiai",
+    "types": [
+      "poison",
+      "normal"
+    ],
+    "japanese_name": "タギングル"
+  },
+  "구르데": {
+    "english_name": "rellor",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "シガロコ"
+  },
+  "철화구야": {
+    "english_name": "celesteela",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "japanese_name": "テッカグヤ"
+  },
+  "두드리짱": {
+    "english_name": "tinkaton",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "japanese_name": "デカヌチャン"
+  },
+  "꿈트렁": {
+    "english_name": "orthworm",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ミミズズ"
+  },
+  "갈가부기": {
+    "english_name": "drednaw",
+    "types": [
+      "water",
+      "rock"
+    ],
+    "japanese_name": "カジリガメ"
+  },
+  "부르르룸": {
+    "english_name": "revavroom",
+    "types": [
+      "steel",
+      "poison"
+    ],
+    "japanese_name": "ブロロローム"
+  },
+  "초롱순": {
+    "english_name": "glimmet",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "japanese_name": "キラーメ"
+  },
+  "베라카스": {
+    "english_name": "rabsca",
+    "types": [
+      "bug",
+      "psychic"
+    ],
+    "japanese_name": "ベラカス"
+  },
+  "부르롱": {
+    "english_name": "varoom",
+    "types": [
+      "steel",
+      "poison"
+    ],
+    "japanese_name": "ブロロン"
+  },
+  "스코빌런": {
+    "english_name": "scovillain",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "japanese_name": "スコヴィラン"
+  },
+  "맨돌핀": {
+    "english_name": "finizen",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ナミイルカ"
+  },
+  "바닥트리오": {
+    "english_name": "wugtrio",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ウミトリオ"
+  },
+  "어리짱": {
+    "english_name": "tinkatink",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "japanese_name": "カヌチャン"
+  },
+  "클레스퍼트라": {
+    "english_name": "espathra",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "クエスパトラ"
+  },
+  "석탄산": {
+    "english_name": "coalossal",
+    "types": [
+      "rock",
+      "fire"
+    ],
+    "japanese_name": "セキタンザン"
+  },
+  "애프룡": {
+    "english_name": "flapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "japanese_name": "アップリュー"
+  },
+  "바다그다": {
+    "english_name": "wiglett",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ウミディグダ"
+  },
+  "벼리짱": {
+    "english_name": "tinkatuff",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "japanese_name": "ナカヌチャン"
+  },
+  "제라오라": {
+    "english_name": "zeraora",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "ゼラオラ"
+  },
+  "하느라기": {
+    "english_name": "flittle",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ヒラヒナ"
+  },
+  "탄차곤": {
+    "english_name": "carkol",
+    "types": [
+      "rock",
+      "fire"
+    ],
+    "japanese_name": "トロッゴン"
+  },
+  "돌핀맨": {
+    "english_name": "palafin",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "イルカマン"
+  },
+  "모토마": {
+    "english_name": "cyclizar",
+    "types": [
+      "dragon",
+      "normal"
+    ],
+    "japanese_name": "モトトカゲ"
+  },
+  "떨구새": {
+    "english_name": "bombirdier",
+    "types": [
+      "flying",
+      "dark"
+    ],
+    "japanese_name": "オトシドリ"
+  },
+  "네크로즈마": {
+    "english_name": "necrozma",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "ネクロズマ"
+  },
+  "우락고래": {
+    "english_name": "cetitan",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "ハルクジラ"
+  },
+  "대도각참": {
+    "english_name": "kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "japanese_name": "ドドゲザン"
+  },
+  "위대한엄니": {
+    "english_name": "great-tusk",
+    "types": [
+      "ground",
+      "fighting"
+    ],
+    "japanese_name": "イダイナキバ"
+  },
+  "터벅고래": {
+    "english_name": "cetoddle",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "アルクジラ"
+  },
+  "어써러셔": {
+    "english_name": "dondozo",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "ヘイラッシャ"
+  },
+  "가비루사": {
+    "english_name": "veluza",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "japanese_name": "ミガルーサ"
+  },
+  "토오": {
+    "english_name": "clodsire",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "japanese_name": "ドオー"
+  },
+  "킬라플로르": {
+    "english_name": "glimmora",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "japanese_name": "キラフロル"
+  },
+  "손지브림": {
+    "english_name": "hattrem",
+    "types": [
+      "psychic"
+    ],
+    "japanese_name": "テブリム"
+  },
+  "오롱털": {
+    "english_name": "grimmsnarl",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "japanese_name": "オーロンゲ"
+  },
+  "땅을기는날개": {
+    "english_name": "slither-wing",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "japanese_name": "チヲハウハネ"
+  },
+  "스트린더": {
+    "english_name": "toxtricity",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "japanese_name": "ストリンダー"
+  },
+  "꼬치조": {
+    "english_name": "barraskewda",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "カマスジョー"
+  },
+  "레이스포스": {
+    "english_name": "spectrier",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "レイスポス"
+  },
+  "다투곰": {
+    "english_name": "ursaluna",
+    "types": [
+      "ground",
+      "normal"
+    ],
+    "japanese_name": "ガチグマ"
+  },
+  "빙큐보": {
+    "english_name": "eiscue",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "コオリッポ"
+  },
+  "무한다이노": {
+    "english_name": "eternatus",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "japanese_name": "ムゲンダイナ"
+  },
+  "나이킹": {
+    "english_name": "perrserker",
+    "types": [
+      "steel"
+    ],
+    "japanese_name": "ニャイキング"
+  },
+  "브리무음": {
+    "english_name": "hatterene",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "japanese_name": "ブリムオン"
+  },
+  "블리자포스": {
+    "english_name": "glastrier",
+    "types": [
+      "ice"
+    ],
+    "japanese_name": "ブリザポス"
+  },
+  "사마자르": {
+    "english_name": "kleavor",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "japanese_name": "バサギリ"
+  },
+  "어치르돈": {
+    "english_name": "arctovish",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "japanese_name": "ウオチルドン"
+  },
+  "사다이사": {
+    "english_name": "sandaconda",
+    "types": [
+      "ground"
+    ],
+    "japanese_name": "サダイジャ"
+  },
+  "포트데스": {
+    "english_name": "polteageist",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ポットデス"
+  },
+  "신비록": {
+    "english_name": "wyrdeer",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "japanese_name": "アヤシシ"
+  },
+  "무쇠보따리": {
+    "english_name": "iron-bundle",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "japanese_name": "テツノツツミ"
+  },
+  "쏘겨모": {
+    "english_name": "morgrem",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "japanese_name": "ギモー"
+  },
+  "모래털가죽": {
+    "english_name": "sandy-shocks",
+    "types": [
+      "electric",
+      "ground"
+    ],
+    "japanese_name": "スナノケガワ"
+  },
+  "무쇠바퀴": {
+    "english_name": "iron-treads",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "japanese_name": "テツノワダチ"
+  },
+  "찌르성게": {
+    "english_name": "pincurchin",
+    "types": [
+      "electric"
+    ],
+    "japanese_name": "バチンウニ"
+  },
+  "날개치는머리": {
+    "english_name": "flutter-mane",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "japanese_name": "ハバタクカミ"
+  },
+  "딩루": {
+    "english_name": "ting-lu",
+    "types": [
+      "dark",
+      "ground"
+    ],
+    "japanese_name": "ディンルー"
+  },
+  "찌로꼬치": {
+    "english_name": "arrokuda",
+    "types": [
+      "water"
+    ],
+    "japanese_name": "サシカマス"
+  },
+  "타부자고": {
+    "english_name": "gholdengo",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "japanese_name": "サーフゴー"
+  },
+  "드닐레이브": {
+    "english_name": "baxcalibur",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "japanese_name": "セグレイブ"
+  },
+  "윽우지": {
+    "english_name": "cramorant",
+    "types": [
+      "flying",
+      "water"
+    ],
+    "japanese_name": "ウッウ"
+  },
+  "올리뇨": {
+    "english_name": "dolliv",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "japanese_name": "オリーニョ"
+  },
+  "누니머기": {
+    "english_name": "snom",
+    "types": [
+      "ice",
+      "bug"
+    ],
+    "japanese_name": "ユキハミ"
+  },
+  "자마젠타": {
+    "english_name": "zamazenta",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ザマゼンタ"
+  },
+  "자시안": {
+    "english_name": "zacian",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "ザシアン"
+  },
+  "레지드래고": {
+    "english_name": "regidrago",
+    "types": [
+      "dragon"
+    ],
+    "japanese_name": "レジドラゴ"
+  },
+  "쫀도기": {
+    "english_name": "fidough",
+    "types": [
+      "fairy"
+    ],
+    "japanese_name": "パピモッチ"
+  },
+  "우라오스": {
+    "english_name": "urshifu",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "japanese_name": "ウーラオス"
+  },
+  "퍼퓨돈": {
+    "english_name": "oinkologne",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "パフュートン"
+  },
+  "드래런치": {
+    "english_name": "drakloak",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "japanese_name": "ドロンチ"
+  },
+  "두리쥐": {
+    "english_name": "tandemaus",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ワッカネズミ"
+  },
+  "자루도": {
+    "english_name": "zarude",
+    "types": [
+      "dark",
+      "grass"
+    ],
+    "japanese_name": "ザルード"
+  },
+  "트래피더": {
+    "english_name": "spidops",
+    "types": [
+      "bug"
+    ],
+    "japanese_name": "ワナイダー"
+  },
+  "빠르모트": {
+    "english_name": "pawmot",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "japanese_name": "パーモット"
+  },
+  "이야후": {
+    "english_name": "munkidori",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "japanese_name": "マシマシラ"
+  },
+  "절벼게": {
+    "english_name": "klawf",
+    "types": [
+      "rock"
+    ],
+    "japanese_name": "ガケガニ"
+  },
+  "과미드라": {
+    "english_name": "hydrapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "japanese_name": "カミツオロチ"
+  },
+  "과미르": {
+    "english_name": "dipplin",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "japanese_name": "カミッチュ"
+  },
+  "치고마": {
+    "english_name": "kubfu",
+    "types": [
+      "fighting"
+    ],
+    "japanese_name": "ダクマ"
+  },
+  "꿰뚫는화염": {
+    "english_name": "gouging-fire",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "japanese_name": "ウガツホムラ"
+  },
+  "조타구": {
+    "english_name": "okidogi",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "japanese_name": "イイネイヌ"
+  },
+  "육파리": {
+    "english_name": "toedscruel",
+    "types": [
+      "ground",
+      "grass"
+    ],
+    "japanese_name": "リククラゲ"
+  },
+  "그푸리": {
+    "english_name": "bramblin",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "japanese_name": "アノクサ"
+  },
+  "날뛰는우레": {
+    "english_name": "raging-bolt",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "japanese_name": "タケルライコ"
+  },
+  "공푸리": {
+    "english_name": "brambleghast",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "japanese_name": "アノホラグサ"
+  },
+  "오거폰": {
+    "english_name": "ogerpon",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "オーガポン"
+  },
+  "브리두라스": {
+    "english_name": "archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "japanese_name": "ブリジュラス"
+  },
+  "테라파고스": {
+    "english_name": "terapagos",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "テラパゴス"
+  },
+  "그우린차": {
+    "english_name": "sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "japanese_name": "ヤバソチャ"
+  },
+  "무쇠암석": {
+    "english_name": "iron-boulder",
+    "types": [
+      "rock",
+      "psychic"
+    ],
+    "japanese_name": "テツノイワオ"
+  },
+  "무쇠감투": {
+    "english_name": "iron-crown",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "japanese_name": "テツノカシラ"
+  },
+  "복숭악동": {
+    "english_name": "pecharunt",
+    "types": [
+      "poison",
+      "ghost"
+    ],
+    "japanese_name": "モモワロウ"
+  },
+  "기로치": {
+    "english_name": "fezandipiti",
+    "types": [
+      "poison",
+      "fairy"
+    ],
+    "japanese_name": "キチキギス"
+  },
+  "캡싸이": {
+    "english_name": "capsakid",
+    "types": [
+      "grass"
+    ],
+    "japanese_name": "カプサイジ"
+  },
+  "차데스": {
+    "english_name": "poltchageist",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "japanese_name": "チャデス"
+  },
+  "묘두기": {
+    "english_name": "houndstone",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ハカドッグ"
+  },
+  "꼬이밍고": {
+    "english_name": "flamigo",
+    "types": [
+      "flying",
+      "fighting"
+    ],
+    "japanese_name": "カラミンゴ"
+  },
+  "저승갓숭": {
+    "english_name": "annihilape",
+    "types": [
+      "fighting",
+      "ghost"
+    ],
+    "japanese_name": "コノヨザル"
+  },
+  "싸리용": {
+    "english_name": "tatsugiri",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "japanese_name": "シャリタツ"
+  },
+  "사나운버섯": {
+    "english_name": "brute-bonnet",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "japanese_name": "アラブルタケ"
+  },
+  "키키링": {
+    "english_name": "farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "japanese_name": "リキキリン"
+  },
+  "노고고치": {
+    "english_name": "dudunsparce",
+    "types": [
+      "normal"
+    ],
+    "japanese_name": "ノココッチ"
+  },
+  "망망이": {
+    "english_name": "greavard",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "ボチ"
+  },
+  "총지엔": {
+    "english_name": "wo-chien",
+    "types": [
+      "dark",
+      "grass"
+    ],
+    "japanese_name": "チオンジェン"
+  },
+  "우렁찬꼬리": {
+    "english_name": "scream-tail",
+    "types": [
+      "fairy",
+      "psychic"
+    ],
+    "japanese_name": "サケブシッポ"
+  },
+  "무쇠무인": {
+    "english_name": "iron-valiant",
+    "types": [
+      "fairy",
+      "fighting"
+    ],
+    "japanese_name": "テツノブジン"
+  },
+  "무쇠잎새": {
+    "english_name": "iron-leaves",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "japanese_name": "テツノイサハ"
+  },
+  "드니꽁": {
+    "english_name": "arctibax",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "japanese_name": "セゴール"
+  },
+  "무쇠손": {
+    "english_name": "iron-hands",
+    "types": [
+      "fighting",
+      "electric"
+    ],
+    "japanese_name": "テツノカイナ"
+  },
+  "위유이": {
+    "english_name": "chi-yu",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "japanese_name": "イーユイ"
+  },
+  "고동치는달": {
+    "english_name": "roaring-moon",
+    "types": [
+      "dragon",
+      "dark"
+    ],
+    "japanese_name": "トドロクツキ"
+  },
+  "모으령": {
+    "english_name": "gimmighoul",
+    "types": [
+      "ghost"
+    ],
+    "japanese_name": "コレクレー"
+  },
+  "무쇠독나방": {
+    "english_name": "iron-moth",
+    "types": [
+      "fire",
+      "poison"
+    ],
+    "japanese_name": "テツノドクガ"
+  },
+  "코라이돈": {
+    "english_name": "koraidon",
+    "types": [
+      "fighting",
+      "dragon"
+    ],
+    "japanese_name": "コライドン"
+  },
+  "굽이치는물결": {
+    "english_name": "walking-wake",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "japanese_name": "ウネルミナモ"
+  },
+  "드니차": {
+    "english_name": "frigibax",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "japanese_name": "セビエ"
+  },
+  "미라이돈": {
+    "english_name": "miraidon",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "japanese_name": "ミライドン"
+  },
+  "무쇠머리": {
+    "english_name": "iron-jugulis",
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "japanese_name": "テツノコウベ"
+  },
+  "무쇠가시": {
+    "english_name": "iron-thorns",
+    "types": [
+      "rock",
+      "electric"
+    ],
+    "japanese_name": "テツノイバラ"
+  },
+  "파오젠": {
+    "english_name": "chien-pao",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "japanese_name": "パオジアン"
+  }
+}
