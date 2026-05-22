@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { typography } from "@/constants/typography";
 
 export default function StartViewScreen() {
   return (
@@ -16,7 +17,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#ffffff",
-    fontSize: 24,
-    fontWeight: "700",
+    ...typography.titleLg,
   },
 });
