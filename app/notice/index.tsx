@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import {
   MatchLabBackground,
@@ -13,26 +13,37 @@ import { useMatchLab } from '@/context/MatchLabContext';
 
 export default function NoticeScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { t } = useMatchLab();
 
   return (
     <MatchLabBackground>
-      <SafeAreaView style={styles.safeArea}>
-        <MatchLabTopBar
-          showsLogo={false}
-          leftIconType="back"
-          leftAccessibilityLabel={t.accessibilityBack}
-          onLeftTap={() => {
-            if (router.canGoBack()) {
-              router.back();
-            } else {
-              router.replace('/startView');
-            }
-          }}
-        />
+      <View style={styles.container}>
+        <View style={{ paddingTop: insets.top }}>
+          <MatchLabTopBar
+            showsLogo={false}
+            leftIconType="back"
+            leftAccessibilityLabel={t.accessibilityBack}
+            onLeftTap={() => {
+              if (router.canGoBack()) {
+                router.back();
+              } else {
+                router.replace('/startView');
+              }
+            }}
+          />
+        </View>
 
         <View style={styles.body}>
-          <Text style={styles.title}>{t.appServiceTitle}</Text>
+          <Text
+            style={styles.title}
+            numberOfLines={2}
+            adjustsFontSizeToFit
+            minimumFontScale={0.85}
+            accessibilityRole="header"
+          >
+            {t.appServiceTitle}
+          </Text>
           <Text style={styles.paragraphs}>
             {`${t.appServiceDescription1}\n\n${t.appServiceDescription2}\n\n${t.appServiceDescription3}`}
           </Text>
@@ -45,13 +56,13 @@ export default function NoticeScreen() {
             onPress={() => router.replace('/home')}
           />
         </View>
-      </SafeAreaView>
+      </View>
     </MatchLabBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
+  container: {
     flex: 1,
   },
   body: {
@@ -68,9 +79,9 @@ const styles = StyleSheet.create({
   paragraphs: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
-    lineHeight: 22,
+    lineHeight: 19,
     color: MatchLabColors.textWhite75,
-    marginTop: 12,
+    marginTop: 8,
   },
   bottomContainer: {
     paddingHorizontal: 46,

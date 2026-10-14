@@ -6,7 +6,6 @@ import {
   Text,
   View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { MatchLabBackground } from '@/components/common';
@@ -28,7 +27,7 @@ export default function StartViewScreen() {
       style={styles.container}
       onPress={() => router.push('/notice')}
       accessibilityRole="button"
-      accessibilityLabel={t.touchTheScreen}
+      accessibilityLabel={`${t.welcome}, ${t.touchTheScreen}`}
     >
       {/* Background base */}
       <MatchLabBackground />
@@ -42,6 +41,7 @@ export default function StartViewScreen() {
               source={getBigTypeImage(type)}
               style={styles.cloudItem}
               resizeMode="contain"
+              blurRadius={1}
             />
           ))}
         </View>
@@ -56,12 +56,15 @@ export default function StartViewScreen() {
         pointerEvents="none"
       />
 
-      {/* Foreground */}
-      <SafeAreaView style={styles.safeArea} pointerEvents="none">
-        {/* Top right version text */}
-        <View style={styles.topSection}>
+      {/* Foreground matching StartView.swift VStack */}
+      <View style={styles.foreground} pointerEvents="none">
+        {/* Top row: version */}
+        <View style={styles.topRow}>
           <Text style={styles.versionText}>{t.version}</Text>
         </View>
+
+        {/* Spacer */}
+        <View style={styles.spacer} />
 
         {/* Center section */}
         <View style={styles.centerSection}>
@@ -74,12 +77,15 @@ export default function StartViewScreen() {
           <Text style={styles.touchText}>{t.touchTheScreen}</Text>
         </View>
 
+        {/* Spacer */}
+        <View style={styles.spacer} />
+
         {/* Bottom section */}
         <View style={styles.bottomSection}>
           <View style={styles.divider} />
           <Text style={styles.disclaimerText}>{t.startDisclaimer}</Text>
         </View>
-      </SafeAreaView>
+      </View>
     </Pressable>
   );
 }
@@ -105,23 +111,24 @@ const styles = StyleSheet.create({
     width: 58,
     height: 58,
   },
-  safeArea: {
+  foreground: {
     flex: 1,
   },
-  topSection: {
+  topRow: {
+    paddingTop: 62,
+    paddingRight: 23,
     alignItems: 'flex-end',
-    marginTop: 18,
-    marginRight: 23,
   },
   versionText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
     color: MatchLabColors.textWhite75,
   },
-  centerSection: {
+  spacer: {
     flex: 1,
+  },
+  centerSection: {
     alignItems: 'center',
-    justifyContent: 'center',
   },
   logoImage: {
     width: 234,
@@ -131,7 +138,7 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.bold,
     fontSize: 24,
     color: MatchLabColors.neonCyan,
-    marginTop: 120,
+    marginTop: 162,
   },
   touchText: {
     fontFamily: fontFamily.semiBold,
@@ -141,7 +148,6 @@ const styles = StyleSheet.create({
   },
   bottomSection: {
     alignItems: 'center',
-    paddingBottom: 32,
   },
   divider: {
     width: 300,
@@ -150,11 +156,12 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   disclaimerText: {
+    width: 308,
+    marginBottom: 32,
     fontFamily: fontFamily.semiBold,
     fontSize: 13,
-    lineHeight: 18,
+    lineHeight: 17,
     color: MatchLabColors.textWhite75,
     textAlign: 'center',
-    width: 308,
   },
 });
