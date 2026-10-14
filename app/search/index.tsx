@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -20,6 +19,52 @@ import {
   TypeSmallToken,
 } from '@/components/common';
 import type { PokemonSearchResult } from '@/services/pokemonDataStore';
+
+function renderHighlightedName(name: string, rawQuery: string) {
+  const query = rawQuery.trim();
+  if (!query) {
+    return <Text style={styles.koreanName}>{name}</Text>;
+  }
+
+  const lowerName = name.toLowerCase();
+  const lowerQuery = query.toLowerCase();
+  const parts: { text: string; isMatch: boolean }[] = [];
+  let startIndex = 0;
+
+  while (startIndex < name.length) {
+    const matchIndex = lowerName.indexOf(lowerQuery, startIndex);
+    if (matchIndex === -1) {
+      parts.push({ text: name.slice(startIndex), isMatch: false });
+      break;
+    }
+    if (matchIndex > startIndex) {
+      parts.push({ text: name.slice(startIndex, matchIndex), isMatch: false });
+    }
+    parts.push({
+      text: name.slice(matchIndex, matchIndex + query.length),
+      isMatch: true,
+    });
+    startIndex = matchIndex + query.length;
+  }
+
+  return (
+    <Text
+      style={styles.koreanName}
+      numberOfLines={1}
+      adjustsFontSizeToFit
+      minimumFontScale={0.8}
+    >
+      {parts.map((part, index) => (
+        <Text
+          key={index}
+          style={part.isMatch ? styles.highlightedText : styles.normalText}
+        >
+          {part.text}
+        </Text>
+      ))}
+    </Text>
+  );
+}
 
 export default function SearchScreen() {
   const insets = useSafeAreaInsets();
@@ -48,61 +93,52 @@ export default function SearchScreen() {
           style={[
             styles.headerContainer,
             {
-              paddingTop: Math.max(insets.top, 20) + 12,
+              paddingTop: Math.max(insets.top, 16) + 8,
               paddingBottom: 16,
             },
           ]}
         >
-          <View style={styles.headerRow}>
-            {/* Back Button */}
+          {/* Full-width Search Capsule */}
+          <View style={styles.searchCapsule}>
+            <Ionicons
+              name="search"
+              size={22}
+              color="rgba(255, 255, 255, 0.55)"
+            />
+            <TextInput
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              placeholder={t.searchPlaceholder}
+              placeholderTextColor="rgba(255, 255, 255, 0.45)"
+              style={styles.searchInput}
+              returnKeyType="search"
+              autoCapitalize="none"
+              autoCorrect={false}
+              accessibilityLabel={t.accessibilitySearch}
+            />
             <Pressable
-              onPress={goBackSafely}
+              onPress={() => {
+                if (searchQuery.length > 0) {
+                  setSearchQuery('');
+                } else {
+                  goBackSafely();
+                }
+              }}
               accessibilityRole="button"
-              accessibilityLabel={t.accessibilityBack}
-              hitSlop={8}
-              style={styles.backButton}
+              accessibilityLabel={
+                searchQuery.length > 0
+                  ? t.accessibilityCloseMenu
+                  : t.accessibilityBack
+              }
+              hitSlop={10}
+              style={styles.clearButton}
             >
-              <Image
-                source={require('@/assets/images/button/Back.png')}
-                style={styles.backIcon}
-                resizeMode="contain"
+              <Ionicons
+                name="close"
+                size={24}
+                color="rgba(255, 255, 255, 0.65)"
               />
             </Pressable>
-
-            {/* Search Capsule */}
-            <View style={styles.searchCapsule}>
-              <Ionicons
-                name="search"
-                size={22}
-                color="rgba(255, 255, 255, 0.5)"
-              />
-              <TextInput
-                value={searchQuery}
-                onChangeText={setSearchQuery}
-                placeholder={t.searchPlaceholder}
-                placeholderTextColor="rgba(255, 255, 255, 0.45)"
-                style={styles.searchInput}
-                returnKeyType="search"
-                autoCapitalize="none"
-                autoCorrect={false}
-                accessibilityLabel={t.accessibilitySearch}
-              />
-              {searchQuery.length > 0 && (
-                <Pressable
-                  onPress={() => setSearchQuery('')}
-                  accessibilityRole="button"
-                  accessibilityLabel={t.accessibilityCloseMenu}
-                  hitSlop={6}
-                  style={styles.clearButton}
-                >
-                  <Ionicons
-                    name="close"
-                    size={20}
-                    color={MatchLabColors.textWhite75}
-                  />
-                </Pressable>
-              )}
-            </View>
           </View>
         </View>
 
@@ -123,53 +159,29 @@ export default function SearchScreen() {
               {searchQuery.trim().length === 0 ? t.searchPlaceholder : '-'}
             </Text>
           ) : (
-            searchResults.slice(0, 12).map((result) => (
-              <View
+            searchResults.map((result) => (
+              <Pressable
                 key={result.id}
-                style={styles.resultRowWrapper}
+                onPress={() => handleSelectResult(result)}
+                accessibilityRole="button"
+                accessibilityLabel={result.name}
+                accessibilityHint={result.englishName}
+                style={({ pressed }) => [
+                  styles.resultRow,
+                  pressed && styles.rowPressed,
+                ]}
               >
-                <Pressable
-                  onPress={() => handleSelectResult(result)}
-                  accessibilityRole="button"
-                  accessibilityLabel={result.name}
-                  accessibilityHint={result.englishName}
-                  style={({ pressed }) => [
-                    styles.resultRow,
-                    pressed && styles.rowPressed,
-                  ]}
-                >
-                  {/* Left column: Korean and English name */}
-                  <View style={styles.nameColumn}>
-                    <Text
-                      style={styles.koreanName}
-                      numberOfLines={1}
-                      adjustsFontSizeToFit
-                      minimumFontScale={0.8}
-                    >
-                      {result.name}
-                    </Text>
-                    <Text
-                      style={styles.englishName}
-                      numberOfLines={1}
-                    >
-                      {result.englishName}
-                    </Text>
-                  </View>
+                {/* Left side: Highlighted Pokemon Name */}
+                <View style={styles.nameColumn}>
+                  {renderHighlightedName(result.name, searchQuery)}
+                </View>
 
-                  {/* Right row: Type small tokens */}
-                  <View style={styles.tokenRow}>
-                    {result.types.slice(0, 2).map((type, idx) => (
-                      <TypeSmallToken
-                        key={`${type}-${idx}`}
-                        type={type}
-                      />
-                    ))}
-                    {result.types.length === 1 && (
-                      <TypeSmallToken type="noType" />
-                    )}
-                  </View>
-                </Pressable>
-              </View>
+                {/* Right side: 2 Type small tokens */}
+                <View style={styles.tokenRow}>
+                  <TypeSmallToken type={result.types[0] ?? 'noType'} />
+                  <TypeSmallToken type={result.types[1] ?? 'noType'} />
+                </View>
+              </Pressable>
             ))
           )}
         </ScrollView>
@@ -188,47 +200,30 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
-    borderColor: MatchLabColors.borderHeader,
-    paddingHorizontal: 30,
-  },
-  headerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 58,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  backIcon: {
-    width: 23,
-    height: 23,
+    borderColor: 'rgba(255, 255, 255, 0.14)',
+    paddingHorizontal: 28,
   },
   searchCapsule: {
-    flex: 1,
     height: 58,
-    borderRadius: 28,
-    backgroundColor: MatchLabColors.rowSurface,
+    borderRadius: 29,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 19,
-    gap: 16,
+    paddingHorizontal: 18,
+    gap: 12,
   },
   searchInput: {
     flex: 1,
     fontFamily: fontFamily.bold,
-    fontSize: 20,
-    color: MatchLabColors.textWhite,
+    fontSize: 19,
+    color: '#FFFFFF',
   },
   clearButton: {
-    width: 26,
-    height: 26,
+    width: 32,
+    height: 32,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -236,7 +231,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   resultsContent: {
-    paddingTop: 12,
     paddingBottom: 24,
   },
   emptyPromptText: {
@@ -253,36 +247,37 @@ const styles = StyleSheet.create({
     marginTop: 48,
     textAlign: 'center',
   },
-  resultRowWrapper: {
-    paddingHorizontal: 40,
-    paddingVertical: 8,
-  },
   resultRow: {
-    height: 58,
+    height: 74,
+    paddingHorizontal: 34,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.07)',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   rowPressed: {
-    opacity: 0.75,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
   },
   nameColumn: {
-    gap: 2,
     flex: 1,
+    marginRight: 16,
+    justifyContent: 'center',
   },
   koreanName: {
     fontFamily: fontFamily.bold,
     fontSize: 20,
-    color: MatchLabColors.textWhite,
+    color: '#FFFFFF',
   },
-  englishName: {
-    fontFamily: fontFamily.regular,
-    fontSize: 12,
-    color: MatchLabColors.textWhite45,
+  highlightedText: {
+    color: MatchLabColors.neonCyan,
+  },
+  normalText: {
+    color: '#FFFFFF',
   },
   tokenRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    gap: 10,
   },
 });

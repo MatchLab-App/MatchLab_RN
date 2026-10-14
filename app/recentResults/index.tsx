@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+  Image,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -7,14 +9,14 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { Fonts, MatchLabColors } from '@/constants/theme';
+import { Ionicons } from '@expo/vector-icons';
+import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
-import type { PokemonType } from '@/constants/pokemonTypes';
+import { BUTTON_IMAGES } from '@/constants/pokemonTypes';
 import { useMatchLab, type RecentMatchRecord } from '@/context/MatchLabContext';
 import {
   HomeIndicator,
   MatchLabBackground,
-  MatchLabTopBar,
   TypeSmallToken,
 } from '@/components/common';
 
@@ -30,12 +32,6 @@ interface RecentRecordRowProps {
 }
 
 function RecentRecordRow({ record }: RecentRecordRowProps) {
-  const source = [...record.defenseTypes, record.attackType].slice(0, 3);
-  const displayTypes: PokemonType[] = [
-    ...source,
-    ...Array(Math.max(0, 3 - source.length)).fill('noType' as PokemonType),
-  ];
-
   const multiplierTextColor =
     record.multiplier === 0
       ? MatchLabColors.weakRed
@@ -43,27 +39,49 @@ function RecentRecordRow({ record }: RecentRecordRowProps) {
 
   return (
     <View style={styles.recordRow}>
-      {/* 3 Type tokens */}
-      <View style={styles.recordTokens}>
-        {displayTypes.map((type, idx) => (
-          <TypeSmallToken
-            key={`${type}-${idx}`}
-            type={type}
-            width={40}
-            height={54}
-          />
-        ))}
-      </View>
+      {/* 1. Attack sword icon */}
+      <Image
+        source={BUTTON_IMAGES.attackIcon}
+        style={styles.attackIcon}
+        resizeMode="contain"
+      />
 
-      {/* Vertical divider */}
+      {/* 2. Attack type small token */}
+      <TypeSmallToken
+        type={record.attackType}
+        width={44}
+        height={56}
+      />
+
+      {/* 3. Vertical divider */}
       <View style={styles.recordDivider} />
 
-      {/* Multiplier text */}
+      {/* 4. Defense shield icon */}
+      <Image
+        source={BUTTON_IMAGES.defenceIcon}
+        style={styles.defenceIcon}
+        resizeMode="contain"
+      />
+
+      {/* 5. First defense type small token */}
+      <TypeSmallToken
+        type={record.defenseTypes[0] ?? 'noType'}
+        width={44}
+        height={56}
+      />
+
+      {/* 6. Second defense type small token */}
+      <TypeSmallToken
+        type={record.defenseTypes[1] ?? 'noType'}
+        width={44}
+        height={56}
+        style={{ marginLeft: 6 }}
+      />
+
+      {/* 7. Multiplier text */}
       <Text
         style={[styles.multiplierText, { color: multiplierTextColor }]}
         numberOfLines={1}
-        adjustsFontSizeToFit
-        minimumFontScale={0.8}
       >
         {`${formatMultiplier(record.multiplier)}X`}
       </Text>
@@ -74,7 +92,7 @@ function RecentRecordRow({ record }: RecentRecordRowProps) {
 export default function RecentResultsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { recentRecords, t } = useMatchLab();
+  const { recentRecords, clearRecentRecords, t } = useMatchLab();
 
   return (
     <MatchLabBackground>
@@ -84,24 +102,51 @@ export default function RecentResultsScreen() {
           style={[
             styles.headerContainer,
             {
-              paddingTop: Math.max(insets.top, 20) + 12,
-              paddingBottom: 12,
+              paddingTop: Math.max(insets.top, 16) + 4,
+              paddingBottom: 10,
             },
           ]}
         >
-          <MatchLabTopBar
-            title={t.menuRecent}
-            showsLogo={false}
-            leftIconType="back"
-            leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => {
-              if (router.canGoBack()) {
-                router.back();
-              } else {
-                router.replace('/home');
-              }
-            }}
-          />
+          <View style={styles.headerRow}>
+            {/* Back Button */}
+            <Pressable
+              onPress={() => {
+                if (router.canGoBack()) {
+                  router.back();
+                } else {
+                  router.replace('/home');
+                }
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={t.accessibilityBack}
+              hitSlop={8}
+              style={styles.headerButton}
+            >
+              <Image
+                source={BUTTON_IMAGES.back}
+                style={styles.backIcon}
+                resizeMode="contain"
+              />
+            </Pressable>
+
+            {/* Header Title */}
+            <Text style={styles.headerTitle}>{t.menuRecent}</Text>
+
+            {/* Trash Button */}
+            <Pressable
+              onPress={clearRecentRecords}
+              accessibilityRole="button"
+              accessibilityLabel={t.accessibilityCloseMenu}
+              hitSlop={8}
+              style={styles.headerButton}
+            >
+              <Ionicons
+                name="trash"
+                size={20}
+                color={MatchLabColors.weakRed}
+              />
+            </Pressable>
+          </View>
         </View>
 
         {/* Scrollable Records Content */}
@@ -110,20 +155,15 @@ export default function RecentResultsScreen() {
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
-          <Text style={styles.sectionLabel}>{t.menuRecent}</Text>
-
-          {/* Records List */}
-          <View style={styles.recordsList}>
-            {recentRecords.length === 0 ? (
-              <View style={styles.emptyCard}>
-                <Text style={styles.emptyText}>-</Text>
-              </View>
-            ) : (
-              recentRecords.slice(0, 5).map((record) => (
-                <RecentRecordRow key={record.id} record={record} />
-              ))
-            )}
-          </View>
+          {recentRecords.length === 0 ? (
+            <View style={styles.emptyCard}>
+              <Text style={styles.emptyText}>-</Text>
+            </View>
+          ) : (
+            recentRecords.map((record) => (
+              <RecentRecordRow key={record.id} record={record} />
+            ))
+          )}
         </ScrollView>
 
         {/* Bottom Home Indicator */}
@@ -140,32 +180,45 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
-    borderColor: MatchLabColors.borderHeader,
+    borderColor: 'rgba(255, 255, 255, 0.14)',
+  },
+  headerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 26,
+  },
+  headerButton: {
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  backIcon: {
+    width: 23,
+    height: 23,
+  },
+  headerTitle: {
+    fontFamily: fontFamily.bold,
+    fontSize: 18,
+    color: '#FFFFFF',
   },
   scrollView: {
     flex: 1,
   },
   scrollContent: {
-    paddingHorizontal: 30,
-    paddingTop: 16,
+    paddingHorizontal: 26,
+    paddingTop: 22,
     paddingBottom: 24,
-    gap: 18,
-  },
-  sectionLabel: {
-    fontFamily: fontFamily.semiBold,
-    fontSize: 15,
-    color: MatchLabColors.textWhite75,
-    paddingLeft: 20,
-  },
-  recordsList: {
-    gap: 10,
+    gap: 14,
   },
   emptyCard: {
-    height: 72,
-    borderRadius: 17,
-    backgroundColor: MatchLabColors.rowSurface,
+    height: 78,
+    borderRadius: 24,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -175,27 +228,36 @@ const styles = StyleSheet.create({
     color: 'rgba(255, 255, 255, 0.6)',
   },
   recordRow: {
-    height: 72,
-    borderRadius: 17,
-    backgroundColor: MatchLabColors.rowSurface,
-    paddingHorizontal: 12,
+    height: 78,
+    borderRadius: 24,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
+    paddingHorizontal: 18,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
   },
-  recordTokens: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  attackIcon: {
+    width: 13,
+    height: 13,
+    opacity: 0.75,
+    marginRight: 8,
   },
   recordDivider: {
     width: 1,
-    height: 36,
-    backgroundColor: MatchLabColors.divider,
+    height: 38,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    marginHorizontal: 10,
+  },
+  defenceIcon: {
+    width: 13,
+    height: 13,
+    opacity: 0.75,
+    marginRight: 6,
   },
   multiplierText: {
-    fontSize: 24,
-    fontFamily: Fonts?.rounded,
-    fontWeight: '700',
+    fontFamily: fontFamily.bold,
+    fontSize: 22,
+    marginLeft: 'auto',
   },
 });
