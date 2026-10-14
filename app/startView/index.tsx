@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   cloudWrapper: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
   },

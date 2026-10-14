@@ -119,11 +119,11 @@ export default HomeMenuOverlay;
 
 const styles = StyleSheet.create({
   overlayWrapper: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     zIndex: 50,
   },
   overlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
   },
   contentContainer: {
     flex: 1,
