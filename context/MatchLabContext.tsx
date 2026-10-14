@@ -7,6 +7,7 @@ import React, {
   useState,
   type ReactNode,
 } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { PokemonType } from '@/constants/pokemonTypes';
 import {
   DEFAULT_LANGUAGE,
@@ -93,15 +94,13 @@ export interface MatchLabContextType {
 const RECENT_RECORDS_KEY = 'matchlab.recent.records';
 const MAX_RECENT_RECORDS = 50;
 
-function loadStoredRecentRecords(): RecentMatchRecord[] {
+async function loadStoredRecentRecords(): Promise<RecentMatchRecord[]> {
   try {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const data = window.localStorage.getItem(RECENT_RECORDS_KEY);
-      if (data) {
-        const parsed = JSON.parse(data);
-        if (Array.isArray(parsed)) {
-          return parsed;
-        }
+    const data = await AsyncStorage.getItem(RECENT_RECORDS_KEY);
+    if (data) {
+      const parsed = JSON.parse(data);
+      if (Array.isArray(parsed)) {
+        return parsed;
       }
     }
   } catch {
@@ -110,11 +109,9 @@ function loadStoredRecentRecords(): RecentMatchRecord[] {
   return [];
 }
 
-function persistRecentRecords(records: RecentMatchRecord[]): void {
+async function persistRecentRecords(records: RecentMatchRecord[]): Promise<void> {
   try {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      window.localStorage.setItem(RECENT_RECORDS_KEY, JSON.stringify(records));
-    }
+    await AsyncStorage.setItem(RECENT_RECORDS_KEY, JSON.stringify(records));
   } catch {
     // ignore storage write errors
   }
@@ -143,12 +140,17 @@ export function MatchLabProvider({ children }: MatchLabProviderProps) {
   // Recent Records
   const [recentRecords, setRecentRecords] = useState<RecentMatchRecord[]>([]);
 
-  // Load persisted records on mount
+  // Load persisted records on mount from AsyncStorage
   useEffect(() => {
-    const stored = loadStoredRecentRecords();
-    if (stored.length > 0) {
-      setRecentRecords(stored);
-    }
+    let isMounted = true;
+    loadStoredRecentRecords().then((stored) => {
+      if (isMounted && stored.length > 0) {
+        setRecentRecords(stored);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // Current translation strings
@@ -307,7 +309,7 @@ export function MatchLabProvider({ children }: MatchLabProviderProps) {
           };
           setRecentRecords((prev) => {
             const next = [newRecord, ...prev].slice(0, MAX_RECENT_RECORDS);
-            persistRecentRecords(next);
+            persistRecentRecords(next).catch(() => {});
             return next;
           });
         }
@@ -316,10 +318,10 @@ export function MatchLabProvider({ children }: MatchLabProviderProps) {
     [step, selectedDefenseTypes]
   );
 
-  // Add defense types (from search result)
-  const addDefenseTypes = useCallback((types: PokemonType[]) => {
-    setSelectedDefenseTypes((prev) => {
-      const updated = [...prev];
+  // Add defense types (from search result) - compute outside state updater
+  const addDefenseTypes = useCallback(
+    (types: PokemonType[]) => {
+      const updated = [...selectedDefenseTypes];
       for (const type of types) {
         if (type === 'noType') continue;
         if (updated.includes(type)) continue;
@@ -331,15 +333,11 @@ export function MatchLabProvider({ children }: MatchLabProviderProps) {
         }
       }
 
-      if (updated.length === 0) {
-        setStep('selectFirstOpponentType');
-      } else {
-        setStep('selectSecondOpponentType');
-      }
-
-      return updated;
-    });
-  }, []);
+      setSelectedDefenseTypes(updated);
+      setStep(updated.length === 0 ? 'selectFirstOpponentType' : 'selectSecondOpponentType');
+    },
+    [selectedDefenseTypes]
+  );
 
   // Primary action button handler
   const performPrimaryAction = useCallback(() => {
@@ -388,13 +386,7 @@ export function MatchLabProvider({ children }: MatchLabProviderProps) {
   // Clear recent records
   const clearRecentRecords = useCallback(() => {
     setRecentRecords([]);
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        window.localStorage.removeItem(RECENT_RECORDS_KEY);
-      }
-    } catch {
-      // ignore
-    }
+    AsyncStorage.removeItem(RECENT_RECORDS_KEY).catch(() => {});
   }, []);
 
   const value: MatchLabContextType = {

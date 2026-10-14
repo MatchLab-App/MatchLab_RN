@@ -120,3 +120,12 @@ export function getBigTypeImage(type: PokemonType): ImageSourcePropType {
 }
 
 export const LOGO_WHITE_IMAGE: ImageSourcePropType = require('@/assets/images/Logo/MatchLab_Logo_White.png');
+
+export const BUTTON_IMAGES = {
+  back: require('@/assets/images/button/Back.png'),
+  dropdown: require('@/assets/images/button/DropdownButton.png'),
+  plane: require('@/assets/images/button/Plane.png'),
+  attackIcon: require('@/assets/images/button/attack_icon.png'),
+  defenceIcon: require('@/assets/images/button/defence_icon.png'),
+  selectedTriangle: require('@/assets/images/button/SelectedTriangle.png'),
+} as const;
