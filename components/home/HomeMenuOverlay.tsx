@@ -8,12 +8,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
-import {
-  MatchLabBackground,
-  MatchLabTopBar,
-  SearchButton,
-} from '@/components/common';
-import { MatchLabColors } from '@/constants/theme';
+import { MatchLabTopBar } from '@/components/common';
 import { fontFamily } from '@/constants/typography';
 import { useMatchLab } from '@/context/MatchLabContext';
 
@@ -47,7 +42,7 @@ const MenuActionRow: React.FC<MenuActionRowProps> = ({
       ]}
     >
       <View style={styles.iconBadge}>
-        <Ionicons name={icon} size={24} color="rgba(255, 255, 255, 0.86)" />
+        <Ionicons name={icon} size={24} color="#FFFFFF" />
       </View>
       <Text style={styles.menuTitle}>{title}</Text>
     </Pressable>
@@ -74,41 +69,31 @@ export const HomeMenuOverlay: React.FC<HomeMenuOverlayProps> = ({
         <Animated.View
           entering={FadeIn.duration(180)}
           exiting={FadeOut.duration(180)}
-          style={styles.overlay}
+          style={[styles.overlay, { paddingTop: topPadding }]}
         >
-          <MatchLabBackground>
-            <View style={[styles.contentContainer, { paddingTop: topPadding }]}>
-              <MatchLabTopBar
-                showsLogo={true}
-                leftIconType="back"
-                leftAccessibilityLabel={t.accessibilityCloseMenu}
-                onLeftTap={onClose}
-              />
-              <View pointerEvents="none">
-                <SearchButton
-                  onPress={() => {}}
-                  style={styles.invisibleSearchButton}
-                />
-              </View>
-              <View style={styles.menuList}>
-                <MenuActionRow
-                  title={t.menuRecent}
-                  icon="time-outline"
-                  onPress={onRecentResults}
-                />
-                <MenuActionRow
-                  title={t.menuTypeChart}
-                  icon="grid-outline"
-                  onPress={onTypeChart}
-                />
-                <MenuActionRow
-                  title={t.menuSettings}
-                  icon="settings-sharp"
-                  onPress={onSettings}
-                />
-              </View>
-            </View>
-          </MatchLabBackground>
+          <MatchLabTopBar
+            showsLogo={false}
+            leftIconType="back"
+            leftAccessibilityLabel={t.accessibilityCloseMenu}
+            onLeftTap={onClose}
+          />
+          <View style={styles.menuList}>
+            <MenuActionRow
+              title={t.menuRecent}
+              icon="folder"
+              onPress={onRecentResults}
+            />
+            <MenuActionRow
+              title={t.menuTypeChart}
+              icon="apps"
+              onPress={onTypeChart}
+            />
+            <MenuActionRow
+              title={t.menuSettings}
+              icon="settings-sharp"
+              onPress={onSettings}
+            />
+          </View>
         </Animated.View>
       )}
     </View>
@@ -124,21 +109,15 @@ const styles = StyleSheet.create({
   },
   overlay: {
     ...StyleSheet.absoluteFill,
-  },
-  contentContainer: {
-    flex: 1,
-  },
-  invisibleSearchButton: {
-    marginTop: 19,
-    opacity: 0,
+    backgroundColor: 'rgba(0, 18, 16, 0.42)',
   },
   menuList: {
-    paddingHorizontal: 27,
-    paddingTop: 17,
+    paddingHorizontal: 30,
+    marginTop: 22,
     gap: 20,
   },
   menuRow: {
-    height: 58,
+    height: 56,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 16,
@@ -147,18 +126,23 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   iconBadge: {
-    width: 58,
-    height: 58,
-    borderRadius: 29,
-    backgroundColor: MatchLabColors.buttonPrimary,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: 'rgba(20, 215, 195, 0.72)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+    shadowColor: '#14F5DE',
+    shadowOpacity: 0.4,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 0 },
+    elevation: 6,
     alignItems: 'center',
     justifyContent: 'center',
   },
   menuTitle: {
     fontFamily: fontFamily.bold,
-    fontSize: 18,
-    color: MatchLabColors.textWhite,
+    fontSize: 17,
+    color: '#FFFFFF',
   },
 });
