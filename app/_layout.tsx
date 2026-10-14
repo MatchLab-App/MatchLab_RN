@@ -10,6 +10,7 @@ import { StatusBar } from "expo-status-bar";
 import "react-native-reanimated";
 
 import { fontFamily } from "@/constants/typography";
+import { MatchLabProvider } from "@/context/MatchLabContext";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 
 SplashScreen.preventAutoHideAsync();
@@ -35,20 +36,33 @@ export default function RootLayout() {
   SplashScreen.hideAsync();
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <LinearGradient
-        colors={["#000000", "#06413B"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 0, y: 1 }}
-        style={{ flex: 1 }}
-      >
-        <Stack
-          screenOptions={{ contentStyle: { backgroundColor: "transparent" } }}
+    <MatchLabProvider>
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <LinearGradient
+          colors={["#000000", "#06413B"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 0, y: 1 }}
+          style={{ flex: 1 }}
         >
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-        </Stack>
-      </LinearGradient>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "transparent" },
+              animation: "fade",
+            }}
+          >
+            <Stack.Screen name="index" />
+            <Stack.Screen name="startView/index" />
+            <Stack.Screen name="notice/index" />
+            <Stack.Screen name="home/index" />
+            <Stack.Screen name="search/index" />
+            <Stack.Screen name="recentResults/index" />
+            <Stack.Screen name="settings/index" />
+            <Stack.Screen name="typeChart/index" />
+          </Stack>
+        </LinearGradient>
+        <StatusBar style="light" />
+      </ThemeProvider>
+    </MatchLabProvider>
   );
 }
