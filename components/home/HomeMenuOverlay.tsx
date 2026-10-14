@@ -5,7 +5,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
 import {
@@ -62,66 +62,74 @@ export const HomeMenuOverlay: React.FC<HomeMenuOverlayProps> = ({
   onSettings,
 }) => {
   const { t } = useMatchLab();
-
-  if (!visible) {
-    return null;
-  }
+  const insets = useSafeAreaInsets();
+  const topPadding = Math.max(insets.top, 16) + 4;
 
   return (
-    <Animated.View
-      entering={FadeIn.duration(180)}
-      exiting={FadeOut.duration(180)}
-      style={styles.overlay}
+    <View
+      style={styles.overlayWrapper}
+      pointerEvents={visible ? 'auto' : 'none'}
     >
-      <MatchLabBackground>
-        <SafeAreaView style={styles.safeArea}>
-          <MatchLabTopBar
-            showsLogo={true}
-            leftIconType="back"
-            leftAccessibilityLabel={t.accessibilityCloseMenu}
-            onLeftTap={onClose}
-          />
-          <View pointerEvents="none">
-            <SearchButton
-              onPress={() => {}}
-              style={styles.invisibleSearchButton}
-            />
-          </View>
-          <View style={styles.menuList}>
-            <MenuActionRow
-              title={t.menuRecent}
-              icon="time-outline"
-              onPress={onRecentResults}
-            />
-            <MenuActionRow
-              title={t.menuTypeChart}
-              icon="grid-outline"
-              onPress={onTypeChart}
-            />
-            <MenuActionRow
-              title={t.menuSettings}
-              icon="settings-sharp"
-              onPress={onSettings}
-            />
-          </View>
-        </SafeAreaView>
-      </MatchLabBackground>
-    </Animated.View>
+      {visible && (
+        <Animated.View
+          entering={FadeIn.duration(180)}
+          exiting={FadeOut.duration(180)}
+          style={styles.overlay}
+        >
+          <MatchLabBackground>
+            <View style={[styles.contentContainer, { paddingTop: topPadding }]}>
+              <MatchLabTopBar
+                showsLogo={true}
+                leftIconType="back"
+                leftAccessibilityLabel={t.accessibilityCloseMenu}
+                onLeftTap={onClose}
+              />
+              <View pointerEvents="none">
+                <SearchButton
+                  onPress={() => {}}
+                  style={styles.invisibleSearchButton}
+                />
+              </View>
+              <View style={styles.menuList}>
+                <MenuActionRow
+                  title={t.menuRecent}
+                  icon="time-outline"
+                  onPress={onRecentResults}
+                />
+                <MenuActionRow
+                  title={t.menuTypeChart}
+                  icon="grid-outline"
+                  onPress={onTypeChart}
+                />
+                <MenuActionRow
+                  title={t.menuSettings}
+                  icon="settings-sharp"
+                  onPress={onSettings}
+                />
+              </View>
+            </View>
+          </MatchLabBackground>
+        </Animated.View>
+      )}
+    </View>
   );
 };
 
 export default HomeMenuOverlay;
 
 const styles = StyleSheet.create({
-  overlay: {
+  overlayWrapper: {
     ...StyleSheet.absoluteFillObject,
     zIndex: 50,
   },
-  safeArea: {
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  contentContainer: {
     flex: 1,
   },
   invisibleSearchButton: {
-    marginTop: 16,
+    marginTop: 19,
     opacity: 0,
   },
   menuList: {
