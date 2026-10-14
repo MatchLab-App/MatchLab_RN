@@ -1,12 +1,14 @@
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import {
   Image,
+  LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
   Pressable,
   ScrollView,
   StyleProp,
   StyleSheet,
+  useWindowDimensions,
   View,
   ViewStyle,
 } from 'react-native';
@@ -30,29 +32,29 @@ const GAP = 10;
 const COLUMN_PITCH = BADGE_SIZE + GAP; // 83px
 const COLUMNS_PER_COPY = 6; // 18 types / 3 rows = 6 columns
 const ONE_CYCLE = COLUMNS_PER_COPY * COLUMN_PITCH; // 6 * 83 = 498px
-const INITIAL_SCROLL_X = 4 * ONE_CYCLE; // 1992px
+const PADDING_HORIZONTAL = 24;
 const MIN_THRESHOLD = 1.5 * ONE_CYCLE; // 747px
 const MAX_THRESHOLD = 7 * ONE_CYCLE; // 3486px
+const EXTREME_MIN = 0.5 * ONE_CYCLE; // 249px
+const EXTREME_MAX = 8 * ONE_CYCLE; // 3984px
 
 interface TypeBadgeProps {
   type: PokemonType;
   isSelected: boolean;
   onPress: (type: PokemonType) => void;
-  isMiddleRow?: boolean;
 }
 
 const TypeBadge: React.FC<TypeBadgeProps> = ({
   type,
   isSelected,
   onPress,
-  isMiddleRow = false,
 }) => {
   return (
     <Pressable
       onPress={() => onPress(type)}
       accessibilityRole="button"
       accessibilityLabel={type}
-      style={[styles.badge, isMiddleRow && styles.middleRowBadge]}
+      style={styles.badge}
     >
       <Image
         source={getBigTypeImage(type)}
@@ -76,6 +78,8 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
   const scrollViewRef = useRef<ScrollView>(null);
   const isAdjustingRef = useRef(false);
   const hasInitialScrolledRef = useRef(false);
+  const { width: windowWidth } = useWindowDimensions();
+  const [viewportWidth, setViewportWidth] = useState(windowWidth || 390);
 
   // Generate 9 copies of the 18 selectable types (162 total items)
   const loopedTypes = useMemo(() => {
@@ -86,23 +90,29 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
     return list;
   }, []);
 
-  // Arrange into 54 columns of 3 rows each
-  const columns = useMemo(() => {
-    const totalColumns = loopedTypes.length / 3;
-    const cols: {
-      type0: PokemonType;
-      type1: PokemonType;
-      type2: PokemonType;
-    }[] = [];
-
-    for (let col = 0; col < totalColumns; col++) {
-      cols.push({
-        type0: loopedTypes[col * 3 + 0],
-        type1: loopedTypes[col * 3 + 1],
-        type2: loopedTypes[col * 3 + 2],
-      });
+  // Separate into 3 horizontal row strips (54 items each)
+  const row0Types = useMemo(() => {
+    const items: PokemonType[] = [];
+    for (let c = 0; c < 54; c++) {
+      items.push(loopedTypes[c * 3 + 0]);
     }
-    return cols;
+    return items;
+  }, [loopedTypes]);
+
+  const row1Types = useMemo(() => {
+    const items: PokemonType[] = [];
+    for (let c = 0; c < 54; c++) {
+      items.push(loopedTypes[c * 3 + 1]);
+    }
+    return items;
+  }, [loopedTypes]);
+
+  const row2Types = useMemo(() => {
+    const items: PokemonType[] = [];
+    for (let c = 0; c < 54; c++) {
+      items.push(loopedTypes[c * 3 + 2]);
+    }
+    return items;
   }, [loopedTypes]);
 
   const isTypeSelected = useCallback(
@@ -116,34 +126,74 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
     [selectedType1, selectedType2, selectedAttackType]
   );
 
-  const handleLayout = () => {
-    if (!hasInitialScrolledRef.current) {
-      hasInitialScrolledRef.current = true;
-      scrollViewRef.current?.scrollTo({ x: INITIAL_SCROLL_X, animated: false });
+  const calculateInitialScrollX = useCallback((width: number) => {
+    return PADDING_HORIZONTAL + 4 * ONE_CYCLE - width / 2 + BADGE_SIZE / 2;
+  }, []);
+
+  const handleLayout = (e: LayoutChangeEvent) => {
+    const width = e.nativeEvent.layout.width;
+    if (width > 0) {
+      setViewportWidth(width);
+      if (!hasInitialScrolledRef.current) {
+        hasInitialScrolledRef.current = true;
+        const initialX = calculateInitialScrollX(width);
+        scrollViewRef.current?.scrollTo({ x: initialX, animated: false });
+      }
     }
   };
 
   const handleContentSizeChange = () => {
-    if (!hasInitialScrolledRef.current) {
+    if (!hasInitialScrolledRef.current && viewportWidth > 0) {
       hasInitialScrolledRef.current = true;
-      scrollViewRef.current?.scrollTo({ x: INITIAL_SCROLL_X, animated: false });
+      const initialX = calculateInitialScrollX(viewportWidth);
+      scrollViewRef.current?.scrollTo({ x: initialX, animated: false });
     }
   };
 
-  const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (isAdjustingRef.current) {
-      isAdjustingRef.current = false;
-      return;
-    }
-
-    const x = event.nativeEvent.contentOffset.x;
-    if (x < MIN_THRESHOLD || x > MAX_THRESHOLD) {
-      const remainder = ((x % ONE_CYCLE) + ONE_CYCLE) % ONE_CYCLE;
-      const targetX = INITIAL_SCROLL_X + remainder;
+  const checkAndRecenter = useCallback((currentX: number) => {
+    if (isAdjustingRef.current) return;
+    const contentX = currentX - PADDING_HORIZONTAL;
+    if (contentX < MIN_THRESHOLD || contentX > MAX_THRESHOLD) {
+      const cycleOffset = ((contentX % ONE_CYCLE) + ONE_CYCLE) % ONE_CYCLE;
+      const targetContentX = 4 * ONE_CYCLE + cycleOffset;
+      const targetX = targetContentX + PADDING_HORIZONTAL;
       isAdjustingRef.current = true;
       scrollViewRef.current?.scrollTo({ x: targetX, animated: false });
+      setTimeout(() => {
+        isAdjustingRef.current = false;
+      }, 50);
+    }
+  }, []);
+
+  const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const x = event.nativeEvent.contentOffset.x;
+    const contentX = x - PADDING_HORIZONTAL;
+
+    // Extreme outer edge guard during active scrolling
+    if (contentX < EXTREME_MIN || contentX > EXTREME_MAX) {
+      if (isAdjustingRef.current) return;
+      const cycleOffset = ((contentX % ONE_CYCLE) + ONE_CYCLE) % ONE_CYCLE;
+      const targetContentX = 4 * ONE_CYCLE + cycleOffset;
+      const targetX = targetContentX + PADDING_HORIZONTAL;
+      isAdjustingRef.current = true;
+      scrollViewRef.current?.scrollTo({ x: targetX, animated: false });
+      setTimeout(() => {
+        isAdjustingRef.current = false;
+      }, 50);
     }
   };
+
+  const handleScrollEndDrag = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    checkAndRecenter(event.nativeEvent.contentOffset.x);
+  };
+
+  const handleMomentumScrollEnd = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    checkAndRecenter(event.nativeEvent.contentOffset.x);
+  };
+
+  const defaultInitialX = useMemo(() => {
+    return calculateInitialScrollX(windowWidth || 390);
+  }, [calculateInitialScrollX, windowWidth]);
 
   return (
     <View style={[styles.container, style]}>
@@ -153,31 +203,48 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
         showsHorizontalScrollIndicator={false}
         scrollEventThrottle={16}
         onScroll={handleScroll}
+        onScrollEndDrag={handleScrollEndDrag}
+        onMomentumScrollEnd={handleMomentumScrollEnd}
         onLayout={handleLayout}
         onContentSizeChange={handleContentSizeChange}
-        contentOffset={{ x: INITIAL_SCROLL_X, y: 0 }}
+        contentOffset={{ x: defaultInitialX, y: 0 }}
         contentContainerStyle={styles.scrollContent}
       >
-        {columns.map((col, colIndex) => (
-          <View key={`col-${colIndex}`} style={styles.column}>
+        {/* Row 0 */}
+        <View style={styles.row}>
+          {row0Types.map((type, idx) => (
             <TypeBadge
-              type={col.type0}
-              isSelected={isTypeSelected(col.type0)}
+              key={`row0-${idx}`}
+              type={type}
+              isSelected={isTypeSelected(type)}
               onPress={onSelect}
             />
+          ))}
+        </View>
+
+        {/* Row 1 (staggered middle row shifted right by 36px) */}
+        <View style={[styles.row, styles.middleRow]}>
+          {row1Types.map((type, idx) => (
             <TypeBadge
-              type={col.type1}
-              isSelected={isTypeSelected(col.type1)}
+              key={`row1-${idx}`}
+              type={type}
+              isSelected={isTypeSelected(type)}
               onPress={onSelect}
-              isMiddleRow
             />
+          ))}
+        </View>
+
+        {/* Row 2 */}
+        <View style={styles.row}>
+          {row2Types.map((type, idx) => (
             <TypeBadge
-              type={col.type2}
-              isSelected={isTypeSelected(col.type2)}
+              key={`row2-${idx}`}
+              type={type}
+              isSelected={isTypeSelected(type)}
               onPress={onSelect}
             />
-          </View>
-        ))}
+          ))}
+        </View>
       </ScrollView>
     </View>
   );
@@ -185,29 +252,28 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    height: 260,
+    height: 263,
     width: '100%',
   },
   scrollContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    paddingRight: 40,
-  },
-  column: {
-    width: BADGE_SIZE,
-    marginRight: GAP,
     flexDirection: 'column',
     gap: GAP,
+    paddingVertical: 12,
+    paddingHorizontal: PADDING_HORIZONTAL,
+  },
+  row: {
+    flexDirection: 'row',
+    gap: GAP,
+    marginLeft: 0,
+  },
+  middleRow: {
+    marginLeft: 36,
   },
   badge: {
     width: BADGE_SIZE,
     height: BADGE_SIZE,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  middleRowBadge: {
-    transform: [{ translateX: 36 }],
   },
   badgeImage: {
     width: BADGE_SIZE,
