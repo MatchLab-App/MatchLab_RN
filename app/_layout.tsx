@@ -1,8 +1,3 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import { Stack, SplashScreen } from "expo-router";
@@ -11,12 +6,10 @@ import "react-native-reanimated";
 
 import { fontFamily } from "@/constants/typography";
 import { MatchLabProvider } from "@/context/MatchLabContext";
-import { useColorScheme } from "@/hooks/use-color-scheme";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     [fontFamily.thin]: require("../assets/fonts/AppleSDGothicNeo-Thin.ttf"),
     [fontFamily.extraLight]: require("../assets/fonts/AppleSDGothicNeo-ExtraLight.ttf"),
@@ -37,32 +30,30 @@ export default function RootLayout() {
 
   return (
     <MatchLabProvider>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <LinearGradient
-          colors={["#000000", "#06413B"]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 0, y: 1 }}
-          style={{ flex: 1 }}
+      <LinearGradient
+        colors={["#000000", "#06413B"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        style={{ flex: 1 }}
+      >
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: "transparent" },
+            animation: "fade",
+          }}
         >
-          <Stack
-            screenOptions={{
-              headerShown: false,
-              contentStyle: { backgroundColor: "transparent" },
-              animation: "fade",
-            }}
-          >
-            <Stack.Screen name="index" />
-            <Stack.Screen name="startView/index" />
-            <Stack.Screen name="notice/index" />
-            <Stack.Screen name="home/index" />
-            <Stack.Screen name="search/index" />
-            <Stack.Screen name="recentResults/index" />
-            <Stack.Screen name="settings/index" />
-            <Stack.Screen name="typeChart/index" />
-          </Stack>
-        </LinearGradient>
-        <StatusBar style="light" />
-      </ThemeProvider>
+          <Stack.Screen name="index" />
+          <Stack.Screen name="startView/index" />
+          <Stack.Screen name="notice/index" />
+          <Stack.Screen name="home/index" />
+          <Stack.Screen name="search/index" />
+          <Stack.Screen name="recentResults/index" />
+          <Stack.Screen name="settings/index" />
+          <Stack.Screen name="typeChart/index" />
+        </Stack>
+      </LinearGradient>
+      <StatusBar style="light" />
     </MatchLabProvider>
   );
 }
