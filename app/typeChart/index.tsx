@@ -71,10 +71,10 @@ export default function TypeChartScreen() {
         return {
           byType: 'タイプ別',
           matrix: '全体相性表',
-          superEffective: '効果は抜群 (2배)',
-          notVeryEffective: '効果はいまひとつ (0.5배)',
-          noEffect: '効果がない (0배)',
-          normal: '等倍 (1배)',
+          superEffective: '効果は抜群 (2倍)',
+          notVeryEffective: '効果はいまひとつ (0.5倍)',
+          noEffect: '効果がない (0倍)',
+          normal: '等倍 (1倍)',
           atkLabel: '攻撃側',
           defLabel: '防御側',
           none: 'なし',
@@ -438,7 +438,7 @@ export default function TypeChartScreen() {
         )}
 
         {/* Bottom Home Indicator */}
-        <HomeIndicator style={styles.homeIndicator} />
+        <HomeIndicator style={{ marginBottom: Math.max(insets.bottom, 5) }} />
       </View>
     </MatchLabBackground>
   );
@@ -760,8 +760,5 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'rgba(255, 255, 255, 0.25)',
     fontWeight: 'bold',
-  },
-  homeIndicator: {
-    marginBottom: 8,
   },
 });

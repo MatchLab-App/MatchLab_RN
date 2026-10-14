@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -35,12 +36,7 @@ export default function SearchScreen() {
     <MatchLabBackground>
       <View style={styles.container}>
         {/* Top Header */}
-        <View
-          style={[
-            styles.headerContainer,
-            { paddingTop: insets.top + 14 },
-          ]}
-        >
+        <View style={styles.headerContainer}>
           <View style={styles.headerRow}>
             {/* Back Button */}
             <Pressable
@@ -50,10 +46,10 @@ export default function SearchScreen() {
               hitSlop={8}
               style={styles.backButton}
             >
-              <Ionicons
-                name="chevron-back"
-                size={24}
-                color={MatchLabColors.textWhite}
+              <Image
+                source={require('@/assets/images/button/Back.png')}
+                style={styles.backIcon}
+                resizeMode="contain"
               />
             </Pressable>
 
@@ -120,6 +116,8 @@ export default function SearchScreen() {
                   <Text
                     style={styles.koreanName}
                     numberOfLines={1}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.8}
                   >
                     {result.name}
                   </Text>
@@ -149,7 +147,9 @@ export default function SearchScreen() {
         </ScrollView>
 
         {/* Bottom Home Indicator */}
-        <HomeIndicator style={styles.homeIndicator} />
+        <HomeIndicator
+          style={{ marginBottom: Math.max(insets.bottom, 5) }}
+        />
       </View>
     </MatchLabBackground>
   );
@@ -160,11 +160,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
+    height: 140,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
-    paddingBottom: 19,
+    justifyContent: 'flex-end',
     paddingHorizontal: 30,
+    paddingBottom: 19,
   },
   headerRow: {
     flexDirection: 'row',
@@ -177,6 +179,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  backIcon: {
+    width: 23,
+    height: 23,
+  },
   searchCapsule: {
     flex: 1,
     height: 58,
@@ -187,7 +193,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 19,
-    gap: 14,
+    gap: 16,
   },
   searchInput: {
     flex: 1,
@@ -239,8 +245,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-  },
-  homeIndicator: {
-    marginBottom: 8,
   },
 });

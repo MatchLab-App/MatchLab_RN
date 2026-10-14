@@ -51,13 +51,8 @@ export default function SettingsScreen() {
   return (
     <MatchLabBackground>
       <View style={styles.container}>
-        {/* Top Header */}
-        <View
-          style={[
-            styles.headerContainer,
-            { paddingTop: insets.top + 12 },
-          ]}
-        >
+        {/* Top Header: Fixed height 126 extending from top edge */}
+        <View style={styles.headerContainer}>
           <MatchLabTopBar
             title={t.menuSettings}
             showsLogo={false}
@@ -73,11 +68,11 @@ export default function SettingsScreen() {
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
-          {/* Language Section */}
-          <View style={styles.sectionBlock}>
-            <Text style={styles.sectionLabel}>{t.settingsLanguage}</Text>
+          {/* Language Section Label */}
+          <Text style={styles.sectionLabel}>{t.settingsLanguage}</Text>
 
-            {/* Language Selector Row */}
+          {/* Language Selector Row */}
+          <View>
             <Pressable
               onPress={() => setIsDropdownOpen((prev) => !prev)}
               accessibilityRole="button"
@@ -150,7 +145,12 @@ export default function SettingsScreen() {
 
           {/* Notice Card */}
           <View style={styles.noticeCard}>
-            <Text style={styles.noticeTitle} numberOfLines={1}>
+            <Text
+              style={styles.noticeTitle}
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.75}
+            >
               {t.appServiceTitle}
             </Text>
             <Text style={styles.noticeDescription} numberOfLines={3}>
@@ -177,7 +177,7 @@ export default function SettingsScreen() {
             </View>
           </View>
 
-          {/* Footer */}
+          {/* Footer (Pushed toward bottom with marginTop: 'auto') */}
           <View style={styles.footerContainer}>
             <Image
               source={LOGO_WHITE_IMAGE}
@@ -190,7 +190,9 @@ export default function SettingsScreen() {
         </ScrollView>
 
         {/* Bottom Home Indicator */}
-        <HomeIndicator style={styles.homeIndicator} />
+        <HomeIndicator
+          style={{ marginBottom: Math.max(insets.bottom, 5) }}
+        />
       </View>
     </MatchLabBackground>
   );
@@ -201,22 +203,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
+    height: 126,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
+    justifyContent: 'flex-end',
     paddingBottom: 9,
   },
   scrollView: {
     flex: 1,
   },
   scrollContent: {
+    flexGrow: 1,
     paddingHorizontal: 30,
     paddingTop: 16,
     paddingBottom: 24,
     gap: 18,
-  },
-  sectionBlock: {
-    gap: 8,
   },
   sectionLabel: {
     fontFamily: fontFamily.semiBold,
@@ -246,7 +248,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: MatchLabColors.borderSubtle,
     overflow: 'hidden',
-    marginTop: 4,
+    marginTop: 8,
   },
   dropdownItem: {
     height: 48,
@@ -268,6 +270,7 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.bold,
   },
   noticeCard: {
+    height: 195,
     minHeight: 195,
     borderRadius: 28,
     backgroundColor: MatchLabColors.rowSurface,
@@ -278,7 +281,7 @@ const styles = StyleSheet.create({
   },
   noticeTitle: {
     fontFamily: fontFamily.bold,
-    fontSize: 22,
+    fontSize: 24,
     color: MatchLabColors.textWhite,
   },
   noticeDescription: {
@@ -317,6 +320,7 @@ const styles = StyleSheet.create({
     color: MatchLabColors.textWhite75,
   },
   footerContainer: {
+    marginTop: 'auto',
     alignItems: 'center',
     gap: 9,
     paddingTop: 16,
@@ -330,8 +334,5 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
     color: MatchLabColors.textWhite75,
-  },
-  homeIndicator: {
-    marginBottom: 8,
   },
 });

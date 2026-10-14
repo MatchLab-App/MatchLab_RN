@@ -4,16 +4,14 @@ import {
   Text,
   View,
 } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { MatchLabColors } from '@/constants/theme';
+import { Fonts, MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
 import type { PokemonType } from '@/constants/pokemonTypes';
 import { useMatchLab, type RecentMatchRecord } from '@/context/MatchLabContext';
 import {
   MatchLabBackground,
   MatchLabTopBar,
-  HomeIndicator,
   TypeSmallToken,
 } from '@/components/common';
 
@@ -61,6 +59,8 @@ function RecentRecordRow({ record }: RecentRecordRowProps) {
       <Text
         style={[styles.multiplierText, { color: multiplierTextColor }]}
         numberOfLines={1}
+        adjustsFontSizeToFit
+        minimumFontScale={0.8}
       >
         {`${formatMultiplier(record.multiplier)}X`}
       </Text>
@@ -69,7 +69,6 @@ function RecentRecordRow({ record }: RecentRecordRowProps) {
 }
 
 export default function RecentResultsScreen() {
-  const insets = useSafeAreaInsets();
   const router = useRouter();
   const { recentRecords, t } = useMatchLab();
 
@@ -77,12 +76,7 @@ export default function RecentResultsScreen() {
     <MatchLabBackground>
       <View style={styles.container}>
         {/* Top Header */}
-        <View
-          style={[
-            styles.headerContainer,
-            { paddingTop: insets.top + 12 },
-          ]}
-        >
+        <View style={styles.headerContainer}>
           <MatchLabTopBar
             title={t.menuRecent}
             showsLogo={false}
@@ -109,9 +103,6 @@ export default function RecentResultsScreen() {
             )}
           </View>
         </View>
-
-        {/* Bottom Home Indicator */}
-        <HomeIndicator style={styles.homeIndicator} />
       </View>
     </MatchLabBackground>
   );
@@ -122,9 +113,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
+    height: 126,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
+    justifyContent: 'flex-end',
     paddingBottom: 9,
   },
   contentContainer: {
@@ -175,9 +168,7 @@ const styles = StyleSheet.create({
   },
   multiplierText: {
     fontSize: 24,
-    fontFamily: fontFamily.bold,
-  },
-  homeIndicator: {
-    marginBottom: 8,
+    fontFamily: Fonts?.rounded,
+    fontWeight: '700',
   },
 });
