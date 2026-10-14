@@ -9,6 +9,7 @@ import {
   ScrollView,
   StyleProp,
   StyleSheet,
+  Text,
   useWindowDimensions,
   View,
   ViewStyle,
@@ -19,11 +20,13 @@ import {
   SELECTABLE_POKEMON_TYPES,
   getBigTypeImage,
 } from '@/constants/pokemonTypes';
+import { fontFamily } from '@/constants/typography';
 
 export interface TypeSelectCarouselProps {
   selectedType1: PokemonType;
   selectedType2: PokemonType;
   selectedAttackType?: PokemonType;
+  mode?: 'defense' | 'attack';
   onSelect: (type: PokemonType) => void;
   style?: StyleProp<ViewStyle>;
 }
@@ -42,13 +45,13 @@ const EXTREME_MAX = 8 * ONE_CYCLE; // 3984px
 
 interface TypeBadgeProps {
   type: PokemonType;
-  isSelected: boolean;
+  selectionOrder: number | null;
   onPress: (type: PokemonType) => void;
 }
 
 const TypeBadge: React.FC<TypeBadgeProps> = ({
   type,
-  isSelected,
+  selectionOrder,
   onPress,
 }) => {
   const handlePress = () => {
@@ -70,8 +73,13 @@ const TypeBadge: React.FC<TypeBadgeProps> = ({
         style={styles.badgeImage}
         resizeMode="contain"
       />
-      {isSelected && (
-        <View style={styles.selectedBorder} pointerEvents="none" />
+      {selectionOrder !== null && (
+        <>
+          <View style={styles.selectedBorder} pointerEvents="none" />
+          <View style={styles.orderBadge} pointerEvents="none">
+            <Text style={styles.orderBadgeText}>{selectionOrder}</Text>
+          </View>
+        </>
       )}
     </Pressable>
   );
@@ -81,6 +89,7 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
   selectedType1,
   selectedType2,
   selectedAttackType,
+  mode = 'defense',
   onSelect,
   style,
 }) => {
@@ -124,15 +133,27 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
     return items;
   }, [loopedTypes]);
 
-  const isTypeSelected = useCallback(
-    (type: PokemonType) => {
-      return (
-        type === selectedType1 ||
-        type === selectedType2 ||
-        (selectedAttackType != null && type === selectedAttackType)
-      );
+  const getSelectionOrder = useCallback(
+    (type: PokemonType): number | null => {
+      if (mode === 'attack') {
+        if (
+          selectedAttackType &&
+          type === selectedAttackType &&
+          selectedAttackType !== 'noType'
+        ) {
+          return 1;
+        }
+        return null;
+      }
+      if (type === selectedType1 && selectedType1 !== 'noType') {
+        return 1;
+      }
+      if (type === selectedType2 && selectedType2 !== 'noType') {
+        return 2;
+      }
+      return null;
     },
-    [selectedType1, selectedType2, selectedAttackType]
+    [mode, selectedType1, selectedType2, selectedAttackType]
   );
 
   const calculateInitialScrollX = useCallback((width: number) => {
@@ -241,19 +262,19 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
             <TypeBadge
               key={`row0-${idx}`}
               type={type}
-              isSelected={isTypeSelected(type)}
+              selectionOrder={getSelectionOrder(type)}
               onPress={onSelect}
             />
           ))}
         </View>
 
-        {/* Row 1 (staggered middle row shifted right by 36px) */}
+        {/* Row 1 (staggered middle row shifted right by COLUMN_PITCH / 2 = 41.5px) */}
         <View style={[styles.row, styles.middleRow]}>
           {row1Types.map((type, idx) => (
             <TypeBadge
               key={`row1-${idx}`}
               type={type}
-              isSelected={isTypeSelected(type)}
+              selectionOrder={getSelectionOrder(type)}
               onPress={onSelect}
             />
           ))}
@@ -265,7 +286,7 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
             <TypeBadge
               key={`row2-${idx}`}
               type={type}
-              isSelected={isTypeSelected(type)}
+              selectionOrder={getSelectionOrder(type)}
               onPress={onSelect}
             />
           ))}
@@ -289,10 +310,9 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     gap: GAP,
-    marginLeft: 0,
   },
   middleRow: {
-    marginLeft: 36,
+    paddingLeft: COLUMN_PITCH / 2,
   },
   badge: {
     width: BADGE_SIZE,
@@ -313,13 +333,30 @@ const styles = StyleSheet.create({
     width: BADGE_SIZE,
     height: BADGE_SIZE,
     borderRadius: BADGE_SIZE / 2,
-    borderWidth: 3,
-    borderColor: 'rgba(255, 255, 255, 0.9)',
+    borderWidth: 2.5,
+    borderColor: '#FFFFFF',
     shadowColor: '#FFFFFF',
-    shadowOpacity: 0.9,
-    shadowRadius: 8,
+    shadowOpacity: 0.85,
+    shadowRadius: 6,
     shadowOffset: { width: 0, height: 0 },
     elevation: 6,
+  },
+  orderBadge: {
+    position: 'absolute',
+    bottom: 2,
+    left: 2,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  orderBadgeText: {
+    fontFamily: fontFamily.bold,
+    fontSize: 12,
+    color: '#063B36',
+    lineHeight: 14,
   },
 });
 
