@@ -15,6 +15,7 @@ import {
   PokemonType,
   getSmallTypeImage,
   LOGO_WHITE_IMAGE,
+  BUTTON_IMAGES,
 } from '@/constants/pokemonTypes';
 import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
@@ -276,41 +277,36 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
   const displayTypes = paddedTypes.slice(0, slotCount);
 
   const isAttack = role ? role === 'attack' : width <= 120;
-  const iconName = isAttack ? 'flash' : 'shield';
 
   const accessibilityValueText = displayTypes
     .map((type) => t.typeLabels[type] ?? type)
     .join(', ');
 
-  const cardStyle: ViewStyle = {
+  const cardBoxStyle: ViewStyle = {
     width,
     height: 93,
-    borderRadius: 11,
-    backgroundColor: MatchLabColors.cardSurface,
-    borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
-    ...(isHighlighted
-      ? {
-          shadowColor: '#FFFFFF',
-          shadowOpacity: 0.55,
-          shadowRadius: 8,
-          shadowOffset: { width: 0, height: 0 },
-          elevation: 6,
-        }
-      : {}),
+    borderRadius: 12,
+    backgroundColor: 'rgba(2, 16, 15, 0.55)',
+    borderTopWidth: 1.2,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 0.5,
+    borderColor: isHighlighted
+      ? 'rgba(255, 255, 255, 0.32)'
+      : 'rgba(255, 255, 255, 0.16)',
   };
 
   const cardContent = (
-    <View style={styles.cardInner}>
+    <View style={cardBoxStyle}>
       {/* Header Row */}
       <View style={styles.cardHeaderRow}>
         <Text style={styles.cardHeaderText} numberOfLines={1}>
           {title}
         </Text>
-        <Ionicons
-          name={iconName}
-          size={12}
-          color={MatchLabColors.textWhite70}
+        <Image
+          source={isAttack ? BUTTON_IMAGES.attackIcon : BUTTON_IMAGES.defenceIcon}
+          style={styles.cardHeaderIcon}
+          resizeMode="contain"
         />
       </View>
 
@@ -323,29 +319,37 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
     </View>
   );
 
-  if (onPress) {
-    return (
-      <Pressable
-        onPress={onPress}
-        accessible={true}
-        accessibilityRole="button"
-        accessibilityLabel={accessibilityLabel ?? title}
-        accessibilityValue={{ text: accessibilityValueText }}
-        style={({ pressed }) => [cardStyle, pressed && styles.cardPressed, style]}
-      >
-        {cardContent}
-      </Pressable>
-    );
-  }
-
   return (
-    <View
-      accessible={true}
-      accessibilityLabel={accessibilityLabel ?? title}
-      accessibilityValue={{ text: accessibilityValueText }}
-      style={[cardStyle, style]}
-    >
-      {cardContent}
+    <View style={[styles.cardContainer, style]}>
+      {isHighlighted ? (
+        <Image
+          source={BUTTON_IMAGES.selectedTriangle}
+          style={styles.selectedTriangle}
+          resizeMode="contain"
+        />
+      ) : (
+        <View style={styles.trianglePlaceholder} />
+      )}
+      {onPress ? (
+        <Pressable
+          onPress={onPress}
+          accessible={true}
+          accessibilityRole="button"
+          accessibilityLabel={accessibilityLabel ?? title}
+          accessibilityValue={{ text: accessibilityValueText }}
+          style={({ pressed }) => [pressed && styles.cardPressed]}
+        >
+          {cardContent}
+        </Pressable>
+      ) : (
+        <View
+          accessible={true}
+          accessibilityLabel={accessibilityLabel ?? title}
+          accessibilityValue={{ text: accessibilityValueText }}
+        >
+          {cardContent}
+        </View>
+      )}
     </View>
   );
 };
@@ -449,28 +453,42 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: MatchLabColors.textWhite,
   },
-  cardInner: {
-    flex: 1,
-    justifyContent: 'space-between',
+  cardContainer: {
+    alignItems: 'center',
+  },
+  selectedTriangle: {
+    width: 12,
+    height: 8,
+    marginBottom: 10,
+  },
+  trianglePlaceholder: {
+    height: 8,
+    marginBottom: 10,
   },
   cardHeaderRow: {
-    paddingHorizontal: 7,
-    paddingTop: 6,
+    paddingHorizontal: 9,
+    paddingTop: 7,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   cardHeaderText: {
     fontFamily: fontFamily.semiBold,
-    fontSize: 12,
-    color: MatchLabColors.textWhite70,
+    fontSize: 11,
+    color: 'rgba(255, 255, 255, 0.7)',
+  },
+  cardHeaderIcon: {
+    width: 12,
+    height: 12,
+    opacity: 0.75,
   },
   cardTokensRow: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-    paddingBottom: 10,
+    gap: 12,
+    paddingBottom: 6,
   },
   cardPressed: {
     opacity: 0.8,

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Pressable, StyleProp, StyleSheet, Text, ViewStyle } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
 import { useMatchLab } from '@/context/MatchLabContext';
 
@@ -30,7 +29,7 @@ export const SearchButton: React.FC<SearchButtonProps> = ({
         style,
       ]}
     >
-      <Ionicons name="search" size={24} color="#8E8E93" style={styles.icon} />
+      <Ionicons name="search" size={22} color="rgba(255, 255, 255, 0.55)" style={styles.icon} />
       <Text style={styles.text} numberOfLines={1}>
         {displayText}
       </Text>
@@ -40,12 +39,12 @@ export const SearchButton: React.FC<SearchButtonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    height: 58,
-    borderRadius: 28,
-    marginHorizontal: 46,
-    backgroundColor: 'rgba(142, 142, 147, 0.1)',
+    height: 54,
+    borderRadius: 27,
+    marginHorizontal: 30,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
+    borderColor: 'rgba(255, 255, 255, 0.18)',
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 19,
@@ -54,12 +53,12 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   icon: {
-    marginRight: 30,
+    marginRight: 16,
   },
   text: {
     fontFamily: fontFamily.bold,
-    fontSize: 20,
-    color: '#8E8E93',
+    fontSize: 18,
+    color: 'rgba(255, 255, 255, 0.5)',
   },
 });
 
