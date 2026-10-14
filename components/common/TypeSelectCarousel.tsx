@@ -1,9 +1,10 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Image,
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   Pressable,
   ScrollView,
   StyleProp,
@@ -12,6 +13,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import * as Haptics from 'expo-haptics';
 import {
   PokemonType,
   SELECTABLE_POKEMON_TYPES,
@@ -49,12 +51,19 @@ const TypeBadge: React.FC<TypeBadgeProps> = ({
   isSelected,
   onPress,
 }) => {
+  const handlePress = () => {
+    if (Platform.OS !== 'web') {
+      Haptics.selectionAsync().catch(() => {});
+    }
+    onPress(type);
+  };
+
   return (
     <Pressable
-      onPress={() => onPress(type)}
+      onPress={handlePress}
       accessibilityRole="button"
       accessibilityLabel={type}
-      style={styles.badge}
+      style={({ pressed }) => [styles.badge, pressed && styles.badgePressed]}
     >
       <Image
         source={getBigTypeImage(type)}
@@ -130,14 +139,31 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
     return PADDING_HORIZONTAL + 4 * ONE_CYCLE - width / 2 + BADGE_SIZE / 2;
   }, []);
 
+  const scrollToInitialPosition = useCallback(
+    (width: number) => {
+      if (width <= 0) return;
+      const initialX = calculateInitialScrollX(width);
+      requestAnimationFrame(() => {
+        scrollViewRef.current?.scrollTo({ x: initialX, animated: false });
+      });
+    },
+    [calculateInitialScrollX]
+  );
+
+  useEffect(() => {
+    if (!hasInitialScrolledRef.current && viewportWidth > 0) {
+      hasInitialScrolledRef.current = true;
+      scrollToInitialPosition(viewportWidth);
+    }
+  }, [viewportWidth, scrollToInitialPosition]);
+
   const handleLayout = (e: LayoutChangeEvent) => {
     const width = e.nativeEvent.layout.width;
     if (width > 0) {
       setViewportWidth(width);
       if (!hasInitialScrolledRef.current) {
         hasInitialScrolledRef.current = true;
-        const initialX = calculateInitialScrollX(width);
-        scrollViewRef.current?.scrollTo({ x: initialX, animated: false });
+        scrollToInitialPosition(width);
       }
     }
   };
@@ -145,8 +171,7 @@ export const TypeSelectCarousel: React.FC<TypeSelectCarouselProps> = ({
   const handleContentSizeChange = () => {
     if (!hasInitialScrolledRef.current && viewportWidth > 0) {
       hasInitialScrolledRef.current = true;
-      const initialX = calculateInitialScrollX(viewportWidth);
-      scrollViewRef.current?.scrollTo({ x: initialX, animated: false });
+      scrollToInitialPosition(viewportWidth);
     }
   };
 
@@ -274,6 +299,10 @@ const styles = StyleSheet.create({
     height: BADGE_SIZE,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  badgePressed: {
+    transform: [{ scale: 0.93 }],
+    opacity: 0.9,
   },
   badgeImage: {
     width: BADGE_SIZE,
