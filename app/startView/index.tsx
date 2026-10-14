@@ -12,13 +12,47 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { MatchLabBackground } from '@/components/common';
 import {
+  BUTTON_IMAGES,
+  LOGO_WHITE_IMAGE,
   START_CLOUD_TYPES,
   getBigTypeImage,
-  LOGO_WHITE_IMAGE,
+  type PokemonType,
 } from '@/constants/pokemonTypes';
 import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
 import { useMatchLab } from '@/context/MatchLabContext';
+
+interface HoneycombRowConfig {
+  count: number;
+  blur: number;
+  opacity: number;
+}
+
+const HONEYCOMB_CONFIG: HoneycombRowConfig[] = [
+  { count: 4, blur: 0, opacity: 0.92 },
+  { count: 3, blur: 0, opacity: 0.92 },
+  { count: 4, blur: 0, opacity: 0.92 },
+  { count: 3, blur: 0, opacity: 0.92 },
+  { count: 4, blur: 4, opacity: 0.75 },
+  { count: 3, blur: 8, opacity: 0.6 },
+  { count: 4, blur: 14, opacity: 0.45 },
+  { count: 3, blur: 14, opacity: 0.45 },
+];
+
+let globalTypeIndex = 0;
+const HONEYCOMB_ROWS = HONEYCOMB_CONFIG.map((cfg, rowIndex) => {
+  const types: PokemonType[] = [];
+  for (let i = 0; i < cfg.count; i++) {
+    types.push(START_CLOUD_TYPES[globalTypeIndex % START_CLOUD_TYPES.length]);
+    globalTypeIndex++;
+  }
+  return {
+    rowIndex,
+    types,
+    blur: cfg.blur,
+    opacity: cfg.opacity,
+  };
+});
 
 export default function StartViewScreen() {
   const router = useRouter();
@@ -39,75 +73,90 @@ export default function StartViewScreen() {
       {/* Background base */}
       <MatchLabBackground />
 
-      {/* TypeIconCloud */}
+      {/* Honeycomb TypeIconCloud with Progressive Blur */}
       <View style={styles.cloudWrapper} pointerEvents="none">
         <View style={styles.cloudGrid}>
-          {START_CLOUD_TYPES.map((type, index) => (
-            <Image
-              key={`${type}-${index}`}
-              source={getBigTypeImage(type)}
-              style={styles.cloudItem}
-              resizeMode="contain"
-              blurRadius={1}
-            />
+          {HONEYCOMB_ROWS.map((row) => (
+            <View
+              key={`cloud-row-${row.rowIndex}`}
+              style={[
+                styles.cloudRow,
+                row.blur > 0 ? ({ filter: [{ blur: row.blur }] } as any) : undefined,
+              ]}
+            >
+              {row.types.map((type, idx) => (
+                <Image
+                  key={`cloud-${row.rowIndex}-${idx}-${type}`}
+                  source={getBigTypeImage(type)}
+                  style={[styles.cloudItem, { opacity: row.opacity }]}
+                  blurRadius={row.blur > 0 ? row.blur : undefined}
+                  resizeMode="contain"
+                />
+              ))}
+            </View>
           ))}
         </View>
       </View>
 
       {/* Overlay LinearGradient */}
       <LinearGradient
-        colors={[MatchLabColors.startOverlayGradient[0], MatchLabColors.startOverlayGradient[1]]}
+        colors={['rgba(0,0,0,0.05)', 'rgba(2,28,25,0.55)', '#04322D']}
+        locations={[0, 0.52, 0.88]}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
         style={StyleSheet.absoluteFill}
         pointerEvents="none"
       />
 
-      {/* Foreground matching StartView.swift VStack */}
+      {/* Foreground */}
       <View style={styles.foreground} pointerEvents="none">
-        {/* Top row: version */}
-        <View
+        {/* Top version text */}
+        <Text
           style={[
-            styles.topRow,
-            {
-              paddingTop: Math.max(insets.top + 10, s(62)),
-              paddingRight: 23,
-            },
+            styles.versionText,
+            { top: insets.top + 10 },
           ]}
         >
-          <Text style={styles.versionText}>{t.version}</Text>
-        </View>
-
-        {/* Spacer */}
-        <View style={styles.spacer} />
+          {t.version}
+        </Text>
 
         {/* Center section */}
-        <View style={styles.centerSection}>
+        <View
+          style={[
+            styles.centerSection,
+            { marginTop: Math.round(windowHeight * 0.46) - insets.top },
+          ]}
+        >
           <Image
             source={LOGO_WHITE_IMAGE}
             style={styles.logoImage}
             resizeMode="contain"
           />
-          <Text style={[styles.welcomeText, { marginTop: s(140) }]}>
+          <Text style={[styles.welcomeText, { marginTop: s(125) }]}>
             {t.welcome}
           </Text>
-          <Text style={[styles.touchText, { marginTop: s(48) }]}>
+          <Image
+            source={BUTTON_IMAGES.selectedTriangle}
+            style={[
+              styles.triangleIcon,
+              { marginTop: s(30), marginBottom: 8 },
+            ]}
+            resizeMode="contain"
+          />
+          <Text style={styles.touchText}>
             {t.touchTheScreen}
           </Text>
         </View>
 
-        {/* Spacer */}
-        <View style={styles.spacer} />
-
         {/* Bottom section */}
-        <View style={styles.bottomSection}>
+        <View
+          style={[
+            styles.bottomSection,
+            { paddingBottom: Math.max(insets.bottom, 16) + 8 },
+          ]}
+        >
           <View style={styles.divider} />
-          <Text
-            style={[
-              styles.disclaimerText,
-              { marginBottom: Math.max(insets.bottom + 12, s(32)) },
-            ]}
-          >
+          <Text style={styles.disclaimerText}>
             {t.startDisclaimer}
           </Text>
         </View>
@@ -121,36 +170,34 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   cloudWrapper: {
-    ...StyleSheet.absoluteFill,
+    position: 'absolute',
+    top: -28,
+    left: 0,
+    right: 0,
     alignItems: 'center',
-    justifyContent: 'center',
   },
   cloudGrid: {
-    width: 268,
+    gap: 6,
+    alignItems: 'center',
+  },
+  cloudRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 12,
-    opacity: 0.8,
-    transform: [{ rotate: '-8deg' }, { translateY: -26 }],
   },
   cloudItem: {
-    width: 58,
-    height: 58,
+    width: 68,
+    height: 68,
   },
   foreground: {
     flex: 1,
   },
-  topRow: {
-    alignItems: 'flex-end',
-  },
   versionText: {
+    position: 'absolute',
+    right: 24,
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
-    color: MatchLabColors.textWhite75,
-  },
-  spacer: {
-    flex: 1,
+    color: 'rgba(255, 255, 255, 0.8)',
   },
   centerSection: {
     alignItems: 'center',
@@ -164,26 +211,32 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: MatchLabColors.neonCyan,
   },
+  triangleIcon: {
+    width: 11,
+    height: 7,
+    tintColor: '#FFFFFF',
+  },
   touchText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
-    color: MatchLabColors.textWhite,
+    color: '#FFFFFF',
   },
   bottomSection: {
+    marginTop: 'auto',
     alignItems: 'center',
   },
   divider: {
     width: 300,
     height: 1,
-    backgroundColor: MatchLabColors.divider,
-    marginBottom: 15,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    marginBottom: 14,
   },
   disclaimerText: {
     width: 308,
     fontFamily: fontFamily.semiBold,
-    fontSize: 13,
-    lineHeight: 17,
-    color: MatchLabColors.textWhite75,
+    fontSize: 12.5,
+    lineHeight: 17.5,
+    color: 'rgba(255, 255, 255, 0.75)',
     textAlign: 'center',
   },
 });
