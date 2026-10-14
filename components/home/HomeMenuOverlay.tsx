@@ -6,10 +6,12 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
 import {
   MatchLabBackground,
   MatchLabTopBar,
+  SearchButton,
 } from '@/components/common';
 import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
@@ -66,7 +68,11 @@ export const HomeMenuOverlay: React.FC<HomeMenuOverlayProps> = ({
   }
 
   return (
-    <View style={styles.overlay}>
+    <Animated.View
+      entering={FadeIn.duration(180)}
+      exiting={FadeOut.duration(180)}
+      style={styles.overlay}
+    >
       <MatchLabBackground>
         <SafeAreaView style={styles.safeArea}>
           <MatchLabTopBar
@@ -75,7 +81,12 @@ export const HomeMenuOverlay: React.FC<HomeMenuOverlayProps> = ({
             leftAccessibilityLabel={t.accessibilityCloseMenu}
             onLeftTap={onClose}
           />
-          <View style={styles.spacer} />
+          <View pointerEvents="none">
+            <SearchButton
+              onPress={() => {}}
+              style={styles.invisibleSearchButton}
+            />
+          </View>
           <View style={styles.menuList}>
             <MenuActionRow
               title={t.menuRecent}
@@ -95,7 +106,7 @@ export const HomeMenuOverlay: React.FC<HomeMenuOverlayProps> = ({
           </View>
         </SafeAreaView>
       </MatchLabBackground>
-    </View>
+    </Animated.View>
   );
 };
 
@@ -109,8 +120,9 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
   },
-  spacer: {
-    height: 74,
+  invisibleSearchButton: {
+    marginTop: 16,
+    opacity: 0,
   },
   menuList: {
     paddingHorizontal: 27,
