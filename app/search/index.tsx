@@ -27,20 +27,36 @@ export default function SearchScreen() {
   const { searchQuery, setSearchQuery, searchResults, addDefenseTypes, t } =
     useMatchLab();
 
+  const goBackSafely = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/home');
+    }
+  };
+
   const handleSelectResult = (result: PokemonSearchResult) => {
     addDefenseTypes(result.types);
-    router.back();
+    goBackSafely();
   };
 
   return (
     <MatchLabBackground>
       <View style={styles.container}>
         {/* Top Header */}
-        <View style={styles.headerContainer}>
+        <View
+          style={[
+            styles.headerContainer,
+            {
+              paddingTop: Math.max(insets.top, 20) + 12,
+              paddingBottom: 16,
+            },
+          ]}
+        >
           <View style={styles.headerRow}>
             {/* Back Button */}
             <Pressable
-              onPress={() => router.back()}
+              onPress={goBackSafely}
               accessibilityRole="button"
               accessibilityLabel={t.accessibilityBack}
               hitSlop={8}
@@ -96,54 +112,66 @@ export default function SearchScreen() {
           contentContainerStyle={styles.resultsContent}
           keyboardShouldPersistTaps="handled"
         >
-          {searchResults.slice(0, 12).map((result) => (
-            <View
-              key={result.id}
-              style={styles.resultRowWrapper}
+          {searchResults.length === 0 ? (
+            <Text
+              style={
+                searchQuery.trim().length === 0
+                  ? styles.emptyPromptText
+                  : styles.emptyDashText
+              }
             >
-              <Pressable
-                onPress={() => handleSelectResult(result)}
-                accessibilityRole="button"
-                accessibilityLabel={result.name}
-                accessibilityHint={result.englishName}
-                style={({ pressed }) => [
-                  styles.resultRow,
-                  pressed && styles.rowPressed,
-                ]}
+              {searchQuery.trim().length === 0 ? t.searchPlaceholder : '-'}
+            </Text>
+          ) : (
+            searchResults.slice(0, 12).map((result) => (
+              <View
+                key={result.id}
+                style={styles.resultRowWrapper}
               >
-                {/* Left column: Korean and English name */}
-                <View style={styles.nameColumn}>
-                  <Text
-                    style={styles.koreanName}
-                    numberOfLines={1}
-                    adjustsFontSizeToFit
-                    minimumFontScale={0.8}
-                  >
-                    {result.name}
-                  </Text>
-                  <Text
-                    style={styles.englishName}
-                    numberOfLines={1}
-                  >
-                    {result.englishName}
-                  </Text>
-                </View>
+                <Pressable
+                  onPress={() => handleSelectResult(result)}
+                  accessibilityRole="button"
+                  accessibilityLabel={result.name}
+                  accessibilityHint={result.englishName}
+                  style={({ pressed }) => [
+                    styles.resultRow,
+                    pressed && styles.rowPressed,
+                  ]}
+                >
+                  {/* Left column: Korean and English name */}
+                  <View style={styles.nameColumn}>
+                    <Text
+                      style={styles.koreanName}
+                      numberOfLines={1}
+                      adjustsFontSizeToFit
+                      minimumFontScale={0.8}
+                    >
+                      {result.name}
+                    </Text>
+                    <Text
+                      style={styles.englishName}
+                      numberOfLines={1}
+                    >
+                      {result.englishName}
+                    </Text>
+                  </View>
 
-                {/* Right row: Type small tokens */}
-                <View style={styles.tokenRow}>
-                  {result.types.slice(0, 2).map((type, idx) => (
-                    <TypeSmallToken
-                      key={`${type}-${idx}`}
-                      type={type}
-                    />
-                  ))}
-                  {result.types.length === 1 && (
-                    <TypeSmallToken type="noType" />
-                  )}
-                </View>
-              </Pressable>
-            </View>
-          ))}
+                  {/* Right row: Type small tokens */}
+                  <View style={styles.tokenRow}>
+                    {result.types.slice(0, 2).map((type, idx) => (
+                      <TypeSmallToken
+                        key={`${type}-${idx}`}
+                        type={type}
+                      />
+                    ))}
+                    {result.types.length === 1 && (
+                      <TypeSmallToken type="noType" />
+                    )}
+                  </View>
+                </Pressable>
+              </View>
+            ))
+          )}
         </ScrollView>
 
         {/* Bottom Home Indicator */}
@@ -160,13 +188,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    height: 140,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
-    justifyContent: 'flex-end',
     paddingHorizontal: 30,
-    paddingBottom: 19,
   },
   headerRow: {
     flexDirection: 'row',
@@ -213,6 +238,20 @@ const styles = StyleSheet.create({
   resultsContent: {
     paddingTop: 12,
     paddingBottom: 24,
+  },
+  emptyPromptText: {
+    fontFamily: fontFamily.semiBold,
+    fontSize: 15,
+    color: MatchLabColors.textWhite45,
+    marginTop: 48,
+    textAlign: 'center',
+  },
+  emptyDashText: {
+    fontFamily: fontFamily.semiBold,
+    fontSize: 18,
+    color: MatchLabColors.textWhite45,
+    marginTop: 48,
+    textAlign: 'center',
   },
   resultRowWrapper: {
     paddingHorizontal: 40,

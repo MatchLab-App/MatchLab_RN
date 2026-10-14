@@ -1,15 +1,18 @@
 import React from 'react';
 import {
+  ScrollView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Fonts, MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
 import type { PokemonType } from '@/constants/pokemonTypes';
 import { useMatchLab, type RecentMatchRecord } from '@/context/MatchLabContext';
 import {
+  HomeIndicator,
   MatchLabBackground,
   MatchLabTopBar,
   TypeSmallToken,
@@ -70,24 +73,43 @@ function RecentRecordRow({ record }: RecentRecordRowProps) {
 
 export default function RecentResultsScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { recentRecords, t } = useMatchLab();
 
   return (
     <MatchLabBackground>
       <View style={styles.container}>
         {/* Top Header */}
-        <View style={styles.headerContainer}>
+        <View
+          style={[
+            styles.headerContainer,
+            {
+              paddingTop: Math.max(insets.top, 20) + 12,
+              paddingBottom: 12,
+            },
+          ]}
+        >
           <MatchLabTopBar
             title={t.menuRecent}
             showsLogo={false}
             leftIconType="back"
             leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => router.back()}
+            onLeftTap={() => {
+              if (router.canGoBack()) {
+                router.back();
+              } else {
+                router.replace('/home');
+              }
+            }}
           />
         </View>
 
-        {/* Content Container */}
-        <View style={styles.contentContainer}>
+        {/* Scrollable Records Content */}
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
           <Text style={styles.sectionLabel}>{t.menuRecent}</Text>
 
           {/* Records List */}
@@ -102,7 +124,12 @@ export default function RecentResultsScreen() {
               ))
             )}
           </View>
-        </View>
+        </ScrollView>
+
+        {/* Bottom Home Indicator */}
+        <HomeIndicator
+          style={{ marginBottom: Math.max(insets.bottom, 5) }}
+        />
       </View>
     </MatchLabBackground>
   );
@@ -113,18 +140,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    height: 126,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
-    justifyContent: 'flex-end',
-    paddingBottom: 9,
   },
-  contentContainer: {
+  scrollView: {
+    flex: 1,
+  },
+  scrollContent: {
     paddingHorizontal: 30,
     paddingTop: 16,
+    paddingBottom: 24,
     gap: 18,
-    flex: 1,
   },
   sectionLabel: {
     fontFamily: fontFamily.semiBold,

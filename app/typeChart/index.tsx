@@ -113,7 +113,10 @@ export default function TypeChartScreen() {
         <View
           style={[
             styles.headerContainer,
-            { paddingTop: insets.top + 12 },
+            {
+              paddingTop: Math.max(insets.top, 20) + 12,
+              paddingBottom: 12,
+            },
           ]}
         >
           <MatchLabTopBar
@@ -121,7 +124,13 @@ export default function TypeChartScreen() {
             showsLogo={false}
             leftIconType="back"
             leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => router.back()}
+            onLeftTap={() => {
+              if (router.canGoBack()) {
+                router.back();
+              } else {
+                router.replace('/home');
+              }
+            }}
           />
         </View>
 
@@ -452,7 +461,6 @@ const styles = StyleSheet.create({
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
-    paddingBottom: 9,
   },
   tabContainer: {
     flexDirection: 'row',
