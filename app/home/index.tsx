@@ -5,7 +5,7 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, {
   FadeInRight,
   FadeOutLeft,
@@ -29,6 +29,7 @@ import { useMatchLab } from '@/context/MatchLabContext';
 export default function HomeScreen() {
   const router = useRouter();
   const { height: windowHeight } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const {
     step,
     primaryDefenseType,
@@ -46,13 +47,16 @@ export default function HomeScreen() {
     performPrimaryAction,
     goBackHomeStep,
     editDefenseSelection,
+    resetHome,
     t,
   } = useMatchLab();
 
-  // Responsive scaling for smaller devices (< 812pt)
-  const isSmallScreen = windowHeight < 812;
-  const scale = isSmallScreen ? Math.max(windowHeight / 812, 0.75) : 1;
-  const s = (v: number) => Math.round(v * scale);
+  // Responsive spacing calculation using safe area insets and window dimensions
+  const topInset = Math.max(insets.top, 16) + 4;
+  const bottomInset = Math.max(insets.bottom, 12);
+  const availableHeight = windowHeight - topInset - bottomInset;
+  const spacingScale = Math.min(Math.max((availableHeight - 560) / 215, 0.35), 1.0);
+  const s = (v: number) => Math.round(v * spacingScale);
 
   const titleColor =
     step === 'result' && effectivenessSummary.multiplier === 0
@@ -66,7 +70,7 @@ export default function HomeScreen() {
 
   return (
     <MatchLabBackground>
-      <SafeAreaView style={styles.safeArea}>
+      <View style={[styles.container, { paddingTop: topInset, paddingBottom: bottomInset }]}>
         {/* 1. Top Bar */}
         <MatchLabTopBar
           leftIconType={step === 'selectFirstOpponentType' ? 'menu' : 'back'}
@@ -83,9 +87,11 @@ export default function HomeScreen() {
             }
           }}
           showsTrailingAction={step !== 'selectFirstOpponentType'}
+          trailingAccessibilityLabel={t.goFirst}
+          onTrailingTap={resetHome}
         />
 
-        {/* 2. Search button or spacer */}
+        {/* 2. Search button (Step 1) or Spacer (Steps 2-4) */}
         {step === 'selectFirstOpponentType' ? (
           <SearchButton
             onPress={() => router.push('/search')}
@@ -95,7 +101,7 @@ export default function HomeScreen() {
             }}
           />
         ) : (
-          <View style={{ height: s(40) }} />
+          <View style={{ height: s(32) }} />
         )}
 
         {/* 3. Title block */}
@@ -119,7 +125,7 @@ export default function HomeScreen() {
         </View>
 
         {/* Spacer below TitleBlock */}
-        <View style={{ height: s(32) }} />
+        <View style={{ height: s(26) }} />
 
         {/* 4. Type selection block with Reanimated layout and card transitions */}
         <View style={styles.typeSelectionBlock}>
@@ -166,18 +172,20 @@ export default function HomeScreen() {
         </View>
 
         {/* 5. Prompt text */}
-        <Text
-          style={[
-            styles.promptText,
-            { marginTop: s(step === 'selectFirstOpponentType' ? 40 : 26) },
-          ]}
-        >
-          {prompt}
-        </Text>
+        <View style={[styles.promptContainer, { marginTop: s(22) }]}>
+          <Text
+            style={styles.promptText}
+            numberOfLines={2}
+            adjustsFontSizeToFit
+            minimumFontScale={0.85}
+          >
+            {prompt}
+          </Text>
+        </View>
 
         {/* 6. Action Pill Button (only when step !== 'selectFirstOpponentType') */}
         {step !== 'selectFirstOpponentType' && (
-          <View style={[styles.actionButtonContainer, { marginTop: s(30) }]}>
+          <View style={[styles.actionButtonContainer, { marginTop: s(20) }]}>
             <MatchLabPillButton
               title={actionTitle}
               isPrimary={step !== 'selectAttackType'}
@@ -187,22 +195,25 @@ export default function HomeScreen() {
           </View>
         )}
 
-        {/* 7. Custom Divider */}
-        <CustomDivider
-          style={{
-            marginTop: s(step === 'selectFirstOpponentType' ? 57 : 43),
-            marginBottom: s(48),
-          }}
-        />
-
-        {/* 8. Carousel */}
-        <TypeSelectCarousel
-          selectedType1={primaryDefenseType}
-          selectedType2={secondaryDefenseType}
-          selectedAttackType={selectedAttackType}
-          onSelect={selectType}
-        />
-      </SafeAreaView>
+        {/* 7. Custom Divider & 8. Carousel with Reanimated layout transition */}
+        <Animated.View
+          layout={LinearTransition.springify().damping(20).stiffness(200)}
+          style={styles.bottomSection}
+        >
+          <CustomDivider
+            style={{
+              marginTop: s(28),
+              marginBottom: s(34),
+            }}
+          />
+          <TypeSelectCarousel
+            selectedType1={primaryDefenseType}
+            selectedType2={secondaryDefenseType}
+            selectedAttackType={selectedAttackType}
+            onSelect={selectType}
+          />
+        </Animated.View>
+      </View>
 
       {/* 9. Home Menu Overlay */}
       <HomeMenuOverlay
@@ -226,12 +237,14 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
+  container: {
     flex: 1,
   },
   titleBlock: {
+    height: 58,
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    gap: 6,
   },
   titleText: {
     fontFamily: fontFamily.bold,
@@ -250,17 +263,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 27,
   },
+  promptContainer: {
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
   promptText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
-    lineHeight: 17,
+    lineHeight: 18,
     color: MatchLabColors.textWhite75,
     textAlign: 'center',
     maxWidth: 296,
-    alignSelf: 'center',
   },
   actionButtonContainer: {
     paddingHorizontal: 46,
+    width: '100%',
+  },
+  bottomSection: {
     width: '100%',
   },
 });
