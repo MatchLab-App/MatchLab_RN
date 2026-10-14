@@ -13,14 +13,19 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { MatchLabColors } from '@/constants/theme';
 import { fontFamily } from '@/constants/typography';
-import { LOGO_WHITE_IMAGE } from '@/constants/pokemonTypes';
+import { BUTTON_IMAGES, LOGO_WHITE_IMAGE } from '@/constants/pokemonTypes';
 import type { AppLanguage } from '@/constants/i18n';
 import { useMatchLab } from '@/context/MatchLabContext';
 import {
   MatchLabBackground,
-  MatchLabTopBar,
   HomeIndicator,
 } from '@/components/common';
+
+const getFlagEmoji = (lang: AppLanguage) => {
+  if (lang === 'ko') return '🇰🇷';
+  if (lang === 'en') return '🇺🇸';
+  return '🇯🇵';
+};
 
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
@@ -56,24 +61,37 @@ export default function SettingsScreen() {
           style={[
             styles.headerContainer,
             {
-              paddingTop: Math.max(insets.top, 20) + 12,
-              paddingBottom: 12,
+              paddingTop: Math.max(insets.top, 16) + 4,
+              paddingBottom: 10,
             },
           ]}
         >
-          <MatchLabTopBar
-            title={t.menuSettings}
-            showsLogo={false}
-            leftIconType="back"
-            leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => {
-              if (router.canGoBack()) {
-                router.back();
-              } else {
-                router.replace('/home');
-              }
-            }}
-          />
+          <View style={styles.headerRow}>
+            <Pressable
+              onPress={() => {
+                if (router.canGoBack()) {
+                  router.back();
+                } else {
+                  router.replace('/home');
+                }
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={t.accessibilityBack}
+              hitSlop={8}
+              style={styles.headerButton}
+            >
+              <Image
+                source={BUTTON_IMAGES.back}
+                style={styles.backIcon}
+                resizeMode="contain"
+              />
+            </Pressable>
+
+            <Text style={styles.headerTitle}>{t.menuSettings}</Text>
+
+            {/* Spacer to balance header */}
+            <View style={styles.headerSpacer} />
+          </View>
         </View>
 
         {/* Scrollable Main Content */}
@@ -85,20 +103,25 @@ export default function SettingsScreen() {
           {/* Language Section Label */}
           <Text style={styles.sectionLabel}>{t.settingsLanguage}</Text>
 
-          {/* Language Selector Row */}
+          {/* Language Selector Pill */}
           <View>
             <Pressable
               onPress={() => setIsDropdownOpen((prev) => !prev)}
               accessibilityRole="button"
               accessibilityLabel={t.settingsLanguage}
               accessibilityValue={{ text: currentLanguageLabel }}
-              style={styles.settingsRow}
+              style={styles.languagePill}
             >
-              <Text style={styles.rowTitleText}>{currentLanguageLabel}</Text>
+              <View style={styles.languageLeft}>
+                <View style={styles.flagBadge}>
+                  <Text style={styles.flagEmoji}>{getFlagEmoji(language)}</Text>
+                </View>
+                <Text style={styles.languageText}>{currentLanguageLabel}</Text>
+              </View>
               <Ionicons
-                name={isDropdownOpen ? 'chevron-up' : 'chevron-down'}
-                size={18}
-                color={MatchLabColors.textWhite75}
+                name={isDropdownOpen ? 'caret-up' : 'caret-down'}
+                size={14}
+                color="#FFFFFF"
               />
             </Pressable>
 
@@ -121,14 +144,21 @@ export default function SettingsScreen() {
                         pressed && styles.dropdownItemPressed,
                       ]}
                     >
-                      <Text
-                        style={[
-                          styles.dropdownItemText,
-                          isSelected && styles.dropdownItemTextSelected,
-                        ]}
-                      >
-                        {opt.label}
-                      </Text>
+                      <View style={styles.dropdownItemLeft}>
+                        <View style={styles.flagBadge}>
+                          <Text style={styles.flagEmoji}>
+                            {getFlagEmoji(opt.code)}
+                          </Text>
+                        </View>
+                        <Text
+                          style={[
+                            styles.dropdownItemText,
+                            isSelected && styles.dropdownItemTextSelected,
+                          ]}
+                        >
+                          {opt.label}
+                        </Text>
+                      </View>
                       {isSelected && (
                         <Ionicons
                           name="checkmark"
@@ -143,9 +173,9 @@ export default function SettingsScreen() {
             )}
           </View>
 
-          {/* File Access Permission Row */}
-          <View style={styles.settingsRow}>
-            <Text style={styles.rowTitleText}>{t.fileAccessPermission}</Text>
+          {/* File Access Permission Pill */}
+          <View style={styles.permissionPill}>
+            <Text style={styles.pillBoldText}>{t.fileAccessPermission}</Text>
             <Switch
               value={isFileAccessEnabled}
               onValueChange={setIsFileAccessEnabled}
@@ -163,11 +193,11 @@ export default function SettingsScreen() {
               style={styles.noticeTitle}
               numberOfLines={1}
               adjustsFontSizeToFit
-              minimumFontScale={0.75}
+              minimumFontScale={0.8}
             >
               {t.appServiceTitle}
             </Text>
-            <Text style={styles.noticeDescription} numberOfLines={3}>
+            <Text style={styles.noticeDescription}>
               {t.appServiceDescription1}
             </Text>
             <Pressable
@@ -188,19 +218,17 @@ export default function SettingsScreen() {
             </Pressable>
           </View>
 
-          {/* Version Row */}
-          <View style={styles.settingsRow}>
-            <View style={styles.versionContainer}>
-              <Text style={styles.rowTitleText}>Ver.</Text>
-              <Text style={styles.versionText}>{t.version}</Text>
-            </View>
+          {/* Version Pill */}
+          <View style={styles.versionPill}>
+            <Text style={styles.versionLabel}>Ver.</Text>
+            <Text style={styles.versionValue}>{t.version}</Text>
           </View>
 
-          {/* Footer (Pushed toward bottom with marginTop: 'auto') */}
+          {/* Footer */}
           <View style={styles.footerContainer}>
             <Image
               source={LOGO_WHITE_IMAGE}
-              style={styles.logoImage}
+              style={styles.footerLogo}
               resizeMode="contain"
             />
             <Text style={styles.footerText}>{t.contact}</Text>
@@ -222,9 +250,33 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
-    borderColor: MatchLabColors.borderHeader,
+    borderColor: 'rgba(255, 255, 255, 0.14)',
+  },
+  headerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 26,
+  },
+  headerButton: {
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerSpacer: {
+    width: 44,
+    height: 44,
+  },
+  backIcon: {
+    width: 23,
+    height: 23,
+  },
+  headerTitle: {
+    fontFamily: fontFamily.bold,
+    fontSize: 18,
+    color: '#FFFFFF',
   },
   scrollView: {
     flex: 1,
@@ -232,43 +284,59 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     paddingHorizontal: 30,
-    paddingTop: 16,
+    paddingTop: 18,
     paddingBottom: 24,
-    gap: 18,
   },
   sectionLabel: {
     fontFamily: fontFamily.semiBold,
-    fontSize: 15,
-    color: MatchLabColors.textWhite75,
-    paddingLeft: 20,
+    fontSize: 13,
+    color: 'rgba(255, 255, 255, 0.75)',
+    paddingLeft: 12,
+    marginBottom: 8,
   },
-  settingsRow: {
+  languagePill: {
     height: 58,
-    borderRadius: 28,
-    backgroundColor: MatchLabColors.rowSurface,
+    borderRadius: 29,
+    paddingHorizontal: 18,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
-    paddingHorizontal: 20,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  rowTitleText: {
+  languageLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  flagBadge: {
+    width: 32,
+    height: 22,
+    borderRadius: 4,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  flagEmoji: {
+    fontSize: 16,
+  },
+  languageText: {
     fontFamily: fontFamily.bold,
-    fontSize: 18,
-    color: MatchLabColors.textWhite,
+    fontSize: 17,
+    color: '#FFFFFF',
   },
   dropdownContainer: {
     borderRadius: 20,
-    backgroundColor: MatchLabColors.rowSurface,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     overflow: 'hidden',
     marginTop: 8,
   },
   dropdownItem: {
-    height: 48,
-    paddingHorizontal: 20,
+    height: 50,
+    paddingHorizontal: 18,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -276,44 +344,70 @@ const styles = StyleSheet.create({
   dropdownItemPressed: {
     backgroundColor: 'rgba(255, 255, 255, 0.08)',
   },
+  dropdownItemLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
   dropdownItemText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 16,
-    color: MatchLabColors.textWhite,
+    color: '#FFFFFF',
   },
   dropdownItemTextSelected: {
     color: MatchLabColors.neonCyan,
     fontFamily: fontFamily.bold,
   },
-  noticeCard: {
-    height: 195,
-    minHeight: 195,
-    borderRadius: 28,
-    backgroundColor: MatchLabColors.rowSurface,
+  permissionPill: {
+    marginTop: 16,
+    height: 58,
+    borderRadius: 29,
+    paddingHorizontal: 22,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
-    padding: 17,
-    gap: 13,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  pillBoldText: {
+    fontFamily: fontFamily.bold,
+    fontSize: 17,
+    color: '#FFFFFF',
+  },
+  noticeCard: {
+    marginTop: 16,
+    borderRadius: 28,
+    paddingVertical: 22,
+    paddingHorizontal: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
+    alignItems: 'center',
   },
   noticeTitle: {
     fontFamily: fontFamily.bold,
-    fontSize: 24,
-    color: MatchLabColors.textWhite,
+    fontSize: 20,
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
   noticeDescription: {
     fontFamily: fontFamily.semiBold,
-    fontSize: 13,
+    fontSize: 12.5,
     lineHeight: 18,
-    color: MatchLabColors.textWhite75,
+    color: 'rgba(255, 255, 255, 0.75)',
+    textAlign: 'center',
+    marginTop: 12,
   },
   noticeCapsuleButton: {
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
+    marginTop: 16,
     height: 32,
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
     borderRadius: 16,
-    backgroundColor: MatchLabColors.rowSurface,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderWidth: 1,
-    borderColor: MatchLabColors.borderSubtle,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -322,33 +416,46 @@ const styles = StyleSheet.create({
   },
   noticeButtonText: {
     fontFamily: fontFamily.semiBold,
-    fontSize: 15,
+    fontSize: 13,
     color: MatchLabColors.neonCyan,
   },
-  versionContainer: {
+  versionPill: {
+    marginTop: 16,
+    height: 58,
+    borderRadius: 29,
+    paddingHorizontal: 22,
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.16)',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'flex-start',
     gap: 10,
   },
-  versionText: {
-    fontFamily: fontFamily.semiBold,
-    fontSize: 18,
-    color: MatchLabColors.textWhite75,
+  versionLabel: {
+    fontFamily: fontFamily.bold,
+    fontSize: 17,
+    color: '#FFFFFF',
+  },
+  versionValue: {
+    fontFamily: fontFamily.regular,
+    fontSize: 17,
+    color: 'rgba(255, 255, 255, 0.85)',
   },
   footerContainer: {
-    marginTop: 'auto',
+    marginTop: 32,
+    paddingBottom: 24,
     alignItems: 'center',
-    gap: 9,
-    paddingTop: 16,
-    paddingBottom: 36,
+    gap: 6,
   },
-  logoImage: {
-    width: 124,
-    height: 20,
+  footerLogo: {
+    width: 118,
+    height: 19,
+    marginBottom: 4,
   },
   footerText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
-    color: MatchLabColors.textWhite75,
+    color: 'rgba(255, 255, 255, 0.75)',
   },
 });
