@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
   MatchLabBackground,
   MatchLabPillButton,
@@ -14,27 +14,54 @@ import { useMatchLab } from '@/context/MatchLabContext';
 export default function NoticeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { from } = useLocalSearchParams<{ from?: string }>();
   const { t } = useMatchLab();
+
+  const handleBack = () => {
+    if (from === 'settings') {
+      if (router.canGoBack()) {
+        router.back();
+      } else {
+        router.replace('/settings');
+      }
+    } else {
+      if (router.canGoBack()) {
+        router.back();
+      } else {
+        router.replace('/startView');
+      }
+    }
+  };
+
+  const handleConfirm = () => {
+    if (from === 'settings') {
+      if (router.canGoBack()) {
+        router.back();
+      } else {
+        router.replace('/settings');
+      }
+    } else {
+      router.replace('/home');
+    }
+  };
 
   return (
     <MatchLabBackground>
       <View style={styles.container}>
-        <View style={{ paddingTop: insets.top }}>
+        <View style={{ paddingTop: Math.max(insets.top, 16) + 4 }}>
           <MatchLabTopBar
             showsLogo={false}
             leftIconType="back"
             leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => {
-              if (router.canGoBack()) {
-                router.back();
-              } else {
-                router.replace('/startView');
-              }
-            }}
+            onLeftTap={handleBack}
           />
         </View>
 
-        <View style={styles.body}>
+        <ScrollView
+          style={styles.body}
+          contentContainerStyle={styles.bodyContent}
+          showsVerticalScrollIndicator={false}
+        >
           <Text
             style={styles.title}
             numberOfLines={2}
@@ -47,13 +74,18 @@ export default function NoticeScreen() {
           <Text style={styles.paragraphs}>
             {`${t.appServiceDescription1}\n\n${t.appServiceDescription2}\n\n${t.appServiceDescription3}`}
           </Text>
-        </View>
+        </ScrollView>
 
-        <View style={styles.bottomContainer}>
+        <View
+          style={[
+            styles.bottomContainer,
+            { paddingBottom: Math.max(insets.bottom + 12, 38) },
+          ]}
+        >
           <MatchLabPillButton
             title={t.confirmed}
             isPrimary={true}
-            onPress={() => router.replace('/home')}
+            onPress={handleConfirm}
           />
         </View>
       </View>
@@ -66,9 +98,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   body: {
+    flex: 1,
+  },
+  bodyContent: {
     paddingHorizontal: 29,
     paddingTop: 39,
-    flex: 1,
+    paddingBottom: 24,
   },
   title: {
     fontFamily: fontFamily.bold,
@@ -85,6 +120,5 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     paddingHorizontal: 46,
-    paddingBottom: 38,
   },
 });

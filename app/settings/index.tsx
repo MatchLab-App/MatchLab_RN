@@ -51,14 +51,28 @@ export default function SettingsScreen() {
   return (
     <MatchLabBackground>
       <View style={styles.container}>
-        {/* Top Header: Fixed height 126 extending from top edge */}
-        <View style={styles.headerContainer}>
+        {/* Top Header */}
+        <View
+          style={[
+            styles.headerContainer,
+            {
+              paddingTop: Math.max(insets.top, 20) + 12,
+              paddingBottom: 12,
+            },
+          ]}
+        >
           <MatchLabTopBar
             title={t.menuSettings}
             showsLogo={false}
             leftIconType="back"
             leftAccessibilityLabel={t.accessibilityBack}
-            onLeftTap={() => router.back()}
+            onLeftTap={() => {
+              if (router.canGoBack()) {
+                router.back();
+              } else {
+                router.replace('/home');
+              }
+            }}
           />
         </View>
 
@@ -157,7 +171,12 @@ export default function SettingsScreen() {
               {t.appServiceDescription1}
             </Text>
             <Pressable
-              onPress={() => router.push('/notice' as any)}
+              onPress={() =>
+                router.push({
+                  pathname: '/notice',
+                  params: { from: 'settings' },
+                } as any)
+              }
               accessibilityRole="button"
               accessibilityLabel={t.readFullNotice}
               style={({ pressed }) => [
@@ -203,12 +222,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
-    height: 126,
     backgroundColor: MatchLabColors.headerSurface,
     borderBottomWidth: 1,
     borderColor: MatchLabColors.borderHeader,
-    justifyContent: 'flex-end',
-    paddingBottom: 9,
   },
   scrollView: {
     flex: 1,
