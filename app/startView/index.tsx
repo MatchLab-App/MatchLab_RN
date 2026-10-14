@@ -5,7 +5,9 @@ import {
   StyleSheet,
   Text,
   View,
+  useWindowDimensions,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { MatchLabBackground } from '@/components/common';
@@ -21,6 +23,11 @@ import { useMatchLab } from '@/context/MatchLabContext';
 export default function StartViewScreen() {
   const router = useRouter();
   const { t } = useMatchLab();
+  const { height: windowHeight } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
+
+  const scale = Math.min(Math.max((windowHeight - insets.top - insets.bottom) / 760, 0.72), 1.08);
+  const s = (v: number) => Math.round(v * scale);
 
   return (
     <Pressable
@@ -59,7 +66,15 @@ export default function StartViewScreen() {
       {/* Foreground matching StartView.swift VStack */}
       <View style={styles.foreground} pointerEvents="none">
         {/* Top row: version */}
-        <View style={styles.topRow}>
+        <View
+          style={[
+            styles.topRow,
+            {
+              paddingTop: Math.max(insets.top + 10, s(62)),
+              paddingRight: 23,
+            },
+          ]}
+        >
           <Text style={styles.versionText}>{t.version}</Text>
         </View>
 
@@ -73,8 +88,12 @@ export default function StartViewScreen() {
             style={styles.logoImage}
             resizeMode="contain"
           />
-          <Text style={styles.welcomeText}>{t.welcome}</Text>
-          <Text style={styles.touchText}>{t.touchTheScreen}</Text>
+          <Text style={[styles.welcomeText, { marginTop: s(140) }]}>
+            {t.welcome}
+          </Text>
+          <Text style={[styles.touchText, { marginTop: s(48) }]}>
+            {t.touchTheScreen}
+          </Text>
         </View>
 
         {/* Spacer */}
@@ -83,7 +102,14 @@ export default function StartViewScreen() {
         {/* Bottom section */}
         <View style={styles.bottomSection}>
           <View style={styles.divider} />
-          <Text style={styles.disclaimerText}>{t.startDisclaimer}</Text>
+          <Text
+            style={[
+              styles.disclaimerText,
+              { marginBottom: Math.max(insets.bottom + 12, s(32)) },
+            ]}
+          >
+            {t.startDisclaimer}
+          </Text>
         </View>
       </View>
     </Pressable>
@@ -103,6 +129,7 @@ const styles = StyleSheet.create({
     width: 268,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     gap: 12,
     opacity: 0.8,
     transform: [{ rotate: '-8deg' }, { translateY: -26 }],
@@ -115,8 +142,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topRow: {
-    paddingTop: 62,
-    paddingRight: 23,
     alignItems: 'flex-end',
   },
   versionText: {
@@ -138,13 +163,11 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.bold,
     fontSize: 24,
     color: MatchLabColors.neonCyan,
-    marginTop: 162,
   },
   touchText: {
     fontFamily: fontFamily.semiBold,
     fontSize: 15,
     color: MatchLabColors.textWhite,
-    marginTop: 52,
   },
   bottomSection: {
     alignItems: 'center',
@@ -157,7 +180,6 @@ const styles = StyleSheet.create({
   },
   disclaimerText: {
     width: 308,
-    marginBottom: 32,
     fontFamily: fontFamily.semiBold,
     fontSize: 13,
     lineHeight: 17,
