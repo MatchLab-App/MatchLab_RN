@@ -16,16 +16,8 @@ export const SearchButton: React.FC<SearchButtonProps> = ({
   placeholder,
   style,
 }) => {
-  let context: ReturnType<typeof useMatchLab> | null = null;
-  try {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    context = useMatchLab();
-  } catch {
-    context = null;
-  }
-
-  const t = context?.t;
-  const displayText = placeholder ?? t?.searchPlaceholder ?? '이름으로 타입 검색';
+  const { t } = useMatchLab();
+  const displayText = placeholder ?? t.searchPlaceholder;
 
   return (
     <Pressable
@@ -51,7 +43,7 @@ const styles = StyleSheet.create({
     height: 58,
     borderRadius: 28,
     marginHorizontal: 46,
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: 'rgba(142, 142, 147, 0.1)',
     borderWidth: 1,
     borderColor: MatchLabColors.borderSubtle,
     flexDirection: 'row',
@@ -62,7 +54,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   icon: {
-    marginRight: 22,
+    marginRight: 30,
   },
   text: {
     fontFamily: fontFamily.bold,

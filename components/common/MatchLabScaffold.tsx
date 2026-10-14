@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  DimensionValue,
   Image,
   Pressable,
   StyleProp,
@@ -63,23 +64,31 @@ export const MatchLabTopBar: React.FC<MatchLabTopBarProps> = ({
   trailingAccessibilityLabel,
   onTrailingTap,
 }) => {
+  const { t } = useMatchLab();
+
+  const defaultLeftLabel = leftIconType === 'back'
+    ? t.accessibilityBack
+    : t.accessibilityMenu;
+
   return (
     <View style={styles.topBar}>
       {/* Left button */}
       <Pressable
         onPress={onLeftTap}
         accessibilityRole="button"
-        accessibilityLabel={
-          leftAccessibilityLabel ?? (leftIconType === 'back' ? 'Back' : 'Menu')
-        }
+        accessibilityLabel={leftAccessibilityLabel ?? defaultLeftLabel}
         hitSlop={8}
         style={styles.topBarButton}
       >
-        {leftIconType === 'back' ? (
-          <Ionicons name="chevron-back" size={24} color={MatchLabColors.textWhite} />
-        ) : (
-          <Ionicons name="menu" size={24} color={MatchLabColors.textWhite} />
-        )}
+        <Image
+          source={
+            leftIconType === 'back'
+              ? require('@/assets/images/button/Back.png')
+              : require('@/assets/images/button/DropdownButton.png')
+          }
+          style={styles.topBarIconImage}
+          resizeMode="contain"
+        />
       </Pressable>
 
       {/* Center */}
@@ -89,9 +98,16 @@ export const MatchLabTopBar: React.FC<MatchLabTopBarProps> = ({
             source={LOGO_WHITE_IMAGE}
             style={styles.logoImage}
             resizeMode="contain"
+            accessibilityLabel={t.accessibilityLogo}
           />
         ) : title ? (
-          <Text style={styles.topBarTitle} numberOfLines={1}>
+          <Text
+            style={styles.topBarTitle}
+            numberOfLines={1}
+            adjustsFontSizeToFit
+            minimumFontScale={0.8}
+            accessibilityRole="header"
+          >
             {title}
           </Text>
         ) : (
@@ -105,13 +121,18 @@ export const MatchLabTopBar: React.FC<MatchLabTopBarProps> = ({
         disabled={!showsTrailingAction}
         accessibilityRole="button"
         accessibilityLabel={trailingAccessibilityLabel ?? 'Send'}
+        accessibilityElementsHidden={!showsTrailingAction || !trailingAccessibilityLabel}
         hitSlop={8}
         style={[
           styles.topBarButton,
           { opacity: showsTrailingAction ? 1 : 0 },
         ]}
       >
-        <Ionicons name="paper-plane-outline" size={21} color={MatchLabColors.textWhite} />
+        <Image
+          source={require('@/assets/images/button/Plane.png')}
+          style={styles.topBarIconImage}
+          resizeMode="contain"
+        />
       </Pressable>
     </View>
   );
@@ -166,9 +187,14 @@ export const MatchLabPillButton: React.FC<MatchLabPillButtonProps> = ({
       ]}
     >
       {iconName && (
-        <Ionicons name={iconName} size={24} color={contentColor} />
+        <Ionicons name={iconName} size={22} color={contentColor} />
       )}
-      <Text style={[styles.pillButtonText, { color: contentColor }]}>
+      <Text
+        style={[styles.pillButtonText, { color: contentColor }]}
+        numberOfLines={1}
+        adjustsFontSizeToFit
+        minimumFontScale={0.75}
+      >
         {title}
       </Text>
     </Pressable>
@@ -183,49 +209,19 @@ export interface TypeSmallTokenProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const DEFAULT_TYPE_NAMES: Record<PokemonType, string> = {
-  normal: '노말',
-  fire: '불꽃',
-  water: '물',
-  grass: '풀',
-  electric: '전기',
-  ice: '얼음',
-  fighting: '격투',
-  poison: '독',
-  ground: '땅',
-  flying: '비행',
-  psychic: '에스퍼',
-  bug: '벌레',
-  rock: '바위',
-  ghost: '고스트',
-  dragon: '드래곤',
-  steel: '강철',
-  dark: '악',
-  fairy: '페어리',
-  noType: '미선택',
-};
-
 export const TypeSmallToken: React.FC<TypeSmallTokenProps> = ({
   type,
   width = 48,
   height = 61,
   style,
 }) => {
-  let context: ReturnType<typeof useMatchLab> | null = null;
-  try {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    context = useMatchLab();
-  } catch {
-    context = null;
-  }
-
-  const label =
-    context?.t?.typeLabels?.[type] ??
-    DEFAULT_TYPE_NAMES[type] ??
-    (type === 'noType' ? '미선택' : type);
+  const { t } = useMatchLab();
+  const label = t.typeLabels[type] ?? (type === 'noType' ? '미선택' : type);
 
   return (
     <View
+      accessible={true}
+      accessibilityLabel={label}
       style={[
         styles.tokenContainer,
         { width, height },
@@ -241,6 +237,7 @@ export const TypeSmallToken: React.FC<TypeSmallTokenProps> = ({
         style={styles.tokenText}
         numberOfLines={1}
         adjustsFontSizeToFit
+        minimumFontScale={0.7}
       >
         {label}
       </Text>
@@ -270,6 +267,7 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
   onPress,
   style,
 }) => {
+  const { t } = useMatchLab();
   const slotCount = width > 120 ? 2 : 1;
   const paddedTypes: PokemonType[] = [...types];
   while (paddedTypes.length < slotCount) {
@@ -280,15 +278,17 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
   const isAttack = role ? role === 'attack' : width <= 120;
   const iconName = isAttack ? 'flash' : 'shield';
 
+  const accessibilityValueText = displayTypes
+    .map((type) => t.typeLabels[type] ?? type)
+    .join(', ');
+
   const cardStyle: ViewStyle = {
     width,
     height: 93,
     borderRadius: 11,
     backgroundColor: MatchLabColors.cardSurface,
     borderWidth: 1,
-    borderColor: isHighlighted
-      ? 'rgba(255, 255, 255, 0.45)'
-      : MatchLabColors.borderSubtle,
+    borderColor: MatchLabColors.borderSubtle,
     ...(isHighlighted
       ? {
           shadowColor: '#FFFFFF',
@@ -327,8 +327,10 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
     return (
       <Pressable
         onPress={onPress}
+        accessible={true}
         accessibilityRole="button"
         accessibilityLabel={accessibilityLabel ?? title}
+        accessibilityValue={{ text: accessibilityValueText }}
         style={({ pressed }) => [cardStyle, pressed && styles.cardPressed, style]}
       >
         {cardContent}
@@ -338,11 +340,42 @@ export const TypeSelectionCard: React.FC<TypeSelectionCardProps> = ({
 
   return (
     <View
+      accessible={true}
       accessibilityLabel={accessibilityLabel ?? title}
+      accessibilityValue={{ text: accessibilityValueText }}
       style={[cardStyle, style]}
     >
       {cardContent}
     </View>
+  );
+};
+
+// MARK: - 7. MatchLabSkeleton
+export interface MatchLabSkeletonProps {
+  width?: DimensionValue;
+  height?: DimensionValue;
+  cornerRadius?: number;
+  style?: StyleProp<ViewStyle>;
+}
+
+export const MatchLabSkeleton: React.FC<MatchLabSkeletonProps> = ({
+  width,
+  height,
+  cornerRadius = 12,
+  style,
+}) => {
+  return (
+    <View
+      style={[
+        styles.skeleton,
+        {
+          width,
+          height,
+          borderRadius: cornerRadius,
+        },
+        style,
+      ]}
+    />
   );
 };
 
@@ -362,6 +395,10 @@ const styles = StyleSheet.create({
     height: 47,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  topBarIconImage: {
+    width: 23,
+    height: 23,
   },
   topBarCenter: {
     alignItems: 'center',
@@ -438,6 +475,11 @@ const styles = StyleSheet.create({
   cardPressed: {
     opacity: 0.8,
   },
+  skeleton: {
+    backgroundColor: 'rgba(142, 142, 147, 0.28)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.08)',
+  },
 });
 
 export default {
@@ -447,4 +489,5 @@ export default {
   PillButton: MatchLabPillButton,
   TypeSmallToken,
   TypeSelectionCard,
+  Skeleton: MatchLabSkeleton,
 };
